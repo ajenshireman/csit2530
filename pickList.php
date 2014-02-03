@@ -105,13 +105,13 @@
     	</div>
 	</div>
 	<div class="form-group">
-    	<label for="inputTimeslots" class="block">Preferred Times (Select at least 1)</label><br />
-    	<input type="checkbox" name="inputTimesots" value="8:30-11:30">8:30-11:30<br />
-    	<input type="checkbox" name="inputTimesots" value="9:30-11:30">9:30-11:30<br />
-    	<input type="checkbox" name="inputTimesots" value="1:00-4:00">1:00-4:00<br />
-    	<input type="checkbox" name="inputTimesots" value="4:00-6:00">4:00-6:00<br />
-    	<input type="checkbox" name="inputTimesots" value="6:15-9:15">6:15-9:15<br />
-    	<input type="checkbox" name="inputTimesots" value="No Fridays">No Fridays
+    	<label for="inputTimeslots" class="block">Preferred Times (Select at least 1)</label>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="8:30-11:30"> 8:30-11:30</span>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="9:30-11:30"> 9:30-11:30</span>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="1:00-4:00"> 1:00-4:00</span>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="4:00-6:00"> 4:00-6:00</span>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="6:15-9:15"> 6:15-9:15</span>
+    	<span class="block"><input type="checkbox" name="inputTimesots" value="No Fridays"> No Fridays</span>
 	</div>
 	<button type="submit" name="btnSubmit">Submit</button>
 </form>
