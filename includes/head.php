@@ -14,7 +14,7 @@
     <title></title>
     
     <!-- normalize.css  -->
-    <link rel="stylesheet" href="css/normaize.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
     
     <!-- custom styles -->
     <link re="stylesheet" href="css/styles.css" />
