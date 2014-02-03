@@ -6,7 +6,7 @@
  * Common <head> for all pages
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -14,10 +14,10 @@
     <title></title>
     
     <!-- normalize.css  -->
-    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/normalize.css" /
     
     <!-- custom styles -->
-    <link re="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     
 </head>
 <body>
