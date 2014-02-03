@@ -11,7 +11,15 @@
 <head>
     <meta charset="utf-8" />
     
-    <title></title>
+    <title>
+        <?php 
+            if ( isset($pageTitle) ) {
+                print "$pageTitle";
+            } else {
+                print 'CSIT 5330 - Ajen Shireman';
+            }
+        ?>
+    </title>
     
     <!-- normalize.css  -->
     <link rel="stylesheet" href="css/normalize.css" /
