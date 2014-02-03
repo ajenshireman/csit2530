@@ -37,17 +37,72 @@
         <input type="text" name="inputNumHours" size="5" />
     </div>
 	<div class="form-group">
-    	<label for="inputCourses" class="block">Courses (Select 5)</label>
-    	<select multiple name="inputCourses[]" size="9" class="block">
-    	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-            <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-            <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-            <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-            <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-            <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-            <option value="CSIT 2290 P01">CSIT 2290 P01</option>
-            <option value="CSIT 2520 P01">CSIT 2520 P01</option>
-    	</select>
+    	Courses (Select 5)<br />
+    	<div class="form-group">
+    	   <label for=inportCourse1">Choice 1: </label>
+        	<select name="inputCourse1" class="block">
+        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
+                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
+                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
+                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
+                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
+                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
+                <option value="CSIT 2290 P01">CSIT 2290 P01</option>
+                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	</select>
+    	</div>
+    	<div class="form-group">
+    	   <label for=inportCourse2">Choice 2: </label>
+        	<select name="inputCourse1" class="block">
+        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
+                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
+                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
+                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
+                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
+                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
+                <option value="CSIT 2290 P01">CSIT 2290 P01</option>
+                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	</select>
+    	</div>
+    	<div class="form-group">
+    	   <label for=inportCourse3">Choice 3: </label>
+        	<select name="inputCourse1" class="block">
+        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
+                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
+                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
+                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
+                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
+                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
+                <option value="CSIT 2290 P01">CSIT 2290 P01</option>
+                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	</select>
+    	</div>
+    	<div class="form-group">
+    	   <label for=inportCourse4">Choice 4: </label>
+        	<select name="inputCourse1" class="block">
+        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
+                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
+                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
+                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
+                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
+                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
+                <option value="CSIT 2290 P01">CSIT 2290 P01</option>
+                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	</select>
+    	</div>
+    	<div class="form-group">
+    	   <label for=inportCourse5">Choice 5: </label>
+        	<select name="inputCourse1" class="block">
+        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
+                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
+                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
+                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
+                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
+                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
+                <option value="CSIT 2290 P01">CSIT 2290 P01</option>
+                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	</select>
+    	</div>
 	</div>
 
 	<div class="form-group">
