@@ -20,45 +20,44 @@ $name = $_POST['inputName'];
 $semester = $_POST['inputSemester'];
 $numClasses = $_POST['inputNumClasses'];
 $numHours = mysql_real_escape_string($_POST['inputNumHours']);
-$courses = $_POST['inputCourses'];
+/*$courses = array(
+	$_POST['inputCourse1'],
+    $_POST['inputCourse2'],
+    $_POST['inputCourse3'],
+    $_POST['inputCourse4'],
+    $_POST['inputCourse5'],
+);*/
+$courses=$_POST['inputCourses'];
 $timeslots = $_POST['inputTimeslots'];
 
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" href="../css/styles.css" />
-</head>
-<body>
-	<div id="name">
-        Name: <?php echo $name ?>
-	</div>
-	<div id="semester">
-        Semester: <?php echo $semester ?>
-	</div>
-	<div id="numClasses">
-        Number of classes: <?php echo $numClasses ?>
-	</div>
-	<div id="numHours">
-        Number of hours: <?php echo $numHours ?>
-	</div>
-	<div id="courses">
-        Preferred Courses: <br />
-        <?php 
-        foreach ( $courses as $course ) {
-            echo "$course<br />";
-        }
-	    ?>
-	</div>
-	<div id="timeslots">
-        Preferred Times: <br />
-        <?php 
-        foreach ( $timeslots as $timeslot ) {
-            echo "$timeslot<br />";
-        }
-	    ?>
-	</div>
-</body>
-</html>
+<?php require './includes/head.php' ?>
+<div id="name">
+    Name: <?php echo $name ?>
+</div>
+<div id="semester">
+    Semester: <?php echo $semester ?>
+</div>
+<div id="numClasses">
+    Number of classes: <?php echo $numClasses ?>
+</div>
+<div id="numHours">
+    Number of hours: <?php echo $numHours ?>
+</div>
+<div id="courses">
+    Preferred Courses: <br />
+    <?php 
+    foreach ( $courses as $course ) {
+        echo "$course<br />";
+    }
+    ?>
+</div>
+<div id="timeslots">
+    Preferred Times: <br />
+    <?php 
+    foreach ( $timeslots as $timeslot ) {
+        echo "$timeslot<br />";
+    }
+    ?>
+</div>
+<?php require './includes/foot.php' ?>
