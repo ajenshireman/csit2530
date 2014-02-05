@@ -20,13 +20,6 @@ $name = $_POST['inputName'];
 $semester = $_POST['inputSemester'];
 $numClasses = $_POST['inputNumClasses'];
 $numHours = mysql_real_escape_string($_POST['inputNumHours']);
-/*$courses = array(
-	$_POST['inputCourse1'],
-    $_POST['inputCourse2'],
-    $_POST['inputCourse3'],
-    $_POST['inputCourse4'],
-    $_POST['inputCourse5'],
-);*/
 $courses=$_POST['inputCourses'];
 $timeslots = $_POST['inputTimeslots'];
 
