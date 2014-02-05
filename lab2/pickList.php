@@ -41,66 +41,66 @@
     	<div class="form-group">
     	   <label for="inpo]utCourses">Choice 1 </label>
         	<select name="inputCourses[]">
-        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-                <option value="CSIT 2280 P01">CSIT 2290 P01</option>
-                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
+                <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
+                <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
+                <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
+                <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
+                <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
+                <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
+                <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
         	</select>
     	</div>
     	<div class="form-group">
     	   <label for="inputCourses">Choice 2 </label>
         	<select name="inputCourses[]">
-        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-                <option value="CSIT 2280 P01">CSIT 2290 P01</option>
-                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
+                <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
+                <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
+                <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
+                <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
+                <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
+                <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
+                <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
         	</select>
     	</div>
     	<div class="form-group">
     	   <label for="inputCourses">Choice 3 </label>
         	<select name="inputCourses[]">
-        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-                <option value="CSIT 2280 P01">CSIT 2290 P01</option>
-                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
+                <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
+                <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
+                <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
+                <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
+                <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
+                <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
+                <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
         	</select>
     	</div>
     	<div class="form-group">
     	   <label for="inputCourses">Choice 4 </label>
         	<select name="inputCourses[]">
-        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-                <option value="CSIT 2280 P01">CSIT 2290 P01</option>
-                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
+                <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
+                <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
+                <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
+                <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
+                <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
+                <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
+                <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
         	</select>
     	</div>
     	<div class="form-group">
     	   <label for="inputCourse">Choice 5 </label>
         	<select name="inputCourses[]">
-        	    <option value="CSIT 1510 P01">CSIT 1510 P01</option>
-                <option value="CSIT 1520 P02">CSIT 1520 P02</option>
-                <option value="CSIT 1810 P01">CSIT 1810 P01</option>
-                <option value="CSIT 2230 PC1">CSIT 2230 PC1</option>
-                <option value="CSIT 2530 P01">CSIT 2530 P01</option>
-                <option value="CSIT 2860 PC1">CSIT 2860 PC1</option>
-                <option value="CSIT 2280 P01">CSIT 2290 P01</option>
-                <option value="CSIT 2520 P01">CSIT 2520 P01</option>
+        	    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
+                <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
+                <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
+                <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
+                <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
+                <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
+                <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
+                <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
         	</select>
     	</div>
 	</div>
