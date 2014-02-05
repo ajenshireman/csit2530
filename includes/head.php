@@ -17,7 +17,7 @@
             if ( isset($pageTitle) ) {
                 print "$pageTitle";
             } else {
-                print 'CSIT 5330 - Ajen Shireman';
+                print 'CSIT 2530 - Ajen Shireman';
             }
         ?>
     </title>
