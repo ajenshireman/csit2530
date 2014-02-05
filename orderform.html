@@ -1,0 +1,53 @@
+<html>
+<body>
+    <form action="processorder.php" method="post">
+        <table border="0">
+            <tr bgcolor="#cccccc">
+                <td width="150">Item</td>
+                <td width="15">Quantity</td>
+            </tr>
+            <tr>
+                <td>Tires</td>
+                <td align="center"><input type="text" name="tireqty" size="3" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td>Oil</td>
+                <td align="center"><input type="text" name="oilqty" size="3" maxlength="3"></td>
+            </tr>
+            <tr>
+                <td>Spark Plugs</td>
+                <td align="center"><input type="text" name="sparkqty" size="3"  maxlength="3"></td>
+            </tr>
+        </table>
+        <div class="address address-ship">
+            <div><strong>Shipping Address:</strong></div>
+            <div class="formGroup">
+                <label for="adressStreet">Street Adress: </label>
+                <input type="text" name="addressStreet" />
+            </div>
+            <div class="formGroup">
+                <label for="addressCity">City: </label>
+                <input type="text" name="addressCity" />
+            </div>
+            <div class="formGroup">
+                <label for="addressState">State: </label>
+                <input type="text" name="addressState" size=2 />
+            </div>
+            <div class="formGroup">
+                <label for="addressZip">Zip Code: </label>
+                <input type="text" name="addressZip" size=5 />
+            </div>
+        </div>
+        <div class="howFound">
+            <label for="find">How did you find Bob's?</label>
+            <select name="find">
+                <option value = "a">I'm a regular customer</option>
+                <option value = "b">TV advertising</option>
+                <option value = "c">Phone directory</option>
+                <option value = "d">Word of mouth</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit Order">
+    </form>
+</body>
+</html>
