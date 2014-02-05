@@ -19,7 +19,7 @@ if ( !isset($_POST['btnSubmit']) ) {
 $name = $_POST['inputName'];
 $semester = $_POST['inputSemester'];
 $numClasses = $_POST['inputNumClasses'];
-$numHours = mysql_real_escape_string($_POST['inputNumHours']);
+$numHours = $_POST['inputNumHours'];
 $courses=$_POST['inputCourses'];
 $timeslots = $_POST['inputTimeslots'];
 
