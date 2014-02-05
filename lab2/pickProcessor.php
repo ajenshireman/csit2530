@@ -24,7 +24,7 @@ $courses=$_POST['inputCourses'];
 $timeslots = $_POST['inputTimeslots'];
 
 ?>
-<?php require './includes/head.php' ?>
+<?php include './includes/head.php' ?>
 <div id="name">
     Name: <?php echo $name ?>
 </div>
@@ -53,4 +53,4 @@ $timeslots = $_POST['inputTimeslots'];
     }
     ?>
 </div>
-<?php require './includes/foot.php' ?>
+<?php include './includes/foot.php' ?>
