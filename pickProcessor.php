@@ -16,12 +16,12 @@ if ( !isset($_POST['btnSubmit']) ) {
 }
 
 // Gather post variables
-$name = $_POST['inputName'];
-$semester = $_POST['inputSemester'];
-$numClasses = $_POST['inputNumClasses'];
-$numHours = $_POST['inputNumHours'];
-$courses=$_POST['inputCourses'];
-$timeslots = $_POST['inputTimeslots'];
+$name = !empty($_POST['inputName']) ? $_POST['inputName'] : '';
+$semester = !empty($_POST['inputSemester']) ? $_POST['inputSemester'] : '';
+$numClasses = !empty($_POST['inputNumClasses']) ? $_POST['inputNumClasses'] : 0;
+$numHours = !empty($_POST['inputNumHours']) ? $_POST['inputNumHours'] : 0;
+$courses= !empty($_POST['inputCourses']) ? $_POST['inputCourses'] : 'No Courses Selected';
+$timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No Times Selected';
 
 ?>
 <?php include './includes/head.php' ?>
@@ -40,16 +40,24 @@ $timeslots = $_POST['inputTimeslots'];
 <div id="courses">
     Preferred Courses: <br />
     <?php 
-    foreach ( $courses as $course ) {
-        echo "$course<br />";
+    if ( is_array($courses) ) {
+        foreach ( $courses as $course ) {
+            echo "$course<br />";
+        }
+    } else {
+        echo $courses;
     }
     ?>
 </div>
 <div id="timeslots">
     Preferred Times: <br />
-    <?php 
-    foreach ( $timeslots as $timeslot ) {
-        echo "$timeslot<br />";
+    <?php
+    if ( is_array($timeslots) ) {
+        foreach ( $timeslots as $timeslot ) {
+            echo "$timeslot<br />";
+        }
+    } else {
+        echo $timeslots;
     }
     ?>
 </div>
