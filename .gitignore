@@ -46,3 +46,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Example Code
+examples/
