@@ -23,10 +23,10 @@ $discount = $list_price * $discount_percent;
 $discount_price = $list_price - $discount;
 
 // Format the variables
-$list_price_formatted = number_format($list_price);
-$discount_percent_formatted = number_format($discount_percent);
-$discount_formatted = number_format($discount);
-$discount_price_formatted = number_format($discount_price);
+$list_price_formatted = '$'.number_format($list_price, 2);
+$discount_percent_formatted = number_format($discount_percent).'%';
+$discount_formatted = '$'.number_format($discount, 2);
+$discount_price_formatted = '$'.number_format($discount_price, 2);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
