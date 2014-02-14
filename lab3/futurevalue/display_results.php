@@ -61,7 +61,7 @@
 </head>
 <body>
     <div id="content">
-        <h1>Future Value Calculator</h1>
+        <h1>Ajen Shireman's Future Value Calculator</h1>
 
         <label>Investment Amount:</label>
         <span><?php echo $investment_f; ?></span><br />
