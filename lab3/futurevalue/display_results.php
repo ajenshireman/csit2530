@@ -22,7 +22,15 @@
     else if ( !is_numeric($interest_rate) )  {
         $error_message = 'Interest rate must be a valid number.'; }
     else if ( $interest_rate <= 0 || $interest_rate > 15) {
-        $error_message = 'Interest rate must be greater than zero and less than or equal to 15.'; }
+        $error_message = 'Interest rate must be <gre></gre>ater than zero and less than or equal to 15.'; }
+    
+    // validate year entry
+    elseif ( !isset($years) ) {
+        $error_message = 'Years is a required field.'; }
+    else if ( !is_numeric($years) )  {
+        $error_message = 'Years must be a valid number.'; }
+    else if ( $years < 0 || $years >50) {
+        $error_message = 'Years must be between zero and 50 (inclusive).'; }
 
     // set error message to empty string if no invalid entries
     else {
