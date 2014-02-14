@@ -9,6 +9,8 @@
  */
 ?>
 <?php include './includes/head.php' ?>
+
+<!-- 
 <form role="form" id="classSelectionForm" method="post" action="pickProcessor.php">
     <div class="form-group">
         <label for="inputName">Name</label>
@@ -115,4 +117,5 @@
 	</div>
 	<button type="submit" name="btnSubmit">Submit</button>
 </form>
+-->
 <?php include './includes/foot.php' ?>
