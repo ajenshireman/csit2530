@@ -21,8 +21,8 @@
         $error_message = 'Interest rate is a required field.'; }
     else if ( !is_numeric($interest_rate) )  {
         $error_message = 'Interest rate must be a valid number.'; }
-    else if ( $interest_rate <= 0 ) {
-        $error_message = 'Interest rate must be greater than zero.'; }
+    else if ( $interest_rate <= 0 || $interest_rate > 15) {
+        $error_message = 'Interest rate must be greater than zero and less than or equal to 15.'; }
 
     // set error message to empty string if no invalid entries
     else {
