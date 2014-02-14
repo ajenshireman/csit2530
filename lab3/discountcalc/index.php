@@ -30,13 +30,16 @@
 
             <div id="data">
                 <label>Product Description:</label>
-                <input type="text" name="product_description"/><br />
+                <input type="text" name="product_description" 
+                      value="<?php if ( isset($product_description) ) { echo $product_description; } ?>" /><br />
 
                 <label>List Price:</label>
-                <input type="text" name="list_price"/><br />
+                <input type="text" name="list_price" 
+                       value="<?php if ( isset($list_price) ) { echo $list_price; } ?>" /><br />
 
                 <label>Discount Percent:</label>
-                <input type="text" name="discount_percent"/>%<br />
+                <input type="text" name="discount_percent" 
+                       value="<?php if ( isset($discount_percent) ) { echo $discount_percent; } ?>" />%<br />
             </div>
 
             <div id="buttons">
