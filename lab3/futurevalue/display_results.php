@@ -17,7 +17,7 @@
     // If the user pressed 'cancel' clear the form
     if ( isset($_POST['cancel']) ) {
         // unset the POST variables
-        unset($_POST['investmen']);
+        unset($_POST['investment']);
         unset($_POST['interest_rate']);
         unset($_POST['years']);
         // return user to the index
