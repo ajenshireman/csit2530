@@ -38,7 +38,7 @@ if ( empty($product_description) ) {
 else if ( empty($list_price) ) {
     $error = 'Please emter a list price';
 }
-else if ( !isnumeric($list_price) ) {
+else if ( !is_numeric($list_price) ) {
     $error = 'List price must be a valid number';
 }
 else if ( $list_price <= 0 ) {
@@ -48,7 +48,7 @@ else if ( $list_price <= 0 ) {
 else if ( empty($discount_percent) ) {
     $error = 'Please emter a discount percent';
 }
-else if ( !isnumeric($discount_percent) ) {
+else if ( !is_numeric($discount_percent) ) {
     $error = 'Discount percent must be a valid number';
 }
 else if ( $discount_percent < 0 || $discount_percent > 100 ) {
