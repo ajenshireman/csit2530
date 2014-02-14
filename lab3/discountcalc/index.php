@@ -44,7 +44,8 @@
 
             <div id="buttons">
                 <label>&nbsp;</label>
-                <input type="submit" value="Calculate Discount" /><br />
+                <input type="submit" value="Calculate Discount" />
+                <input type="submit" value="Clear" /><br />
             </div>
 
         </form>
