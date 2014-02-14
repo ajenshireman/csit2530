@@ -17,15 +17,20 @@
         <div id="data">
             <label>Investment Amount:</label>
             <input type="text" name="investment"
-                   value="<?php echo $investment; ?>"/><br />
+                   value="<?php 
+                           // Added checks to each input to only display variables if they've been set
+                           if ( isset($investment) ) { 
+                               echo $investment; 
+                           } 
+                           ?>"/><br />
 
             <label>Yearly Interest Rate:</label>
             <input type="text" name="interest_rate"
-                   value="<?php echo $interest_rate; ?>"/><br />
+                   value="<?php if ( isset($interest_rate) ) { echo $interest_rate; } ?>"/><br />
 
             <label>Number of Years:</label>
             <input type="text" name="years"
-                   value="<?php echo $years; ?>"/><br />
+                   value="<?php if ( isset($years) ) { echo $years; } ?>"/><br />
         </div>
 
         <div id="buttons">
