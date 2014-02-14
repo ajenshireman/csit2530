@@ -6,7 +6,11 @@
     <li>Lab 3
         <ul>
             <li><a href="lab3/futurevalue">Future Value</a></li>
-            <li><a href="lab3/discountcalc">Discount Calculator</a></li>
+            <li><a href="lab3/discountcalc">Discount Calculator</a>
+                <ul>
+                    <li><a href="lab3/discountcalc/screenShots.php">Validation Confirmation</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
 </ul>
