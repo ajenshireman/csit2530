@@ -27,7 +27,13 @@
     <div id="content">
         <h1>Ajen Shireman's Product Discount Calculator</h1>
         <form action="display_discount.php" method="post">
-
+            <div class="error">
+                <?php 
+                if ( !empty($error) ) {
+                    echo "<p>$error</p>";                    
+                }
+                ?>
+            </div>
             <div id="data">
                 <label>Product Description:</label>
                 <input type="text" name="product_description" 
