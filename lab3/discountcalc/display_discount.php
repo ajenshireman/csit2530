@@ -11,6 +11,16 @@
  *  Added code to do the stuff
  */
 
+// If the user pressed 'clear' clear the form
+if ( isset($_POST['cancel']) ) {
+    // unset the POST variables
+    unset($_POST['product_description']);
+    unset($_POST['list_price']);
+    unset($_POST['discount_percent']);
+    // return user to the index
+    header('Location: index.php');
+}
+
 // Collect POST variables
 $product_description = $_POST['product_description'];
 $list_price = $_POST['list_price'];
