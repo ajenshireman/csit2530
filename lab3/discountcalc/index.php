@@ -7,7 +7,11 @@
  *
  * Start page for app to calulate product discounts
  * This file was provided as by the textbook authors as a started file
- * Enhancements:
+ * Needed validation:
+ *  All fields must be filled out
+ *  list_price and discount_percent must be numeric
+ *  list price must be greater than 0 (maybe equal to 0)
+ *  discount_percent must be between 0 and 100 (inclusive)
  * 
  */
 ?>
