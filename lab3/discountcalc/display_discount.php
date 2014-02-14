@@ -112,7 +112,7 @@ $discount_price_formatted = '$'.number_format($discount_price, 2);
         <label>Discount Price:</label>
         <span><?php echo $discount_price_formatted; ?></span><br />
         
-        <label>Sales Tax:</label>
+        <label>Sales Tax (<?php echo number_format((SALES_TAX * 100), 2)?>%):</label>
         <span><?php echo '$'.number_format($salesTax, 2) ?></span><br />
         
         <label>Total:</label>
