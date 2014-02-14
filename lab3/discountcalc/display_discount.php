@@ -66,7 +66,7 @@ if ( $error != '' ) {
 }
 
 // calculate discount amount
-$discount = $list_price * $discount_percent;
+$discount = $list_price * ( $discount_percent / 100);
 
 // calculate discounted price
 $discount_price = $list_price - $discount;
