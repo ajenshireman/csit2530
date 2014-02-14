@@ -11,6 +11,9 @@
  *  Added code to do the stuff
  */
 
+// Constants
+define('SALES_TAX', 0.0975);
+
 // Set the timezone in which are running this application
 date_default_timezone_set('America/New_York');
 
@@ -71,6 +74,12 @@ $discount = $list_price * ( $discount_percent / 100);
 // calculate discounted price
 $discount_price = $list_price - $discount;
 
+// Calulate sales tax
+$salesTax = $discount_price * SALES_TAX;
+
+// Calculate total price
+$totalPrice = $discount_price + $salesTax;
+
 // Format the variables
 $list_price_formatted = '$'.number_format($list_price, 2);
 $discount_percent_formatted = number_format($discount_percent).'%';
@@ -102,6 +111,12 @@ $discount_price_formatted = '$'.number_format($discount_price, 2);
 
         <label>Discount Price:</label>
         <span><?php echo $discount_price_formatted; ?></span><br />
+        
+        <label>Sales Tax:</label>
+        <span><?php echo '$'.number_format($salesTax, 2) ?></span><br />
+        
+        <label>Total:</label>
+        <span><?php echo '$'.number_format($totalPrice, 2) ?></span><br />
 
         <p>&nbsp;</p>
     </div>
