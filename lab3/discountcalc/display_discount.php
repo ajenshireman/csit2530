@@ -29,6 +29,42 @@ $product_description = $_POST['product_description'];
 $list_price = $_POST['list_price'];
 $discount_percent = $_POST['discount_percent'];
 
+// Validate!
+// Product Description
+if ( empty($product_description) ) {
+    $error = 'Please enter a product description';
+} 
+// List price
+else if ( empty($list_price) ) {
+    $error = 'Please emter a list price';
+}
+else if ( !isnumeric($list_price) ) {
+    $error = 'List price must be a valid number';
+}
+else if ( $list_price <= 0 ) {
+    $error = 'List price must be greater than zero';
+}
+// Discount Percent
+else if ( empty($discount_percent) ) {
+    $error = 'Please emter a discount percent';
+}
+else if ( !isnumeric($discount_percent) ) {
+    $error = 'Discount percent must be a valid number';
+}
+else if ( $discount_percent < 0 || $discount_percent > 100 ) {
+    $error = 'Discount percent must be greater than zero and less than 100 (inclusive)';
+}
+// No problems
+else {
+    $error = '';
+}
+
+// Check for errors, and redirect to index if there are any
+if ( $error != '' ) {
+    include('index.php');
+    exit();
+}
+
 // calculate discount amount
 $discount = $list_price * $discount_percent;
 
