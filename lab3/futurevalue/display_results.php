@@ -25,7 +25,7 @@
         $error_message = 'Interest rate must be <gre></gre>ater than zero and less than or equal to 15.'; }
     
     // validate year entry
-    elseif ( !isset($years) ) {
+    else if ( !isset($years) ) {
         $error_message = 'Years is a required field.'; }
     else if ( !is_numeric($years) )  {
         $error_message = 'Years must be a valid number.'; }
