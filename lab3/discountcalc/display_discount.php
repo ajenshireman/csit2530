@@ -1,3 +1,16 @@
+<?php 
+/**
+ * display_discount.php
+ * Ajen Shireman
+ * CSIT 2530 Lab3
+ * 14 February 2014
+ *
+ * display page for app to calulate product discounts
+ * This file was provided as by the textbook authors as a started file
+ * Enhancements:
+ *  
+ */
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
