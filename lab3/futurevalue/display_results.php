@@ -1,4 +1,19 @@
 <?php
+/**
+ * display_results.php
+ * Ajen Shireman
+ * CSIT 2530 Lab3
+ * 14 February 2014
+ *
+ * Results page for app to calulate future value of an investment
+ * This file was provided as by the textbook authors as a started file
+ * Enhancements:
+ *  If the clear button was pressed, unset POST variables and return the user to the index
+ *  Added check for upper limit on investment_rate
+ *  Added chack for upper and lower limit on years
+ *  Added date to the bottom of the page
+ */
+
     // If the user pressed 'cancel' clear the form
     if ( isset($_POST['cancel']) ) {
         // unset the POST variables
@@ -32,7 +47,7 @@
     else if ( !is_numeric($interest_rate) )  {
         $error_message = 'Interest rate must be a valid number.'; }
     else if ( $interest_rate <= 0 || $interest_rate > 15) {
-        $error_message = 'Interest rate must be <gre></gre>ater than zero and less than or equal to 15.'; }
+        $error_message = 'Interest rate must be greater than zero and less than or equal to 15.'; }
     
     // validate year entry
     else if ( !isset($years) ) {

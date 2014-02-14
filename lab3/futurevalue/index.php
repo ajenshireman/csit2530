@@ -1,4 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<?php 
+/**
+ * index.php
+ * Ajen Shireman
+ * CSIT 2530 Lab3
+ * 14 February 2014
+ *
+ * Start page for app to calulate future value of an investment
+ * This file was provided as by the textbook authors as a started file
+ * Enhancements:
+ *  Added check for null values in inout boxes to prevent php error messages
+ *  Added button to clear the form
+ */
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
