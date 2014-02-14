@@ -1,11 +1,11 @@
 <?php
 /**
- * picklist.php
+ * COURSEPICKER.php
  * Ajen Shireman
- * CSIT 2530 Lab2 - PartB
- * 31 January 2014
+ * CSIT 2530 Lab3 - PartB
+ * 14 February 2014
  * 
- * Simple form to allow instructors to select which courses they want to teach.
+ * Refinement of form from lab2
  */
 ?>
 <?php include './includes/head.php' ?>
