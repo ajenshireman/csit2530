@@ -16,8 +16,8 @@
 	<title>Lab 3 Validation Confirmation Screen Shots</title>
 </head>
 <body>
-    <h1>Ajen Shireman CSIT2530 Lab 3 14 February 2014</h1>
-    <h1>Validation Confirmation Screen Shots</h1>
+    <h3>Ajen Shireman CSIT2530 Lab 3 14 February 2014</h3>
+    <h3>Validation Confirmation Screen Shots</h3>
 	<img src="img/01.png" />
 	<img src="img/02.png" />
 	<img src="img/03.png" />
