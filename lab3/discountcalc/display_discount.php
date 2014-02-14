@@ -37,7 +37,7 @@ $discount_price_formatted = '$'.number_format($discount_price, 2);
 </head>
 <body>
     <div id="content">
-        <h1>This page is under construction</h1>
+        <h1>Product Discount Calculator</h1>
 
         <label>Product Description:</label>
         <span><?php echo $product_description; ?></span><br />
