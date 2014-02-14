@@ -6,7 +6,7 @@
     <li>Lab 3
         <ul>
             <li><a href="lab3/futurevalue">Future Value</a></li>
-            <li><a href="lab3/dicountcalc">Discount Calculator</a></li>
+            <li><a href="lab3/discountcalc">Discount Calculator</a></li>
         </ul>
     </li>
 </ul>
