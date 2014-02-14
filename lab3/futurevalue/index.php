@@ -35,7 +35,8 @@
 
         <div id="buttons">
             <label>&nbsp;</label>
-            <input type="submit" value="Calculate"/><br />
+            <input type="submit" value="Calculate"/>
+            <input type="submit" name="cancel" value="Clear" /><br />
         </div>
 
     </form>
