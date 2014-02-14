@@ -11,6 +11,9 @@
  *  Added code to do the stuff
  */
 
+// Set the timezone in which are running this application
+date_default_timezone_set('America/New_York');
+
 // If the user pressed 'clear' clear the form
 if ( isset($_POST['cancel']) ) {
     // unset the POST variables
