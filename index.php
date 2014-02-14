@@ -11,6 +11,7 @@
                     <li><a href="lab3/discountcalc/screenShots.php">Validation Confirmation</a></li>
                 </ul>
             </li>
+            <li><a href="coursepicker.php">Lab3 - Part B</a></li>
         </ul>
     </li>
 </ul>
