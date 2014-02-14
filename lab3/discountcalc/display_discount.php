@@ -8,8 +8,14 @@
  * display page for app to calulate product discounts
  * This file was provided as by the textbook authors as a started file
  * Enhancements:
- *  
+ *  Added code to do the stuff
  */
+
+// Collect POST variables
+$product_description = $_POST['product_description'];
+$list_price = $_POST['list_price'];
+$discount_percent = $_POST['discount_percent'];
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
