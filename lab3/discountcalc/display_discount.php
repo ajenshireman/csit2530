@@ -17,7 +17,7 @@ $list_price = $_POST['list_price'];
 $discount_percent = $_POST['discount_percent'];
 
 // calculate discount amount
-$discount = $list_price * $discount;
+$discount = $list_price * $discount_percent;
 
 // calculate discounted price
 $discount_price = $list_price - $discount;
