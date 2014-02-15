@@ -9,6 +9,17 @@
  */
 ?>
 <?php include './includes/head.php' ?>
+<?php 
+if ( isset($errors) ) { 
+    $errorMsg = '';
+    foreach ( $errors as $error ) {
+        $errorMsg.=$error.'\n';
+    }
+?>
+<script>
+    alert('<?php echo $errorMsg ?>');
+</script>
+<?php } ?>
 <form action="processpicks.php" method="post">
 	<div class="row">
 	    <div class="small-12 columns">
@@ -44,7 +55,7 @@
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputNumHours">Number of Hours (1 to 20)
-	    		        <input type="number" min="1" max="20" name="inputNumHours" required="required"/>
+	    		        <input type="number" min="1" max="20" name="inputNumHours" required="required" />
 	    		    </label>
 	    		</div>
 	    	</fieldset>

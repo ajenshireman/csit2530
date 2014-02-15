@@ -21,32 +21,32 @@ $semester = !empty($_POST['inputSemester']) ? $_POST['inputSemester'] : '';
 $numClasses = !empty($_POST['inputNumClasses']) ? $_POST['inputNumClasses'] : 0;
 $numHours = !empty($_POST['inputNumHours']) ? $_POST['inputNumHours'] : 0;
 $courses= !empty($_POST['inputCourses']) ? $_POST['inputCourses'] : 'No Courses Selected';
-$timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No Times Selected';
+$timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : '';
 $notes = !empty($_POST['notes']) ? $_POST['notes'] :'';
 
 // Validation
 // Name
 if ( empty($name) ) {
-    $error['name'] = 'Please slect a name';
+    $errors['name'] = 'Please slect a name';
 }
 
 // Semester
 if ( empty($semester) ) {
-    $error['semester'] = 'Please select a semester';
+    $errors['semester'] = 'Please select a semester';
 }
 
 // Number of classes
 if ( empty($numClasses) ) {
-    $error['numCourses'] = 'Please enter the desired number of courses';
+    $errors['numCourses'] = 'Please enter the desired number of courses';
 }
 
 // Hours
 if ( empty($numHours) ) {
-    $error['hours'] = 'Please enter the desired number of hours';
+    $errors['hours'] = 'Please enter the desired number of hours';
 } else if ( !is_numeric($numHours) ) {
-    $error['hours'] = 'Hours must be a numeral';
+    $errors['hours'] = 'Hours must be a numeral';
 } else if ( $numHours <= 0 || $numHours >= 20 ) {
-    $error['hours'] = 'Hours must be greater than 0 and less than 20';
+    $errors['hours'] = 'Hours must be greater than 0 and less than 20';
 }
 
 // Course selections
@@ -54,11 +54,11 @@ if ( empty($numHours) ) {
 
 // Timeslots
 if ( empty($timeslots) ) {
-    $error['timeslots'] = 'Please select at least one preferred time';
+    $errors['timeslots'] = 'Please select at least one preferred time';
 }
 
 // If there are errors, return to the selection page
-if ( isset($error) ) {
+if ( isset($errors) ) {
     include('coursepicker.php');
     exit();
 }
