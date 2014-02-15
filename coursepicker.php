@@ -9,7 +9,7 @@
  */
 ?>
 <?php include './includes/head.php' ?>
-<form action="pickProcessor.php" method="post">
+<form action="processpicks.php" method="post">
 	<div class="row">
 	    <div class="small-12 columns">
 	    	<fieldset>
