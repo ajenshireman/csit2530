@@ -22,6 +22,46 @@ $numClasses = !empty($_POST['inputNumClasses']) ? $_POST['inputNumClasses'] : 0;
 $numHours = !empty($_POST['inputNumHours']) ? $_POST['inputNumHours'] : 0;
 $courses= !empty($_POST['inputCourses']) ? $_POST['inputCourses'] : 'No Courses Selected';
 $timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No Times Selected';
+$notes = !empty($_POST['notes']) ? $_POST['notes'] :'';
+
+// Validation
+// Name
+if ( empty($name) ) {
+    $error['name'] = 'Please slect a name';
+}
+
+// Semester
+if ( empty($semester) ) {
+    $error['semester'] = 'Please select a semester';
+}
+
+// Number of classes
+if ( empty($numClasses) ) {
+    $error['numCourses'] = 'Please enter the desired number of courses';
+}
+
+// Hours
+if ( empty($numHours) ) {
+    $error['hours'] = 'Please enter the desired number of hours';
+} else if ( !is_numeric($numHours) ) {
+    $error['hours'] = 'Hours must be a numeral';
+} else if ( $numHours <= 0 || $numHours >= 20 ) {
+    $error['hours'] = 'Hours must be greater than 0 and less than 20';
+}
+
+// Course selections
+// The form only allows selection of 5 courses
+
+// Timeslots
+if ( empty($timeslots) ) {
+    $error['timeslots'] = 'Please select at least one preferred time';
+}
+
+// If there are errors, return to the selection page
+if ( isset($error) ) {
+    include('coursepicker.php');
+    exit();
+}
 
 ?>
 <?php include './includes/head.php' ?>
@@ -61,4 +101,11 @@ $timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No T
     }
     ?>
 </div>
+<?php 
+if ( !empty($notes) ) {?>
+<div id="notes">
+    Notes: <br />
+    <?php echo $notes ?>
+</div>
+<?php } ?>
 <?php include './includes/foot.php' ?>
