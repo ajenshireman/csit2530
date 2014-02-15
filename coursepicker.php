@@ -16,7 +16,7 @@
 	    	    <legend>Instructor and Course Information</legend>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputName">Name
-	    		        <select name="inputName">
+	    		        <select name="inputName" required="required">
 	    		            <option value="David Brown">David Brown</option>
 	    		            <option value="Sharon Burlingame">Sharon Burlingame</option>
 	    		            <option value="Gitti Negahban">Gitti Negahban</option>
@@ -26,7 +26,7 @@
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputSemester">Semester
-	    		        <select name="inputSemester">
+	    		        <select name="inputSemester" required="required">
 	    		            <option value="Summer 2014">Spring 2014</option>
 	    		            <option value="Fall 2014">Fall 2014</option>
 	    		            <option value="Spring 2015">Spring 2015</option>
@@ -35,7 +35,7 @@
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputNumClases">Number of Courses
-	    		        <select name="inputNumClasses">
+	    		        <select name="inputNumClasses" required="required">
 	    		            <option value ="2">2</option>
 	    		            <option value ="3">3</option>
 	    		            <option value ="4">4</option>
@@ -44,7 +44,7 @@
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputNumHours">Number of Hours (1 to 20)
-	    		        <input type="number" min="1" max="20" name="inputNumHours" />
+	    		        <input type="number" min="1" max="20" name="inputNumHours" required="required"/>
 	    		    </label>
 	    		</div>
 	    	</fieldset>
@@ -60,7 +60,7 @@
 	            		<label for="inputCourses">Choice 1:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]">
+	            		<select name="inputCourses[]" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -78,7 +78,7 @@
 	            		<label for="inputCourses">Choice 2:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]">
+	            		<select name="inputCourses[]" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -96,7 +96,7 @@
 	            		<label for="inputCourses">Choice 3:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]">
+	            		<select name="inputCourses[]" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -114,7 +114,7 @@
 	            		<label for="inputCourses">Choice 4:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]">
+	            		<select name="inputCourses[]" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -129,7 +129,7 @@
 	            
 	            <div class="row">
 	            	<div class="small-12medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 5:</label>
+	            		<label for="inputCourses" required="required">Choice 5:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
