@@ -129,10 +129,10 @@
 	            
 	            <div class="row">
 	            	<div class="small-12medium-2 large-1 columns inline">
-	            		<label for="inputCourses" required="required">Choice 5:</label>
+	            		<label for="inputCourses">Choice 5:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]">
+	            		<select name="inputCourses[]"required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
