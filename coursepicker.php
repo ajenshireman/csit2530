@@ -43,8 +43,8 @@
 	    		    </label>
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumHours">Number of Hours
-	    		        <input type="text" name="inputNumHours" size="5" />
+	    		    <label for="inputNumHours">Number of Hours (1 to 15)
+	    		        <input type="number" min="1" max="15" name="inputNumHours" />
 	    		    </label>
 	    		</div>
 	    	</fieldset>
