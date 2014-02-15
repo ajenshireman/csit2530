@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     
     <!--  Foundation 5.1.1 html5 shim -->
-    <script src="/js/vendor/modernizr.js"></script>
+    <script src="js/vendor/modernizr.js"></script>
     
 </head>
 <body>
