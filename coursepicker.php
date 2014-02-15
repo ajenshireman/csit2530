@@ -153,22 +153,22 @@
 	    	<fieldset>
 	    	    <legend>Preferred Times (Select at least 1)</legend>
 	    		<div class="small-12 columns">
-	    			<div class="small-6 medium-3 columns">
+	    			<div class="small-6 medium-4 large-3 columns">
 	    				<input type="checkbox" name="inputTimeslots[]" value="8:30-11:30"><label for="">8:30-11:30</label>
 	    			</div>
-	    			<div class="small-6 medium-3 columns">
+	    			<div class="small-6 medium-4 large-3 columns">
 	    				<input type="checkbox" name="inputTimeslots[]" value="9:30-11:30"><label for="">9:30-11:30</label>
 	    			</div>
-	    			<div class="small-6 medium-3 columns">
+	    			<div class="small-6 medium-4 large-3 columns">
 	    				<input type="checkbox" name="inputTimeslots[]" value="1:00-4:00"><label for="">1:00-4:00</label>
 	    			</div>
-	    			<div class="small-6 medium-3 columns">
+	    			<div class="small-6 medium-4 large-3 columns">
 	    				<input type="checkbox" name="inputTimeslots[]" value="4:00-6:00"><label for="">4:00-6:00</label>
 	    			</div>
-	    			<div class="small-6 medium-3 columns">
+	    			<div class="small-6 medium-4 large-3 columns">
 	    				<input type="checkbox" name="inputTimeslots[]" value="6:15-9:15"><label for="">6:15-9:15</label>
 	    			</div>
-	    			<div class="small-6 medium-3 columns end">
+	    			<div class="small-6 medium-4 large-3 columns end">
 	    				<input type="checkbox" name="inputTimeslots[]" value="No Fridays"><label for="">No Fridays</label>
 	    			</div>
 	    		</div>
@@ -186,7 +186,7 @@
 	<div class="row">
 	    <div class="small-12 columns">
 	        <button class="tiny" type="submit" name="btnSubmit">Submit</button>
-	        <button class="tiny" type="submit" name="btnClear">Cancel</button>
+	        <button class="tiny" type="submit" id="btnClear" name="btnClear">Cancel</button>
 	    </div>
 	</div>
 </form>
