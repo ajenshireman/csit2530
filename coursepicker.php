@@ -56,10 +56,10 @@
 			    <legend>Desired Courses</legend>
 			    
 	            <div class="row">
-	            	<div class="small-12 medium-3 columns inline">
+	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 1:</label>
 	            	</div>
-	            	<div class="small-12 medium-9 columns">
+	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
@@ -74,10 +74,10 @@
 	            </div>
 	            
 	            <div class="row">
-	            	<div class="small-12 medium-3 columns inline">
+	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 2:</label>
 	            	</div>
-	            	<div class="small-12 medium-9 columns">
+	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
@@ -92,10 +92,10 @@
 	            </div>
 	            
 	            <div class="row">
-	            	<div class="small-12 medium-3 columns inline">
+	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 3:</label>
 	            	</div>
-	            	<div class="small-12 medium-9 columns">
+	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
@@ -110,10 +110,10 @@
 	            </div>
 	            
 	            <div class="row">
-	            	<div class="small-12 medium-3 columns inline">
+	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 4:</label>
 	            	</div>
-	            	<div class="small-12 medium-9 columns">
+	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
@@ -128,10 +128,10 @@
 	            </div>
 	            
 	            <div class="row">
-	            	<div class="small-12 medium-3 columns inline">
+	            	<div class="small-12medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 5:</label>
 	            	</div>
-	            	<div class="small-12 medium-9 columns">
+	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
