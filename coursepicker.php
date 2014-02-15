@@ -176,6 +176,14 @@
 	    </div>
 	</div>
 	<div class="row">
+        <div class="small-12 columns">
+            <fieldset>
+                <legend>Notes</legend>
+                <textarea name="notes"></textarea>
+            </fieldset>
+        </div>
+    </div>
+	<div class="row">
 	    <div class="small-12 columns">
 	        <button class="tiny" type="submit" name="btnSubmit">Submit</button>
 	        <button class="tiny" type="submit" name="btnClear">Cancel</button>
