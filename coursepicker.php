@@ -54,8 +54,8 @@ if ( isset($errors) ) {
 	    		    </label>
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumHours">Number of Hours (1 to 20)
-	    		        <input type="number" min="1" max="20" name="inputNumHours" required="required" />
+	    		    <label for="inputNumHours">Number of Hours (1 to 19)
+	    		        <input type="number" min="1" max="19" name="inputNumHours" required="required" />
 	    		    </label>
 	    		</div>
 	    	</fieldset>
