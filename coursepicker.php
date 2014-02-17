@@ -139,7 +139,7 @@ if ( isset($errors) ) {
 	            </div>
 	            
 	            <div class="row">
-	            	<div class="small-12medium-2 large-1 columns inline">
+	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses">Choice 5:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
