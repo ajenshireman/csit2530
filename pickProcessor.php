@@ -24,7 +24,7 @@ $courses= !empty($_POST['inputCourses']) ? $_POST['inputCourses'] : 'No Courses 
 $timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No Times Selected';
 
 ?>
-<?php include './includes/head.php' ?>
+<?php require './includes/head.php' ?>
 <div id="name">
     Name: <?php echo $name ?>
 </div>
@@ -61,4 +61,4 @@ $timeslots = !empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : 'No T
     }
     ?>
 </div>
-<?php include './includes/foot.php' ?>
+<?php require './includes/foot.php' ?>

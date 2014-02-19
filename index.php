@@ -1,4 +1,4 @@
-<?php include './includes/head.php' ?>
+<?php require './includes/head.php' ?>
 <ul>
     <li><a href="display_phpinfo.php">phpinfo()</a></li>
     <li><a href="orderform.html">Lab 2 Part A</a></li>
@@ -15,4 +15,4 @@
         </ul>
     </li>
 </ul>
-<?php include './includes/foot.php' ?>
+<?php require './includes/foot.php' ?>

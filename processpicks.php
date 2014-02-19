@@ -64,7 +64,7 @@ if ( isset($errors) ) {
 }
 
 ?>
-<?php include './includes/head.php' ?>
+<?php require './includes/head.php' ?>
 <div id="name">
     Name: <?php echo $name ?>
 </div>
@@ -108,4 +108,4 @@ if ( !empty($notes) ) {?>
     <?php echo $notes ?>
 </div>
 <?php } ?>
-<?php include './includes/foot.php' ?>
+<?php require './includes/foot.php' ?>

@@ -8,7 +8,7 @@
  * Refinement of form from lab2
  */
 ?>
-<?php include './includes/head.php' ?>
+<?php require './includes/head.php' ?>
 <?php 
 if ( isset($errors) ) { 
     $errorMsg = '';
@@ -201,4 +201,4 @@ if ( isset($errors) ) {
 	    </div>
 	</div>
 </form>
-<?php include './includes/foot.php' ?>
+<?php require './includes/foot.php' ?>
