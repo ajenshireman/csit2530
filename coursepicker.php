@@ -54,7 +54,7 @@ if ( isset($errors) ) {
 	    		    </label>
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumHours">Number of Hours (1 to 19)
+	    		    <label for="inputNumHours">Number of Load Hours (1 to 19)
 	    		        <input type="number" min="1" max="19" name="inputNumHours" id="inputNumHours" required="required" />
 	    		    </label>
 	    		</div>
