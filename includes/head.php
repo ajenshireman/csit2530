@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     
     <!-- Foundation 5.1.1 -->
-    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/foundation.css" />
     
     <!-- custom styles -->
     <link rel="stylesheet" href="css/styles.css" />
