@@ -177,16 +177,16 @@ if ( isset($errors) ) {
     				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots2" value="9:30-11:30"><label for="inputTimeslots2">9:30-11:30</label>
     			</div>
     			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots3" value="1:00-4:00"><label for="inputTimeslots3">1:00-4:00</label>
+    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots3" value="1:00-4:00"><label for="inputTimeslots3">1:00-4:00</label>
     			</div>
     			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots4" value="4:00-6:00"><label for="inputTimeslots4">4:00-6:00</label>
+    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots4" value="4:00-6:00"><label for="inputTimeslots4">4:00-6:00</label>
     			</div>
     			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots5" value="6:15-9:15"><label for="inputTimeslots5">6:15-9:15</label>
+    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots5" value="6:15-9:15"><label for="inputTimeslots5">6:15-9:15</label>
     			</div>
     			<div class="small-6 medium-4 large-3 columns end">
-    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots6" value="No Fridays"><label for="inputTimeslots6">No Fridays</label>
+    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots6" value="No Fridays"><label for="inputTimeslots6">No Fridays</label>
     			</div>
 	    		
 	    	</fieldset>
