@@ -27,7 +27,7 @@ if ( isset($errors) ) {
 	    	    <legend>Instructor and Course Information</legend>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputName">Name
-	    		        <select name="inputName" required="required">
+	    		        <select name="inputName" id="inputName" required="required">
 	    		            <option value="David Brown">David Brown</option>
 	    		            <option value="Sharon Burlingame">Sharon Burlingame</option>
 	    		            <option value="Gitti Negahban">Gitti Negahban</option>
@@ -37,7 +37,7 @@ if ( isset($errors) ) {
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputSemester">Semester
-	    		        <select name="inputSemester" required="required">
+	    		        <select name="inputSemester" id="inputSemester" required="required">
 	    		            <option value="Summer 2014">Spring 2014</option>
 	    		            <option value="Fall 2014">Fall 2014</option>
 	    		            <option value="Spring 2015">Spring 2015</option>
@@ -45,8 +45,8 @@ if ( isset($errors) ) {
 	    		    </label>
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumClases">Number of Courses
-	    		        <select name="inputNumClasses" required="required">
+	    		    <label for="inputNumClasses">Number of Courses
+	    		        <select name="inputNumClasses" id="inputNumClasses" required="required">
 	    		            <option value ="2">2</option>
 	    		            <option value ="3">3</option>
 	    		            <option value ="4">4</option>
@@ -55,7 +55,7 @@ if ( isset($errors) ) {
 	    		</div>
 	    		<div class="small-12 medium-6 large-3 columns">
 	    		    <label for="inputNumHours">Number of Hours (1 to 19)
-	    		        <input type="number" min="1" max="19" name="inputNumHours" required="required" />
+	    		        <input type="number" min="1" max="19" name="inputNumHours" id="inputNumHours" required="required" />
 	    		    </label>
 	    		</div>
 	    	</fieldset>
@@ -68,10 +68,10 @@ if ( isset($errors) ) {
 			    
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 1:</label>
+	            		<label for="inputCourses1">Choice 1:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" required="required">
+	            		<select name="inputCourses[]" id="inputCourses1" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -86,10 +86,10 @@ if ( isset($errors) ) {
 	            
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 2:</label>
+	            		<label for="inputCourses2">Choice 2:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" required="required">
+	            		<select name="inputCourses[]" id="inputCourses2" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -104,10 +104,10 @@ if ( isset($errors) ) {
 	            
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 3:</label>
+	            		<label for="inputCourses3">Choice 3:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" required="required">
+	            		<select name="inputCourses[]" id="inputCourses3" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -122,10 +122,10 @@ if ( isset($errors) ) {
 	            
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 4:</label>
+	            		<label for="inputCourses4">Choice 4:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" required="required">
+	            		<select name="inputCourses[]" id="inputCourses4" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -140,10 +140,10 @@ if ( isset($errors) ) {
 	            
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses">Choice 5:</label>
+	            		<label for="inputCourses5">Choice 5:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]"required="required">
+	            		<select name="inputCourses[]"  id="inputCourses5" required="required">
 	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
 	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
 	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
@@ -165,22 +165,22 @@ if ( isset($errors) ) {
 	    	    <legend>Preferred Times (Select at least 1)</legend>
 	    		<div class="small-12 columns">
 	    			<div class="small-6 medium-4 large-3 columns">
-	    				<input type="checkbox" name="inputTimeslots[]" value="8:30-11:30"><label for="">8:30-11:30</label>
+	    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots1" value="8:30-11:30"><label for="inputTimeslots1">8:30-11:30</label>
 	    			</div>
 	    			<div class="small-6 medium-4 large-3 columns">
-	    				<input type="checkbox" name="inputTimeslots[]" value="9:30-11:30"><label for="">9:30-11:30</label>
+	    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots2" value="9:30-11:30"><label for="inputTimeslots2">9:30-11:30</label>
 	    			</div>
 	    			<div class="small-6 medium-4 large-3 columns">
-	    				<input type="checkbox" name="inputTimeslots[]" value="1:00-4:00"><label for="">1:00-4:00</label>
+	    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots3" value="1:00-4:00"><label for="inputTimeslots3">1:00-4:00</label>
 	    			</div>
 	    			<div class="small-6 medium-4 large-3 columns">
-	    				<input type="checkbox" name="inputTimeslots[]" value="4:00-6:00"><label for="">4:00-6:00</label>
+	    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots4" value="4:00-6:00"><label for="inputTimeslots4">4:00-6:00</label>
 	    			</div>
 	    			<div class="small-6 medium-4 large-3 columns">
-	    				<input type="checkbox" name="inputTimeslots[]" value="6:15-9:15"><label for="">6:15-9:15</label>
+	    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots5" value="6:15-9:15"><label for="inputTimeslots5">6:15-9:15</label>
 	    			</div>
 	    			<div class="small-6 medium-4 large-3 columns end">
-	    				<input type="checkbox" name="inputTimeslots[]" value="No Fridays"><label for="">No Fridays</label>
+	    				<input type="checkbox" name="inputTimeslots[]"  id="inputTimeslots6" value="No Fridays"><label for="inputTimeslots6">No Fridays</label>
 	    			</div>
 	    		</div>
 	    	</fieldset>
