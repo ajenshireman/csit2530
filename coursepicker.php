@@ -1,9 +1,9 @@
 <?php
 /**
- * COURSEPICKER.php
+ * coursepicker.php
  * Ajen Shireman
  * CSIT 2530 Lab3 - PartB
- * 14 February 2014
+ * 19 February 2014
  * 
  * Refinement of form from lab2
  */

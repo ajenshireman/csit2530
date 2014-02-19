@@ -1,9 +1,9 @@
 <?php
 /**
- * pickProcessor.php
+ * processpicks.php
  * Ajen Shireman
- * CSIT 2530 Lab2 - PartB
- * 31 January 2014
+ * CSIT 2530 Lab3 - PartB
+ * 19 February 2014
  * 
  * This just echos back the choices from pickList.php
  */
