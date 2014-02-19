@@ -81,9 +81,11 @@ if ( isset($errors) ) {
     Preferred Courses: <br />
     <?php 
     if ( is_array($courses) ) {
+        $p = 1;
         foreach ( $courses as $course ) {
-            echo "$course<br />";
+            echo "Choice $p: $course<br />";
         }
+        p++;
     } else {
         echo $courses;
     }
