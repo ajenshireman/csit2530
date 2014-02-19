@@ -84,8 +84,8 @@ if ( isset($errors) ) {
         $p = 1;
         foreach ( $courses as $course ) {
             echo "Choice $p: $course<br />";
+            $p++;
         }
-        $p++;
     } else {
         echo $courses;
     }
