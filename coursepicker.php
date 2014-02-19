@@ -66,6 +66,12 @@ if ( isset($errors) ) {
 			<fieldset>
 			    <legend>Desired Courses</legend>
 			    
+			    <div class="row">
+			    	<div class="small-12 columns">
+			    		<h6>Please select 5 courses in order from most to least desired</h6>
+			    	</div>
+			    </div>
+			    
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
 	            		<label for="inputCourses1">Choice 1:</label>
