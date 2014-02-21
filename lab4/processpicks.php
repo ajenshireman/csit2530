@@ -6,8 +6,12 @@
  * 21 February 2014
  * 
  * This just echos back the choices from pickList.php
- * No changes since lab3
+ * 
+ * 21 February 2014
+ *  Added pageTitle
  */
+
+$pageTitle = 'CSIT Faculty Course Selection - Results';
 
 // If the form hasn't been submitted, send the user back to the index
 // TODO: put this all in one page

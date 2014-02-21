@@ -9,7 +9,10 @@
  * 
  * 21 February 2014
  *  moved course options to separate included file
+ *  added pageTitle
  */
+
+$pageTitle = 'CSIT Faculty Course Selection';
 ?>
 <?php require './includes/head.php' ?>
 <?php 
