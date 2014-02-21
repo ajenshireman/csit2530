@@ -27,35 +27,3 @@
 	margin-top: 0.25rem;
 	padding-left: 1.6rem;
 }
-
-.clear {
-    clear: both;
-}
-
-.block {
-    display: block;
-}
-
-.inline {
-    display: inline;
-}
-
-.row:after {
-    clear: both;
-}
-
-.col-6 {
-    width: 50%;
-    position: relative;
-    float: left;
-}
-
-.form-group {
-    display: block;
-    margin: 5px;
-}
-
-.form-inline,
-.form-group.form-inline {
-    display: inline;
-}
