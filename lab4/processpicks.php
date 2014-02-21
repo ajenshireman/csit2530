@@ -2,10 +2,11 @@
 /**
  * processpicks.php
  * Ajen Shireman
- * CSIT 2530 Lab3 - PartB
- * 19 February 2014
+ * CSIT 2530 Lab4
+ * 21 February 2014
  * 
  * This just echos back the choices from pickList.php
+ * No changes since lab3
  */
 
 // If the form hasn't been submitted, send the user back to the index

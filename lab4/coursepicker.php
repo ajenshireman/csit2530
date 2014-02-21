@@ -2,10 +2,13 @@
 /**
  * coursepicker.php
  * Ajen Shireman
- * CSIT 2530 Lab3 - PartB
- * 19 February 2014
+ * CSIT 2530 Lab4
+ * 21 February 2014
  * 
- * Refinement of form from lab2
+ * Refinement of form from lab3
+ * 
+ * 21 February 2014
+ *  moved course options to separate included file
  */
 ?>
 <?php require './includes/head.php' ?>

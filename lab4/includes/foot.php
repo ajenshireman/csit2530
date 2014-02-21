@@ -4,6 +4,10 @@
  * Author: Ajen Shireman
  * 
  * common EOF for all pages
+ * 
+ * 21 February 2014
+ *  Added div.wrap around main content for sticky foot at bottom of the page
+ *  Added copyright and address info to the footer
  */
 ?>
 

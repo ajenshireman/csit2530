@@ -4,6 +4,10 @@
  * Author: Ajen Shireman
  *
  * Common <head> for all pages
+ * 
+ * 21 February 2014:
+ *  Added div.wrap around main content for sticky foot at bottom of the page
+ *  Added pscc logo and h1 with CSIT Course Seection
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
