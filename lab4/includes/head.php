@@ -40,3 +40,12 @@
 <body>
 <!-- wrapper for page content -->
 <div id="wrap">
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <img src="./img/pscc_logo.gif" />
+    </div>
+    <div class="small-12 medium-8 columns">
+        <h1 >CSIT Faculty Course Selection</h1>
+    </div>
+</div>
