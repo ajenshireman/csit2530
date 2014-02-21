@@ -78,14 +78,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses1" required="required">
-	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
-	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
-	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
-	            		    <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
-	            		    <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
-	            		    <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
-	            		    <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
-	            		    <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
+	            		    <?php include('includes/courseOptions.php') ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -96,14 +89,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses2" required="required">
-	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
-	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
-	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
-	            		    <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
-	            		    <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
-	            		    <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
-	            		    <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
-	            		    <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
+	            		    <?php include('includes/courseOptions.php') ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -114,14 +100,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses3" required="required">
-	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
-	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
-	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
-	            		    <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
-	            		    <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
-	            		    <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
-	            		    <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
-	            		    <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
+	            		    <?php include('includes/courseOptions.php') ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -132,14 +111,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses4" required="required">
-	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
-	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
-	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
-	            		    <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
-	            		    <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
-	            		    <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
-	            		    <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
-	            		    <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
+	            		    <?php include('includes/courseOptions.php') ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -150,14 +122,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]"  id="inputCourses5" required="required">
-	            		    <option value="CSIT 1510 - Introduction to Programming Using Java">CSIT 1510 - Introduction to Programming Using Java</option>
-	            		    <option value="CSIT 1520 - Advanced Java Programming">CSIT 1520 - Advanced Java Programming</option>
-	            		    <option value="CSIT 1810 - Introduction to Database Design">CSIT 1810 - Introduction to Database Design</option>
-	            		    <option value="CSIT 2230 - Introduction to Internet Software Development">CSIT 2230 - Introduction to Internet Software Development</option>
-	            		    <option value="CSIT 2530 - Web Database Application Development">CSIT 2530 - Web Database Application Development</option>
-	            		    <option value="CSIT 2860 - Machine Organization">CSIT 2860 - Machine Organization</option>
-	            		    <option value="CSIT 2280 - Introduction to Scripting Languages">CSIT 2290 - Introduction to Scripting Languages</option>
-	            		    <option value="CSIT 2520 - SQL Applications with Oracle">CSIT 2520 - SQL Applications with Oracle</option>
+	            		    <?php include('includes/courseOptions.php') ?>
 	            		</select>
 	            	</div>
 	            </div>
