@@ -87,7 +87,7 @@ if ( isset($errors) ) {
 				    if ( is_array($courses) ) {
 				        $p = 1;
 				        foreach ( $courses as $course ) {
-				            echo "Choice $p: $course<br />";
+				            echo "Choice $p: $course<br />\n";
 				            $p++;
 				        }
 				    } else {
@@ -113,9 +113,10 @@ if ( isset($errors) ) {
 				    Notes: <br />
 				    <?php echo $notes ?>
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
 </div>
-<?php } ?>
+
 <?php require './includes/foot.php' ?>
