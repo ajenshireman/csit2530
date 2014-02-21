@@ -38,3 +38,5 @@
     
 </head>
 <body>
+<!-- wrapper for page content -->
+<div id="wrap">

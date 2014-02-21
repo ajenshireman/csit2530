@@ -7,8 +7,10 @@
  */
 ?>
 
-<footer>
+</div> <!-- /wrapper -->
 
+<footer id="footer">
+    
 </footer>
 
 <!--  javaScript -->
