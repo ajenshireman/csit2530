@@ -31,38 +31,40 @@ if ( isset($errors) ) {
 	    <div class="small-12 columns">
 	    	<fieldset>
 	    	    <legend>Instructor and Course Information</legend>
-	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputName">Name
-	    		        <select name="inputName" id="inputName" required="required">
-	    		            <option value="David Brown">David Brown</option>
-	    		            <option value="Sharon Burlingame">Sharon Burlingame</option>
-	    		            <option value="Gitti Negahban">Gitti Negahban</option>
-	    		            <option value="Andrey Puretskiy">Andrey Puretskiy</option>
-	    		        </select>
-	    		    </label>
-	    		</div>
-	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputSemester">Semester
-	    		        <select name="inputSemester" id="inputSemester" required="required">
-	    		            <option value="Summer 2014">Spring 2014</option>
-	    		            <option value="Fall 2014">Fall 2014</option>
-	    		            <option value="Spring 2015">Spring 2015</option>
-	    		        </select>
-	    		    </label>
-	    		</div>
-	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumClasses">Number of Courses
-	    		        <select name="inputNumClasses" id="inputNumClasses" required="required">
-	    		            <option value ="2">2</option>
-	    		            <option value ="3">3</option>
-	    		            <option value ="4">4</option>
-	    		        </select>
-	    		    </label>
-	    		</div>
-	    		<div class="small-12 medium-6 large-3 columns">
-	    		    <label for="inputNumHours">Number of Load Hours (1 to 19)
-	    		        <input type="number" min="1" max="19" name="inputNumHours" id="inputNumHours" required="required" />
-	    		    </label>
+	    		<div class="row">
+	    			<div class="small-12 medium-6 large-3 columns">
+	    			    <label for="inputName">Name
+	    			        <select name="inputName" id="inputName" required="required">
+	    			            <option value="David Brown">David Brown</option>
+	    			            <option value="Sharon Burlingame">Sharon Burlingame</option>
+	    			            <option value="Gitti Negahban">Gitti Negahban</option>
+	    			            <option value="Andrey Puretskiy">Andrey Puretskiy</option>
+	    			        </select>
+	    			    </label>
+	    			</div>
+	    			<div class="small-12 medium-6 large-3 columns">
+	    			    <label for="inputSemester">Semester
+	    			        <select name="inputSemester" id="inputSemester" required="required">
+	    			            <option value="Summer 2014">Spring 2014</option>
+	    			            <option value="Fall 2014">Fall 2014</option>
+	    			            <option value="Spring 2015">Spring 2015</option>
+	    			        </select>
+	    			    </label>
+	    			</div>
+	    			<div class="small-12 medium-6 large-3 columns">
+	    			    <label for="inputNumClasses">Number of Courses
+	    			        <select name="inputNumClasses" id="inputNumClasses" required="required">
+	    			            <option value ="2">2</option>
+	    			            <option value ="3">3</option>
+	    			            <option value ="4">4</option>
+	    			        </select>
+	    			    </label>
+	    			</div>
+	    			<div class="small-12 medium-6 large-3 columns">
+	    			    <label for="inputNumHours">Number of Load Hours (1 to 19)
+	    			        <input type="number" min="1" max="19" name="inputNumHours" id="inputNumHours" required="required" />
+	    			    </label>
+	    			</div>
 	    		</div>
 	    	</fieldset>
 	    </div>
