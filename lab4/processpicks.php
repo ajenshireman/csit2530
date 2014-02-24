@@ -42,7 +42,7 @@ if ( empty($semester) ) {
 
 // Number of classes
 if ( empty($numClasses) ) {
-    $errors['numCourses'] = 'Please enter the desired number of courses';
+    $errors['numCourses'] = 'Please select the desired number of courses';
 }
 
 // Hours
