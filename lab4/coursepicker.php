@@ -26,7 +26,7 @@ if ( isset($errors) ) {
     alert('<?php echo $errorMsg ?>');
 </script>
 <?php } ?>
-<form action="processpicks.php" method="post">
+<form id="pickForm" action="processpicks.php" method="post">
 	<div class="row">
 	    <div class="small-12 columns">
 	    	<fieldset>
