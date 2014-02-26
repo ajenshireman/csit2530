@@ -10,12 +10,12 @@
  */
 
 /**
- * Since we're puing from a file for now, define it at the beinning
+ * Since we're putting from a file for now, define it at the beginning
  */
 define('COURSE_LIST', '../datafiles/CSIT2014FallOffering.csv' );
 
 /**
- * Get the courses availble
+ * Get the available courses
  * 
  * For now pulls the information from ../datafiles/CSIT2014FallOffering.csv
  * 
