@@ -1,33 +1,29 @@
 @CHARSET "ISO-8859-1";
 
-.clear {
-    clear: both;
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by its height */
+    margin: 0 auto -3rem;
+    /* Pad bottom by footer height */
+    padding: 0 0 3rem;
 }
 
-.block {
-    display: block;
+#footer {
+	min-height: 3rem;
+	background-color: #f0f0f0;
 }
 
-.inline {
-    display: inline;
+#footer .copyright {
+	color: #909090;
+	font-size: 0.75rem;
+	margin-top: 0.3rem;
 }
 
-.row:after {
-    clear: both;
-}
-
-.col-6 {
-    width: 50%;
-    position: relative;
-    float: left;
-}
-
-.form-group {
-    display: block;
-    margin: 5px;
-}
-
-.form-inline,
-.form-group.form-inline {
-    display: inline;
+#footer .address {
+	color: #909090;
+	font-size: 0.6rem;
+	margin-top: 0.25rem;
+	padding-left: 1.6rem;
 }

@@ -2,11 +2,16 @@
 /**
  * processpicks.php
  * Ajen Shireman
- * CSIT 2530 Lab3 - PartB
- * 19 February 2014
+ * CSIT 2530 Lab4
+ * 21 February 2014
  * 
  * This just echos back the choices from pickList.php
+ * 
+ * 21 February 2014
+ *  Added pageTitle
  */
+
+$pageTitle = 'CSIT Faculty Course Selection - Results';
 
 // If the form hasn't been submitted, send the user back to the index
 // TODO: put this all in one page
@@ -37,7 +42,7 @@ if ( empty($semester) ) {
 
 // Number of classes
 if ( empty($numClasses) ) {
-    $errors['numCourses'] = 'Please enter the desired number of courses';
+    $errors['numCourses'] = 'Please select the desired number of courses';
 }
 
 // Hours
@@ -87,7 +92,7 @@ if ( isset($errors) ) {
 				    if ( is_array($courses) ) {
 				        $p = 1;
 				        foreach ( $courses as $course ) {
-				            echo "Choice $p: $course<br />";
+				            echo "Choice $p: $course<br />\n";
 				            $p++;
 				        }
 				    } else {
@@ -113,9 +118,10 @@ if ( isset($errors) ) {
 				    Notes: <br />
 				    <?php echo $notes ?>
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>
 </div>
-<?php } ?>
+
 <?php require './includes/foot.php' ?>

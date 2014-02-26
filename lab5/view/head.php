@@ -4,6 +4,10 @@
  * Author: Ajen Shireman
  *
  * Common <head> for all pages
+ * 
+ * 21 February 2014:
+ *  Added div.wrap around main content for sticky foot at bottom of the page
+ *  Added pscc logo and h1 with CSIT Course Seection
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -38,3 +42,14 @@
     
 </head>
 <body>
+<!-- wrapper for page content -->
+<div id="wrap">
+
+<div class="row">
+    <div class="small-12 medium-4 columns">
+        <img src="./img/pscc_logo.gif" />
+    </div>
+    <div class="small-12 medium-8 columns">
+        <h1 >CSIT Faculty Course Selection</h1>
+    </div>
+</div>
