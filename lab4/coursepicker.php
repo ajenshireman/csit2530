@@ -86,7 +86,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses1" required="required">
-	            		    <?php include('includes/courseOptions.php') ?>
+	            		    <?php include 'includes/courseOptions.php'  ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -97,7 +97,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses2" required="required">
-	            		    <?php include('includes/courseOptions.php') ?>
+	            		    <?php include 'includes/courseOptions.php'  ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -108,7 +108,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses3" required="required">
-	            		    <?php include('includes/courseOptions.php') ?>
+	            		    <?php include 'includes/courseOptions.php'  ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -119,7 +119,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses4" required="required">
-	            		    <?php include('includes/courseOptions.php') ?>
+	            		    <?php include 'includes/courseOptions.php'  ?>
 	            		</select>
 	            	</div>
 	            </div>
@@ -130,7 +130,7 @@ if ( isset($errors) ) {
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]"  id="inputCourses5" required="required">
-	            		    <?php include('includes/courseOptions.php') ?>
+	            		    <?php include 'includes/courseOptions.php'  ?>
 	            		</select>
 	            	</div>
 	            </div>
