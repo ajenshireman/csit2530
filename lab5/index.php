@@ -7,6 +7,11 @@
  * Controller for course picker app
  */
 
+define('EOL', PHP_EOL);
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 require './model/courses_db.php';       
 
 if ( isset($_POST['action']) ) {
@@ -19,11 +24,8 @@ if ( isset($_POST['action']) ) {
 
 if ( $action == 'display_selection_form' ) {
     unset($_POST);
-    
     // Show the form to the user
-    include './coursepicker.php';
-} else if ( $action = 'courseSelectionSubmit' ) {
-    include './processpicks.php';
+    require './coursepicker.php';
+} else if ( $action == 'courseSelectionSubmit' ) {
+    require './processpicks.php';
 }
-
-?>
