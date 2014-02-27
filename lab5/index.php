@@ -21,9 +21,9 @@ if ( $action == 'display_selection_form' ) {
     unset($_POST);
     
     // Show the form to the user
-    include './coursepicker.php';
+    require './coursepicker.php';
 } else if ( $action = 'courseSelectionSubmit' ) {
-    include './processpicks.php';
+    require './processpicks.php';
 }
 
 ?>
