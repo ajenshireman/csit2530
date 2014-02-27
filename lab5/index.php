@@ -7,7 +7,8 @@
  * Controller for course picker app
  */
 
-require './model/courses_db.php';       
+require './model/courses_db.php';  
+require './model/validation.php';     
 
 if ( isset($_POST['action']) ) {
     $action = $_POST['action'];
