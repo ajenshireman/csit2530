@@ -8,6 +8,9 @@
  * 21 February 2014:
  *  Added div.wrap around main content for sticky foot at bottom of the page
  *  Added pscc logo and h1 with CSIT Course Seection
+ *  
+ *  26 February 2014:
+ *   Moved the title code to make prettier html output
  */
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -24,7 +27,7 @@
             } else {
                 print 'CSIT 2530 - Ajen Shireman';
             }
-        ?></title>
+            ?></title>
     
     <!-- normalize.css  -->
     <link rel="stylesheet" href="css/normalize.css" />
