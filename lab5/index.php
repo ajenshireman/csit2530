@@ -27,13 +27,13 @@ if ( $action == 'display_selection_form' ) {
     unset($_POST);
     
     // Show the form to the user
-    require './coursepicker.php';
+    require './courseSelectionForm.php';
 } else if ( $action = 'courseSelectionSubmit' ) {
     $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
-        require './coursepicker.php';
+        require './courseSelectionForm.php';
     } else {
-        require './processpicks.php';
+        require './courseSelectionConfirmationForm.php';
     }
 }
 
