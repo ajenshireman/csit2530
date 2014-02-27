@@ -15,5 +15,6 @@
         </ul>
     </li>
     <li><a href="lab4/coursepicker.php">Lab4</a></li>
+    <li><a href="lab5/">Lab5</a></li>
 </ul>
 <?php require './includes/foot.php' ?>
