@@ -14,7 +14,7 @@
 
 $pageTitle = 'CSIT Faculty Course Selection';
 ?>
-<?php require './view/head.php' ?>
+<?php require './includes/head.php' ?>
 <?php 
 if ( isset($errors) ) { 
     $errorMsg = '';
@@ -145,4 +145,4 @@ CLOSEDIV;
 	    </div>
 	</div>
 </form>
-<?php require './view/foot.php' ?>
+<?php require './includes/foot.php' ?>
