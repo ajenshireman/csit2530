@@ -13,13 +13,6 @@
 
 $pageTitle = 'CSIT Faculty Course Selection - Results';
 
-// If the form hasn't been submitted, send the user back to the index
-// TODO: put this all in one page
-if ( !isset($_POST['btnSubmit']) ) {
-    header("Location: index.php");
-    die();
-}
-
 // Gather post variables
 $name = !empty($_POST['inputName']) ? $_POST['inputName'] : '';
 $semester = !empty($_POST['inputSemester']) ? $_POST['inputSemester'] : '';
