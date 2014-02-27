@@ -80,60 +80,25 @@ if ( isset($errors) ) {
 			    	</div>
 			    </div>
 			    
+			    <?php 
+			    
+			    for ( $i = 1; $i <= 5; $i++ ) { 
+                    echo<<<OPENDIV
 	            <div class="row">
 	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses1">Choice 1:</label>
+	            		<label for="inputCourses$i">Choice $i:</label>
 	            	</div>
 	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" id="inputCourses1" required="required">
-	            		    <?php include 'includes/courseOptions.php'  ?>
+	            		<select name="inputCourses[]" id="inputCourses$i" required="required">
+OPENDIV;
+                    printCourseOptions();
+                    echo<<<CLOSEDIV
 	            		</select>
 	            	</div>
 	            </div>
-	            
-	            <div class="row">
-	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses2">Choice 2:</label>
-	            	</div>
-	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" id="inputCourses2" required="required">
-	            		    <?php include 'includes/courseOptions.php'  ?>
-	            		</select>
-	            	</div>
-	            </div>
-	            
-	            <div class="row">
-	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses3">Choice 3:</label>
-	            	</div>
-	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" id="inputCourses3" required="required">
-	            		    <?php include 'includes/courseOptions.php'  ?>
-	            		</select>
-	            	</div>
-	            </div>
-	            
-	            <div class="row">
-	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses4">Choice 4:</label>
-	            	</div>
-	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]" id="inputCourses4" required="required">
-	            		    <?php include 'includes/courseOptions.php'  ?>
-	            		</select>
-	            	</div>
-	            </div>
-	            
-	            <div class="row">
-	            	<div class="small-12 medium-2 large-1 columns inline">
-	            		<label for="inputCourses5">Choice 5:</label>
-	            	</div>
-	            	<div class="small-12 medium-10 large-11 columns">
-	            		<select name="inputCourses[]"  id="inputCourses5" required="required">
-	            		    <?php include 'includes/courseOptions.php'  ?>
-	            		</select>
-	            	</div>
-	            </div>
+CLOSEDIV;
+                }
+			    ?>
 	            
 			</fieldset>
 		</div>
