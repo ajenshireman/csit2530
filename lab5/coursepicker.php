@@ -26,7 +26,7 @@ if ( isset($errors) ) {
     alert('<?php echo $errorMsg ?>');
 </script>
 <?php } ?>
-<form id="pickForm" action="processpicks.php" method="post">
+<form id="courseSelectionForm" action="." method="post">
 	<div class="row">
 	    <div class="small-12 columns">
 	    	<fieldset>
@@ -139,9 +139,9 @@ CLOSEDIV;
         </div>
     </div>
 	<div class="row">
-	    <div class="small-12 columns">
-	        <button class="tiny" type="submit" name="btnSubmit">Submit</button>
-	        <button class="tiny" type="submit" id="btnClear" name="btnClear">Cancel</button>
+        <div class="small-12 columns">
+            <button class="tiny" type="submit" value="courseSelectionSubmit">Submit</button>
+            <button class="tiny" type="reset" value="courseSelectionReset">Reset</button>
 	    </div>
 	</div>
 </form>
