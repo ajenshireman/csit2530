@@ -15,10 +15,12 @@ $pageTitle = 'CSIT Faculty Course Selection - Results';
 
 // If the form hasn't been submitted, send the user back to the index
 // TODO: put this all in one page
+/* I'm dumb. The page is redirecting because I took this variable out
 if ( !isset($_POST['btnSubmit']) ) {
     header("Location: index.php");
     die();
 }
+*/
 
 // Gather post variables
 $name = !empty($_POST['inputName']) ? $_POST['inputName'] : '';
@@ -69,7 +71,7 @@ if ( isset($errors) ) {
 }
 
 ?>
-<?php require './/head.php' ?>
+<?php require './includes/head.php' ?>
 <div class="row">
 	<div class="small-12 columns">
 		<div class="panel callout">
@@ -124,4 +126,4 @@ if ( isset($errors) ) {
 	</div>
 </div>
 
-<?php require './/foot.php' ?>
+<?php require './includes/foot.php' ?>
