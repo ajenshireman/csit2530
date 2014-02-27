@@ -140,8 +140,8 @@ CLOSEDIV;
     </div>
 	<div class="row">
         <div class="small-12 columns">
-            <button class="tiny" type="submit" value="courseSelectionSubmit">Submit</button>
-            <button class="tiny" type="reset" value="courseSelectionReset">Reset</button>
+            <button class="tiny" type="submit" name="action" value="courseSelectionSubmit">Submit</button>
+            <button class="tiny" type="reset" name="action" value="courseSelectionReset">Reset</button>
 	    </div>
 	</div>
 </form>
