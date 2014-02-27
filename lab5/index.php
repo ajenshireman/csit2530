@@ -37,4 +37,3 @@ if ( $action == 'display_selection_form' ) {
     }
 }
 
-?>

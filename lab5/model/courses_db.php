@@ -74,5 +74,3 @@ function printCourses () {
     }
     print('</ul>');
 }
-
-?>
