@@ -16,13 +16,13 @@
 function validateCourseSelectionForm () {
     // Gather post variables
     $values = array (
-        'name' => !empty($_POST['inputName']) ? $_POST['inputName'] : '',
-        'semester' => !empty($_POST['inputSemester']) ? $_POST['inputSemester'] : '',
+        'name'       => !empty($_POST['inputName'])       ? $_POST['inputName']       : '',
+        'semester'   => !empty($_POST['inputSemester'])   ? $_POST['inputSemester']   : '',
         'numClasses' => !empty($_POST['inputNumClasses']) ? $_POST['inputNumClasses'] : 0,
-        'numHours' => !empty($_POST['inputNumHours']) ? $_POST['inputNumHours'] : 0,
-        'courses' => !empty($_POST['inputCourses']) ? $_POST['inputCourses'] : 'No Courses Selected',
-        'timeslots' =>!empty($_POST['inputTimeslots']) ? $_POST['inputTimeslots'] : '',
-        'notes' => !empty($_POST['notes']) ? $_POST['notes'] :''
+        'numHours'   => !empty($_POST['inputNumHours'])   ? $_POST['inputNumHours']   : 0,
+        'courses'    => !empty($_POST['inputCourses'])    ? $_POST['inputCourses']    : 'No Courses Selected',
+        'timeslots'  => !empty($_POST['inputTimeslots'])  ? $_POST['inputTimeslots']  : '',
+        'notes'      => !empty($_POST['notes'])           ? $_POST['notes']           : ''
     );
     
     // Validation
