@@ -69,7 +69,7 @@ if ( isset($errors) ) {
 }
 
 ?>
-<?php require './includes/head.php' ?>
+<?php require './/head.php' ?>
 <div class="row">
 	<div class="small-12 columns">
 		<div class="panel callout">
@@ -124,4 +124,4 @@ if ( isset($errors) ) {
 	</div>
 </div>
 
-<?php require './includes/foot.php' ?>
+<?php require './/foot.php' ?>
