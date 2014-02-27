@@ -12,9 +12,6 @@
  *  26 February 2014:
  *   Moved the title code to make prettier html output
  */
-
-require './model/courses_db.php';
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
