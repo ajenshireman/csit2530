@@ -60,6 +60,6 @@ function validateCourseSelectionForm () {
     
     return array(
         'values' => $values,
-        isset($errors) ? $errors : null
+        'errors' => isset($errors) ? $errors : null
     );
 }
