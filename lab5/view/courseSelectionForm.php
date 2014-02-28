@@ -20,9 +20,9 @@ $pageTitle = 'CSIT Faculty Course Selection';
 ?>
 <?php require './view/head.php' ?>
 <?php 
-if ( isset($errors) ) { 
+if ( isset($formVars['errors']) ) { 
     $errorMsg = '';
-    foreach ( $errors as $error ) {
+    foreach ( $formVars['errors'] as $error ) {
         $errorMsg.=$error.'\n';
     }
 ?>
