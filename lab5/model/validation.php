@@ -27,26 +27,26 @@ function validateCourseSelectionForm () {
     
     // Validation
     // Name
-    if ( empty($name) ) {
+    if ( empty($values['name']) ) {
         $errors['name'] = 'Please slect a name';
     }
     
     // Semester
-    if ( empty($semester) ) {
+    if ( empty($values['semester']) ) {
         $errors['semester'] = 'Please select a semester';
     }
     
     // Number of classes
-    if ( empty($numClasses) ) {
+    if ( empty($values['numClasses']) ) {
         $errors['numCourses'] = 'Please select the desired number of courses';
     }
     
     // Hours
-    if ( empty($numHours) ) {
+    if ( empty($values['numHours']) ) {
         $errors['hours'] = 'Please enter the desired number of hours';
-    } else if ( !is_numeric($numHours) ) {
+    } else if ( !is_numeric($values['numHours']) ) {
         $errors['hours'] = 'Hours must be a numeral';
-    } else if ( $numHours <= 0 || $numHours >= 20 ) {
+    } else if ( $values['numHours'] <= 0 || $values['numHours'] >= 20 ) {
         $errors['hours'] = 'Hours must be greater than 0 and less than 20';
     }
     
@@ -54,7 +54,7 @@ function validateCourseSelectionForm () {
     // The form only allows selection of 5 courses
     
     // Timeslots
-    if ( empty($timeslots) ) {
+    if ( empty($values['timeslots']) ) {
         $errors['timeslots'] = 'Please select at least one preferred time';
     }
     
