@@ -7,7 +7,7 @@
  * 
  * Contains buisiness logic for course selection app
  * Defines functions for accessing course information
- * 
+ * Defines fucions for vaidationg the selection form
  */
 
 /**
