@@ -1,10 +1,11 @@
 <?php
 /**
- * courses_db.php
+ * courseSelection.model.php
  * Ajen Shireman
  * CSIT 2530
  * Course Selection app
  * 
+ * Contains buisiness logic for course selection app
  * Defines functions for accessing course information
  * 
  */

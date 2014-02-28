@@ -12,7 +12,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require './model/courses_db.php';  
+require './model/courseSelection.model.php';  
 require './model/validation.php';     
 
 if ( isset($_POST['action']) ) {
