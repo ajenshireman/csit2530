@@ -28,11 +28,13 @@ if ( $action == 'display_selection_form' ) {
     // Show the form to the user
     require './view/courseSelectionForm.php';
 } else if ( $action = 'courseSelectionSubmit' ) {
+    // Validate selections
     $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
+        // If errors, show the selection form again
         require './view/courseSelectionForm.php';
     } else {
+        // If no errors show the confirmation page
         require './view/courseSelectionConfirmationForm.php';
     }
-}
-
+} 
