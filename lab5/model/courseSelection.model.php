@@ -46,7 +46,7 @@ function getCourses () {
 /**
  * print the available courses as a <option> list for a dropdown
  * 
- * gets he availabe courses from getCourses()
+ * gets the availabe courses from getCourses()
  * 
  * @return void
  */
