@@ -105,7 +105,7 @@ if ( isset($formVars['errors']) ) {
 	            	<div class="small-12 medium-10 large-11 columns">
 	            		<select name="inputCourses[]" id="inputCourses$i" required="required">
 OPENDIV;
-                    printCourseOptions();
+                    printCourseOptions($formVars['values']['courses'][$i-1]);
                     echo<<<CLOSEDIV
 	            		</select>
 	            	</div>

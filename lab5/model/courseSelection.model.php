@@ -48,14 +48,20 @@ function getCourses () {
  * 
  * gets the availabe courses from getCourses()
  * 
+ * @param array $selectedCourse
+ * 
  * @return void
  */
-function printCourseOptions () {
+function printCourseOptions ( $selectedCourse ) {
     $courses = getCourses();
     $options = '';
     foreach ( $courses as $course ) {
         $cinfo = "$course[0] $course[1] $course[2] - $course[3] - $course[4] $course[5]";
-        $options .= "<option value=\"$cinfo\">$cinfo</option>".PHP_EOL;
+        $options .= "<option value=\"$cinfo\"";
+        if ( $selectedCourse == $cinfo ) {
+            $options .= ' selected="selected"';
+        }
+        $options .= ">$cinfo</option>".PHP_EOL;
     }
     print $options;
 }
