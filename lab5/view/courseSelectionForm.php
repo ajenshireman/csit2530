@@ -31,6 +31,16 @@ if ( isset($formVars['errors']) ) {
 </script>
 <?php } ?>
 <form id="courseSelectionForm" action="." method="post">
+    <div class="row">
+        <div class="small-12 columns error">
+            <?php 
+            if ( isset($formVars['errors']) ) {
+                foreach ( $formVars['errors'] as $error ) {
+                    print("<p class=\"error\">{$error}</p>");
+                }
+            } ?>
+        </div>
+    </div>
 	<div class="row">
 	    <div class="small-12 columns">
 	    	<fieldset>
@@ -39,34 +49,34 @@ if ( isset($formVars['errors']) ) {
 	    			<div class="small-12 medium-6 large-3 columns">
 	    			    <label for="inputName">Name
 	    			        <select name="inputName" id="inputName" required="required">
-	    			            <option value="David Brown">David Brown</option>
-	    			            <option value="Sharon Burlingame">Sharon Burlingame</option>
-	    			            <option value="Gitti Negahban">Gitti Negahban</option>
-	    			            <option value="Andrey Puretskiy">Andrey Puretskiy</option>
+	    			            <option value="David Brown" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="David Brown"<?php } ?>>David Brown</option>
+	    			            <option value="Sharon Burlingame" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Sharon Burlingame"<?php } ?>>Sharon Burlingame</option>
+	    			            <option value="Gitti Negahban" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Gitti Negahban"<?php } ?>>Gitti Negahban</option>
+	    			            <option value="Andrey Puretskiy" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Andrey Puretskiy"<?php } ?>>Andrey Puretskiy</option>
 	    			        </select>
 	    			    </label>
 	    			</div>
 	    			<div class="small-12 medium-6 large-3 columns">
 	    			    <label for="inputSemester">Semester
 	    			        <select name="inputSemester" id="inputSemester" required="required">
-	    			            <option value="Summer 2014">Spring 2014</option>
-	    			            <option value="Fall 2014">Fall 2014</option>
-	    			            <option value="Spring 2015">Spring 2015</option>
+	    			            <option value="Summer 2014" <?php if ( $formVars['values']['semester'] == "Spring 2014" ) {?> selected="selected"<?php } ?>>Spring 2014</option>
+	    			            <option value="Fall 2014" <?php if ( $formVars['values']['semester'] == "Fall 2014" ) {?> selected="selected"<?php } ?>>Fall 2014</option>
+	    			            <option value="Spring 2015" <?php if ( $formVars['values']['semester'] == "Spring 2014" ) {?> selected="selected"<?php } ?>>Spring 2015</option>
 	    			        </select>
 	    			    </label>
 	    			</div>
 	    			<div class="small-12 medium-6 large-3 columns">
 	    			    <label for="inputNumClasses">Number of Courses
 	    			        <select name="inputNumClasses" id="inputNumClasses" required="required">
-	    			            <option value ="2">2</option>
-	    			            <option value ="3">3</option>
-	    			            <option value ="4">4</option>
+	    			            <option value ="2" <?php if ( $formVars['values']['numClasses'] == "2" ) {?> selected="selected"<?php } ?>>2</option>
+	    			            <option value ="3" <?php if ( $formVars['values']['numClasses'] == "3" ) {?> selected="selected"<?php } ?>>3</option>
+	    			            <option value ="4" <?php if ( $formVars['values']['numClasses'] == "4" ) {?> selected="selected"<?php } ?>>4</option>
 	    			        </select>
 	    			    </label>
 	    			</div>
 	    			<div class="small-12 medium-6 large-3 columns">
 	    			    <label for="inputNumHours">Number of Load Hours (1 to 19)
-	    			        <input type="number" min="1" max="19" name="inputNumHours" id="inputNumHours" required="required" />
+	    			        <input type="number" min="1" max="19" step="0.5" name="inputNumHours" id="inputNumHours" required="required" value="<?php print($formVars['values']['numHours']) ?>" />
 	    			    </label>
 	    			</div>
 	    		</div>
