@@ -148,7 +148,7 @@ CLOSEDIV;
         <div class="small-12 columns">
             <fieldset>
                 <legend>Notes</legend>
-                <textarea name="notes"></textarea>
+                <textarea name="notes"><?php print($formVars['values']['notes']) ?></textarea>
             </fieldset>
         </div>
     </div>
