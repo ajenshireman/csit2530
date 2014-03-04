@@ -73,7 +73,7 @@ $pageTitle = 'CSIT Faculty Course Selection - Results';
 	</div>
 	<div class="row">
         <div class="small-12 columns">
-            <button class="tiny" type="submit" name="action" value="courseSelectionConfirm">OK</button>
+            <button class="tiny" type="submit" name="action" value="courseSelectionFinalize">OK</button>
             <button class="tiny" type="submit" name="action" value="courseSelectionRevist">Back</button>
             <button class="tiny" type="cancel" name="action" value="courseSelectionCancel">Cancel</button>
 	    </div>
