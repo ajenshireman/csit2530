@@ -147,7 +147,7 @@ function validateCourseSelectionForm () {
  * 
  * @return void
  */
-function finalizeCourseSelections ( $selections = array() ) {
+function finalizeCourseSelection ( $selections = array() ) {
     // append the course selections to a text file
     
 }
