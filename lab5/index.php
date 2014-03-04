@@ -26,7 +26,6 @@ if ( $action == 'display_selection_form' ) {
     unset($_POST);
     
     // Show the form to the user
-    //echo "showing first time form";
     require './view/courseSelectionForm.php';
 } else if ( $action == 'courseSelectionSubmit' ) {
     // Validate selections
