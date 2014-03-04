@@ -137,3 +137,17 @@ function validateCourseSelectionForm () {
             'errors' => isset($errors) ? $errors : null
     );
 }
+
+/**
+ * finalize course selection
+ * 
+ * write the choices to a txt file and eventually the data base
+ * 
+ * @param array $selection
+ * 
+ * @return void
+ */
+function finalizeCourseSelections ( $selections = array() ) {
+    // append the course selections to a text file
+    
+}
