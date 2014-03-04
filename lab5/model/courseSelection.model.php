@@ -148,6 +148,12 @@ function validateCourseSelectionForm () {
  * @return void
  */
 function finalizeCourseSelection ( $selections = array() ) {
-    // append the course selections to a text file
-    
+    /* append the course selections to a text file */
+    $file = fopen('../../datafiles/choicelistFall2014.txt', 'xb');
+    fwrite($file, $selections['name'].PHP_EOL);
+    foreach ( $selections['courses'] as $course ) {
+        fwrite($file, $course.PHP_EOL);
+    }
+    fwrite($file, PHP_EOL);
+    fclose($file);
 }
