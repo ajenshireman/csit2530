@@ -27,7 +27,7 @@ if ( isset($formVars['errors']) ) {
     }
 ?>
 <script>
-    alert('<?php echo $errorMsg ?>');
+    //alert('<?php echo $errorMsg ?>');
 </script>
 <?php } ?>
 <form id="courseSelectionForm" action="." method="post">
