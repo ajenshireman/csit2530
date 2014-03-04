@@ -38,6 +38,10 @@ if ( $action == 'display_selection_form' ) {
         // If no errors show the confirmation page
         require './view/courseSelectionConfirmationForm.php';
     }
+} else if ( $action == 'courseSelectionRevist' ) {
+    // return the user to the selection form with choices intact
+    // TODO selections aren't preserved. Why?
+    require './view/courseSelectionForm.php';
 } else if ( $action == 'courseSelectionFinalize' ) {
     // Finalize the selections
     finalizeCourseSelection($formVars['values']);
