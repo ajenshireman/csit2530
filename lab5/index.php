@@ -10,7 +10,6 @@
 
 /* turn error reporting on */
 ini_set('display_errors', 1);
-//error_reporting(E_ALL);
 error_reporting(E_ALL^E_NOTICE);
 
 require './model/courseSelection.model.php';  
@@ -23,14 +22,6 @@ if ( isset($_POST['action']) ) {
     $action = 'display_selection_form';
 }
 
-echo "action: $action";
-/* *
-if ( isset($formVars) ) { 
-    echo 'formVars exists'; 
-} else {
-    echo 'formVars not set';
-}
-/* */
 if ( $action == 'display_selection_form' ) {
     unset($_POST);
     
@@ -41,7 +32,6 @@ if ( $action == 'display_selection_form' ) {
     // Validate selections
     $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
-        echo 'showing nth time form';
         // If errors, show the selection form again
         require './view/courseSelectionForm.php';
     } else {
@@ -51,7 +41,7 @@ if ( $action == 'display_selection_form' ) {
 } else if ( $action == 'courseSelectionFinalize' ) {
     // Finalize the selections
     finalizeCourseSelection($formVars['values']);
-    //if ( isset($formVars) ) { echo 'formVars exists'; }
+    
     // Display the thank you page
     require './view/courseSelectionThankYou.php';
 }
