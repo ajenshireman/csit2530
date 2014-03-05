@@ -10,13 +10,14 @@
 
 /* turn error reporting on */
 ini_set('display_errors', 1);
-error_reporting(E_ALL^E_NOTICE);
+error_reporting(E_ALL);
+//error_reporting(E_ALL^E_NOTICE);
 
 /* load required moduels */
 require './model/courseSelection.model.php';  
 
 /* define global varialbles */
-
+$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
 
 /* get reqiured action from post */
 if ( isset($_POST['action']) ) {
@@ -35,7 +36,7 @@ if ( $action == 'display_selection_form' ) {
     require './view/courseSelectionForm.php';
 } else if ( $action == 'courseSelectionSubmit' ) {
     // Validate selections
-    $formVars = validateCourseSelectionForm();
+    $_SESSION['formVars'] = $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
         // If errors, show the selection form again
         require './view/courseSelectionForm.php';
