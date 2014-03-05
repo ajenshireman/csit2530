@@ -12,8 +12,13 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL^E_NOTICE);
 
+/* load required moduels */
 require './model/courseSelection.model.php';  
 
+/* define global varialbles */
+
+
+/* get reqiured action from post */
 if ( isset($_POST['action']) ) {
     $action = $_POST['action'];
 } else if ( isset($_GET['action']) ) {
@@ -22,6 +27,7 @@ if ( isset($_POST['action']) ) {
     $action = 'display_selection_form';
 }
 
+/* do the stuff */
 if ( $action == 'display_selection_form' ) {
     unset($_POST);
     
