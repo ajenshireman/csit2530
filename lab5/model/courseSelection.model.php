@@ -83,6 +83,26 @@ function printCourses () {
 }
 
 /**
+ * collect form values from $_POST
+ * 
+ * @ param array$ post
+ * 
+ * @return array
+ */
+function collectFormVars ( $post = array() ) {
+    $formVars['values'] = array(
+            'name'       => !empty($_POST['inputName'])       ? $_POST['inputName']       : null,
+            'semester'   => !empty($_POST['inputSemester'])   ? $_POST['inputSemester']   : null,
+            'numClasses' => !empty($_POST['inputNumClasses']) ? $_POST['inputNumClasses'] : null,
+            'numHours'   => !empty($_POST['inputNumHours'])   ? $_POST['inputNumHours']   : null,
+            'courses'    => !empty($_POST['inputCourses'])    ? $_POST['inputCourses']    : null,
+            'timeslots'  => !empty($_POST['inputTimeslots'])  ? $_POST['inputTimeslots']  : null,
+            'notes'      => !empty($_POST['notes'])           ? $_POST['notes']           : null
+    );
+    return $formVars;
+}
+
+/**
  * validate the course selection form
  *
  * @return array multi-dimensional array with errors and form values
@@ -151,6 +171,14 @@ function finalizeCourseSelection ( $selections = array() ) {
     /* append the course selections to a text file */
     $file = fopen('../../datafiles/choicelistFall2014.txt', 'ab');
     fwrite($file, $selections['name'].PHP_EOL);
+    if ( isset($selections['courses']) ) {
+        echo 'courses exists ';
+        if ( is_array($selections['courses']) ) {
+            echo 'courses is an array ';
+        }
+    } else {
+        echo 'curses does not exist';
+    }
     foreach ( $selections['courses'] as $course ) {
         fwrite($file, $course.PHP_EOL);
     }

@@ -17,7 +17,11 @@ error_reporting(E_ALL);
 require './model/courseSelection.model.php';  
 
 /* define global varialbles */
-$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
+//$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
+
+/* store formVars to the session */
+$_SESSION['formVars'] = collectFormVars($_POST);
+$formVars = $_SESSION['formVars'];
 
 /* get reqiured action from post */
 if ( isset($_POST['action']) ) {
@@ -34,7 +38,8 @@ if ( $action == 'display_selection_form' ) {
     
     // Show the form to the user
     require './view/courseSelectionForm.php';
-} else if ( $action == 'courseSelectionSubmit' ) {
+    echo 'end of if Loop'
+;} else if ( $action == 'courseSelectionSubmit' ) {
     // Validate selections
     $_SESSION['formVars'] = $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
