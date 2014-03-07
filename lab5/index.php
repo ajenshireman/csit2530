@@ -16,25 +16,12 @@ error_reporting(E_ALL);
 /* load required moduels */
 require './model/courseSelection.model.php';  
 
-/* define global varialbles *
-//$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
-if ( isset($formVars) ) {
-    echo 'formVars exists ';
-} else {
-    echo 'formVars does not exist ';
-}
-
 /* start the session */
 session_name('c2530a07_coursepicker');
 session_start();
 
-/* store formVars to the session */
-//if ( isset($_POST['formVars']) ) {
-//    $_SESSION['formVars'] = collectFormVars($_POST);
-//    $formVars = $_SESSION['formVars'];
-//} else {
-    $formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
-//}
+/* get formVars to the session */
+$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
 
 /* get reqiured action from post */
 if ( isset($_POST['action']) ) {
