@@ -100,7 +100,6 @@ function printNameOptions ( $selectedName ) {
  */
 function getCourses () {
     return getFromCSV(COURSE_LIST);
-    
 }
 
 /**
