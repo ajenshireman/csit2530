@@ -10,7 +10,7 @@
 $pageTitle = 'CSIT Faculty Course Selection - Complete';
 ?>
 <?php require './view/head.php' ?>
-<form action="">
+<form action="." method="post">
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="panel callout">
