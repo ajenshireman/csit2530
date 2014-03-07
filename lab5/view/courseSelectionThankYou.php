@@ -10,5 +10,23 @@
 $pageTitle = 'CSIT Faculty Course Selection - Complete';
 ?>
 <?php require './view/head.php' ?>
-<h1>DONE</h1>
+<form action="">
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="panel callout">
+			    <p>
+			        Thank you <?php print($formVars['values']['name'])?>.
+			    </p>
+			    <p>
+			        Your course selections for <?php print($formVars['values']['semester']) ?> have been saved.
+			    </p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+        <div class="small-12 columns">
+            <button class="tiny" type="submit" name="action" value="display_selection_form">OK</button>
+	    </div>
+	</div>
+</form>
 <?php require './view/foot.php' ?>
