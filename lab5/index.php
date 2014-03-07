@@ -54,11 +54,6 @@ if ( $action == 'display_selection_form' ) {
     // TODO selections aren't preserved. Why?
     require './view/courseSelectionForm.php';
 } else if ( $action == 'courseSelectionFinalize' ) {
-    if ( isset($formVars['values']['courses']) ) {
-        echo 'formVars[\'values\'] exists ';
-    } else {
-        echo 'formVars[\'values\'] does not exist but it should ';
-    }
     // Finalize the selections
     finalizeCourseSelection($_SESSION['formVars']['values']);
     
