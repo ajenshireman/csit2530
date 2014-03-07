@@ -2,8 +2,8 @@
 /**
  * processpicks.php
  * Ajen Shireman
- * CSIT 2530 Lab5
- * 216February 2014
+ * CSIT 2530 - Lab5
+ * 3 March 2014
  * 
  * This just echos back the choices from pickList.php
  * 

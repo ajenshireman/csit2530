@@ -2,7 +2,8 @@
 /**
  * courseSelection.model.php
  * Ajen Shireman
- * CSIT 2530
+ * CSIT 2530 - Lab5
+ * 3 March 2014
  * Course Selection app
  * 
  * Contains buisiness logic for course selection app

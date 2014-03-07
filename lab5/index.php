@@ -3,7 +3,7 @@
  * index.php
  * Ajen Shireman
  * CSIT 2530 - Lab5
- * 26 February 2014
+ * 3 March 2014
  * 
  * Controller for course picker app
  */
