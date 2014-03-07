@@ -49,10 +49,7 @@ if ( isset($formVars['errors']) ) {
 	    			<div class="small-12 medium-6 large-3 columns">
 	    			    <label for="inputName">Name
 	    			        <select name="inputName" id="inputName" required="required">
-	    			            <option value="David Brown" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="David Brown"<?php } ?>>David Brown</option>
-	    			            <option value="Sharon Burlingame" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Sharon Burlingame"<?php } ?>>Sharon Burlingame</option>
-	    			            <option value="Gitti Negahban" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Gitti Negahban"<?php } ?>>Gitti Negahban</option>
-	    			            <option value="Andrey Puretskiy" <?php if ( $formVars['values']['name'] == "Fall 2014" ) {?> selected="Andrey Puretskiy"<?php } ?>>Andrey Puretskiy</option>
+	    			            <?php printNameOptions($formVars['values']['name']) ?>
 	    			        </select>
 	    			    </label>
 	    			</div>
