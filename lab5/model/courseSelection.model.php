@@ -13,6 +13,7 @@
 /**
  * Since we're putting from a file for now, define it at the beginning
  */
+define('NAME_LIST', '../../CSIT2014FALLNames.csv');
 define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv');
 define('TIME_LIST', '../../datafiles/CSIT2014FALLTimeslots.csv');
 
@@ -31,6 +32,33 @@ function cleanUpCorseSelection () {
 }
 
 /**
+ * get the contents of a csv fie and retun it as an array
+ * 
+ * This isn't working for some reason and i don't have time to fix it
+ * 
+ * @param string $source
+ * 
+ * @return array $contents
+ */
+function getFromCSV ( $source ) {
+    if ( $file = fopen($source, 'rb') ) {
+        $contents = array();
+        while ( !feof($file) ) {
+            $line = fgetcsv($file);
+            if ( $line === false ) { continue; }
+            array_push($content, $line);
+        }
+        return $contents;
+    } else {
+        /*
+         * @TODO handle missing file gracefully
+        */
+        print('File '.$source.' does not exist');
+        return;
+    }
+}
+
+/**
  * Get the available courses
  * 
  * For now pulls the information from ../datafiles/CSIT2014FALLCourseOffering.csv
@@ -41,6 +69,8 @@ function cleanUpCorseSelection () {
  * @return array 
  */
 function getCourses () {
+    //return getFromCSV(COURSE_LIST);
+    
     if ( $file = fopen(COURSE_LIST, 'rb') ) {
         $courses = array();
         while ( !feof($file) ) {
@@ -56,6 +86,7 @@ function getCourses () {
         print('File '.COURSE_LIST.' does not exist');
         return;
     }
+    
 }
 
 /**
