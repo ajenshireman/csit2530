@@ -47,7 +47,7 @@ function getFromCSV ( $source ) {
         while ( !feof($file) ) {
             $line = fgetcsv($file);
             if ( $line === false ) { continue; }
-            array_push($content, $line);
+            array_push($contents, $line);
         }
         return $contents;
     } else {
@@ -66,23 +66,6 @@ function getFromCSV ( $source ) {
  */
 function getNames () {
     return getFromCSV(NAME_LIST);
-    /*
-    if ( $file = fopen(NAME_LIST, 'rb') ) {
-        $names = array();
-        while ( !feof($file) ) {
-            $name = fgetcsv($file);
-            if ( $name === false ) { continue; }
-            array_push($names, $name);
-        }
-        return $names;
-    } else {
-        /*
-         * @TODO handle missing file gracefully
-         *
-        print('File '.NAME_LIST.' does not exist');
-        return;
-    }
-    */
 }
 
 /**
@@ -116,23 +99,7 @@ function printNameOptions ( $selectedName ) {
  * @return array 
  */
 function getCourses () {
-    //return getFromCSV(COURSE_LIST);
-    
-    if ( $file = fopen(COURSE_LIST, 'rb') ) {
-        $courses = array();
-        while ( !feof($file) ) {
-            $course = fgetcsv($file);
-            if ( $course === false ) { continue; }
-            array_push($courses, $course);
-        }
-        return $courses;
-    } else {
-        /*
-         * @TODO handle missing file gracefully
-         */
-        print('File '.COURSE_LIST.' does not exist');
-        return;
-    }
+    return getFromCSV(COURSE_LIST);
     
 }
 
@@ -181,21 +148,7 @@ function printCourses () {
  * @return array
  */
 function getTimeslots () {
-    if ( $file = fopen(TIME_LIST, 'rb') ) {
-        $timeslots = array();
-        while ( !feof($file) ) {
-            $timeslot = fgetcsv($file);
-            if ( $timeslot === false ) { continue; }
-            array_push($timeslots, $timeslot);
-        }
-        return $timeslots;
-    } else {
-        /*
-         * @TODO handle missing file gracefully
-        */
-        print('File '.TIME_LIST.' does not exist');
-        return;
-    }
+    return getFromCSV(TIME_LIST);
 }
 
 /**
