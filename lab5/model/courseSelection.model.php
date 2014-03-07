@@ -16,6 +16,20 @@
 define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv' );
 
 /**
+ * clean up the form variables
+ * 
+ * unsets $formVars and $_SESSION['formVars']
+ * 
+ * @return void
+ */
+
+function cleanUpCorseSelection () {
+    unset($formVars);
+    unset($_SESSION['formVars']);
+    unset($_POST);
+}
+
+/**
  * Get the available courses
  * 
  * For now pulls the information from ../datafiles/CSIT2014FALLCourseOffering.csv
@@ -134,7 +148,7 @@ function validateCourseSelectionForm () {
     if ( empty($values['numClasses']) ) {
         $errors['numCourses'] = 'Please select the desired number of courses';
     }
-
+    
     // Hours
     if ( empty($values['numHours']) ) {
         $errors['hours'] = 'Please enter the desired number of hours';
@@ -146,7 +160,11 @@ function validateCourseSelectionForm () {
 
     // Course selections
     // The form only allows selection of 5 courses
-
+    // prevent dupilicates
+    if ( findDuplicateCourseSelecetions ( $values['courses']) ) {
+        $errors['courses'] = 'Please select 5 different courses';
+    }
+    
     // Timeslots
     if ( empty($values['timeslots']) ) {
         $errors['timeslots'] = 'Please select at least one preferred time';
@@ -156,6 +174,26 @@ function validateCourseSelectionForm () {
             'values' => $values,
             'errors' => isset($errors) ? $errors : null
     );
+}
+
+/**
+ * check for the selection of dulicate courses
+ * 
+ * @param array $courses
+ * 
+ * @return true if duplicates are found
+ * @return false if no duplicattes are found
+ */
+function findDuplicateCourseSelecetions ( $courses ) {
+    for ( $i = 0; $i < count($courses); $i++ ) {
+        for ( $j = $i + 1; $j < count($courses); $j++ ) {
+            if ( $courses[$i] == $courses[$j] ) {
+                return true;
+            }
+        }
+    }
+    
+    return false;
 }
 
 /**
@@ -171,14 +209,6 @@ function finalizeCourseSelection ( $selections = array() ) {
     /* append the course selections to a text file */
     $file = fopen('../../datafiles/choicelistFall2014.txt', 'ab');
     fwrite($file, $selections['name'].PHP_EOL);
-    if ( isset($selections['courses']) ) {
-        echo 'courses exists ';
-        if ( is_array($selections['courses']) ) {
-            echo 'courses is an array ';
-        }
-    } else {
-        echo 'curses does not exist';
-    }
     foreach ( $selections['courses'] as $course ) {
         fwrite($file, $course.PHP_EOL);
     }
