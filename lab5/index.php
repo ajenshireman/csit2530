@@ -38,8 +38,7 @@ if ( $action == 'display_selection_form' ) {
     
     // Show the form to the user
     require './view/courseSelectionForm.php';
-    echo 'end of if Loop'
-;} else if ( $action == 'courseSelectionSubmit' ) {
+} else if ( $action == 'courseSelectionSubmit' ) {
     // Validate selections
     $_SESSION['formVars'] = $formVars = validateCourseSelectionForm();
     if ( isset($formVars['errors']) ) {
