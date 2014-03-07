@@ -3,7 +3,7 @@
  * courseSelectionThankYou.php
  * Ajen Shireman
  * CSIT 2530 - Lab5
- * 3 March 2014
+ * 7 March 2014
  *
  * Thank you page displayed after course selection is complete
  */

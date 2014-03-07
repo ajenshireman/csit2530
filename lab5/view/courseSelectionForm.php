@@ -3,7 +3,7 @@
  * coursepicker.php
  * Ajen Shireman
  * CSIT 2530 - Lab5
- * 3 March 2014
+ * 7 March 2014
  * 
  * Refinement of form from lab3
  * 
