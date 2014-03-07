@@ -16,12 +16,25 @@ error_reporting(E_ALL);
 /* load required moduels */
 require './model/courseSelection.model.php';  
 
-/* define global varialbles */
+/* define global varialbles *
 //$formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
+if ( isset($formVars) ) {
+    echo 'formVars exists ';
+} else {
+    echo 'formVars does not exist ';
+}
+
+/* start the session */
+session_name('c2530a07_coursepicker');
+session_start();
 
 /* store formVars to the session */
-$_SESSION['formVars'] = collectFormVars($_POST);
-$formVars = $_SESSION['formVars'];
+//if ( isset($_POST['formVars']) ) {
+//    $_SESSION['formVars'] = collectFormVars($_POST);
+//    $formVars = $_SESSION['formVars'];
+//} else {
+    $formVars = isset($_SESSION['formVars']) ? $_SESSION['formVars'] : null;
+//}
 
 /* get reqiured action from post */
 if ( isset($_POST['action']) ) {
@@ -34,7 +47,7 @@ if ( isset($_POST['action']) ) {
 
 /* do the stuff */
 if ( $action == 'display_selection_form' ) {
-    unset($_POST);
+    cleanUpCorseSelection();
     
     // Show the form to the user
     require './view/courseSelectionForm.php';
@@ -54,9 +67,17 @@ if ( $action == 'display_selection_form' ) {
     // TODO selections aren't preserved. Why?
     require './view/courseSelectionForm.php';
 } else if ( $action == 'courseSelectionFinalize' ) {
+    if ( isset($formVars['values']['courses']) ) {
+        echo 'formVars[\'values\'] exists ';
+    } else {
+        echo 'formVars[\'values\'] does not exist but it should ';
+    }
     // Finalize the selections
-    finalizeCourseSelection($formVars['values']);
+    finalizeCourseSelection($_SESSION['formVars']['values']);
     
     // Display the thank you page
     require './view/courseSelectionThankYou.php';
+    
+    // cleanup
+    cleanUpCorseSelection();    
 }
