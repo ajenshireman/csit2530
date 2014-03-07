@@ -13,7 +13,7 @@
 /**
  * Since we're putting from a file for now, define it at the beginning
  */
-define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv' );
+define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv');
 define('TIME_LIST', '../../datafiles/CSIT2014FALLTimeslots.csv');
 
 /**
