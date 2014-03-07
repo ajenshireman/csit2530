@@ -14,6 +14,7 @@
  * Since we're putting from a file for now, define it at the beginning
  */
 define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv' );
+define('TIME_LIST', '../../datafiles/CSIT2014FALLTimeslots.csv');
 
 /**
  * clean up the form variables
@@ -94,6 +95,63 @@ function printCourses () {
         print "<li>$course[0] $course[1] $course[2] - $course[3] - $course[4] $course[5]</li>";
     }
     print('</ul>');
+}
+
+/**
+ * get the available timeslots
+ * 
+ * @return array
+ */
+function getTimeslots () {
+    if ( $file = fopen(TIME_LIST, 'rb') ) {
+        $timeslots = array();
+        while ( !feof($file) ) {
+            $timeslot = fgetcsv($file);
+            if ( $timeslot === false ) { continue; }
+            array_push($timeslots, $timeslot);
+        }
+        return $timeslots;
+    } else {
+        /*
+         * @TODO handle missing file gracefully
+        */
+        print('File '.TIME_LIST.' does not exist');
+        return;
+    }
+}
+
+/**
+ * print the available timeslots
+ * 
+ * @param array $selectedTimes
+ * 
+ * @return void
+ */
+function printTimesolots ( $selectedTimes = array() ) {
+    $div = '';
+    $divClass = 'small-6 medium-4 large-3 columns';
+    $timeslots = getTimeslots();
+    for ( $i = 0; $i < count($timeslots); $i++ ) {
+        // check if this is the last timeslot
+        if ( $i == count($timeslots) - 1 ) {
+            $divClass .= ' end';
+        }
+        
+        // check if this timeslt is selected
+        if ( isset($selectedTimes[$i]) ) {
+            $selected = ' checked="checked"';
+        } else {
+            $selected = '';
+        }
+        
+        // wirte the html
+        $div .= <<<OPENDIV
+<div class="$divClass">
+    <input type="checkbox" name="inputTimeslots[$i]" id="inputTimeslots$i" value="{$timeslots[$i][0]}"$selected><label for="inputTimeslots$i">{$timeslots[$i][0]}</label>
+</div>
+OPENDIV;
+    }
+    print $div;
 }
 
 /**

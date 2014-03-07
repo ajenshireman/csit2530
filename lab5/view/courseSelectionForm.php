@@ -121,26 +121,7 @@ CLOSEDIV;
 	    <div class="small-12 columns">
 	    	<fieldset>
 	    	    <legend>Preferred Times (Select at least 1)</legend>
-                
-    			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots1" value="8:30-11:30"><label for="inputTimeslots1">8:30-11:30</label>
-    			</div>
-    			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots2" value="9:30-11:30"><label for="inputTimeslots2">9:30-11:30</label>
-    			</div>
-    			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots3" value="13:00-16:00"><label for="inputTimeslots3">13:00-16:00</label>
-    			</div>
-    			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots4" value="16:00-18:00"><label for="inputTimeslots4">16:00-18:00</label>
-    			</div>
-    			<div class="small-6 medium-4 large-3 columns">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots5" value="18:15-21:15"><label for="inputTimeslots5">18:15-21:15</label>
-    			</div>
-    			<div class="small-6 medium-4 large-3 columns end">
-    				<input type="checkbox" name="inputTimeslots[]" id="inputTimeslots6" value="No Fridays"><label for="inputTimeslots6">No Fridays</label>
-    			</div>
-	    		
+	    	    <?php printTimesolots($formVars['values']['timeslots']) ?>
 	    	</fieldset>
 	    </div>
 	</div>
