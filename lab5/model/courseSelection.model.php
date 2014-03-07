@@ -14,7 +14,7 @@
 /**
  * Since we're putting from a file for now, define it at the beginning
  */
-define('NAME_LIST', '../../CSIT2014FALLNames.csv');
+define('NAME_LIST', '../../datafiles/CSIT2014FALLInstructors.csv');
 define('COURSE_LIST', '../../datafiles/CSIT2014FALLCourseOffering.csv');
 define('TIME_LIST', '../../datafiles/CSIT2014FALLTimeslots.csv');
 
@@ -60,6 +60,52 @@ function getFromCSV ( $source ) {
 }
 
 /**
+ * get the list of instructor names
+ * 
+ * @return array
+ */
+function getNames () {
+    return getFromCSV(NAME_LIST);
+    /*
+    if ( $file = fopen(NAME_LIST, 'rb') ) {
+        $names = array();
+        while ( !feof($file) ) {
+            $name = fgetcsv($file);
+            if ( $name === false ) { continue; }
+            array_push($names, $name);
+        }
+        return $names;
+    } else {
+        /*
+         * @TODO handle missing file gracefully
+         *
+        print('File '.NAME_LIST.' does not exist');
+        return;
+    }
+    */
+}
+
+/**
+ * print the avaiabe names as dropdown options
+ * 
+ * @param string $selectedName
+ * 
+ * @retun void
+ */
+function printNameOptions ( $selectedName ) {
+    $names = getNames();
+    $options = '';
+    foreach ( $names as $name ) {
+        $options .= "<option value=\"$name[0]\"";
+        if ( $name == $selectedName ) {
+            $options .= ' selected="selected"';
+        }
+        $options .= ">$name[0]</option>".PHP_EOL;
+    }
+    print $options;
+}
+
+/**
  * Get the available courses
  * 
  * For now pulls the information from ../datafiles/CSIT2014FALLCourseOffering.csv
@@ -76,7 +122,7 @@ function getCourses () {
         $courses = array();
         while ( !feof($file) ) {
             $course = fgetcsv($file);
-            if ( $c === false ) { continue; }
+            if ( $course === false ) { continue; }
             array_push($courses, $course);
         }
         return $courses;
