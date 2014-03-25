@@ -34,7 +34,7 @@
     <input name="weight" type="text" size="3"/> LBS
     <br /><br />
     <input type="submit" name="submit" value="Calculate BMI"/>
-    <button type="clear" name="clear" value="Clear">Clear</button>
+    <button type="reset" name="clear" value="Clear">Clear</button>
   </form>
 
 <?php require 'foot.php' ?>
