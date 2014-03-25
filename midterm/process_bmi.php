@@ -59,6 +59,14 @@
 
   // Open a file or database to save entered data
   // This code is currently missing
+  $file = fopen('../../datafiles/bmiLog.txt', 'ab');
+  fwrite($file, $username.PHP_EOL);
+  fwrite($file, $gender.PHP_EOL);
+  fwrite($file, $height_feet.'ft '.$height_inches.'in'.PHP_EOL);
+  fwrite($file, $weight.PHP_EOL);
+  fwrite($file, $bmi.PHP_EOL);
+  fwrite($file, PHP_EOL);
+  fclose($file);
 ?>
 
 <?php require 'head.php' ?>
