@@ -35,13 +35,7 @@
   // This code is currently missing
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml-transitional.dtd">
-<html>
-<head>
-  <title>CSIT 2530 BMI Results</title>
-  <meta content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
-</head>
+<?php require 'head.php' ?>
 
 <body>
   <h2>CSIT 2530 Midterm - BMI Calculator</h2>
@@ -61,6 +55,4 @@
  
 ?>
 
-<h4>by - Substitute Your Name and the date Here</h4>
-</body>
-</html>
+<?php require 'foot.php' ?>
