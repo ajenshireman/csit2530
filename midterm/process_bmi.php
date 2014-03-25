@@ -21,6 +21,11 @@
   }
 
   // What is this doing?
+  /*
+   * added sashes before characters that need to be escaped
+   * this helps prevent sql injection by changing ' into \' and " into \" 
+   * it as changes returns to  \n but this is not as critical
+   */
   if (!get_magic_quotes_gpc())
   {
     $username = addslashes($username);
