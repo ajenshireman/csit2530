@@ -1,4 +1,4 @@
-  <h4>by - Substitute Your Name and the date Here</h4>
+  <h4>by - Ajen Shireman <?php echo date('Y-m-d') ?></h4>
 
 </body>
 </html>
