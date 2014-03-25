@@ -5,6 +5,9 @@
   // BMI is calculated as weight(in pounds)/ height-squared (in inches) * 703.069
   //                   
 
+  /* Constants */
+  define (CONVERSION_FACTOR, 703.069);
+  
   // create short variable names
   $username=trim($_POST['username']);
   $agerange=$_POST['age_range'];
@@ -40,8 +43,10 @@
 
   // Using the formula specified in the comments at the top of the page,
   // calculate the BMI for this user
-
-  $bmi = '*** under construction ***';
+  
+  $heigh_in_inches = $height_feet * 12;
+  $height_in_inches = $heigh_in_inches + $height_inches;
+  $bmi = ( $weight / pow($height_in_inches, 2) ) * CONVERSION_FACTOR;
 
   // Open a file or database to save entered data
   // This code is currently missing
