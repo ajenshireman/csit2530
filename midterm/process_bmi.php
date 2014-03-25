@@ -26,6 +26,14 @@
       $error_message .= 'Error: A gender is required.<br />';
   }
   
+  if ( $height_feet < 1 || $height_feet > 8 ) {
+      $error_message .= 'Error: Height(feet) must be greater than 1 and less than 8.<br />';
+  }
+  
+  if ( $height_inches < 1 || $height_inches > 11 ) {
+      $error_message .= 'Error: Height(inches) must be greater than 1 and less than 11.<br />';
+  }
+  
   if ( !empty($error_message) ) {
       include('midterm_bmi.php');
       exit();
