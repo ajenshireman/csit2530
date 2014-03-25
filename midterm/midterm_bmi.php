@@ -22,6 +22,11 @@
       <option value="age65plus">old geezer
     </select>
     <br /><br />
+    Select your gender: <br />
+    <input type="radio" name="gender" value="Female">Female</input>
+    <input type="radio" name="gender" value="Male">Male</input>
+    <input type="radio" name="gender" value="Undecided">Undecided</input>
+    <br /><br />
     Enter your height and weight<br />
     HEIGHT <input name="height_feet" type="text" size="1"/> FT
           <input name="height_inches" type="text" size="2"/> INCHES
