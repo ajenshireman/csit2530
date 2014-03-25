@@ -16,16 +16,17 @@
   $height_inches = trim($_POST['height_inches']);
   $weight = trim($_POST['weight']);
  
-
+  $error_message = '';
   if (empty($username)) 
   {
-     $error_message = 'Error: A username is required. Please try again.<br/>';
-     include('midterm_bmi.php');
-     exit();
+     $error_message .= 'Error: A username is required. Please try again.<br/>';
   }
   
   if ( empty($gender) ) {
-      $error_message = 'Error: A gender is required.<br />';
+      $error_message .= 'Error: A gender is required.<br />';
+  }
+  
+  if ( !empty($error_message) ) {
       include('midterm_bmi.php');
       exit();
   }
