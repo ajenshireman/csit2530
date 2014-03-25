@@ -8,6 +8,7 @@
   // create short variable names
   $username=trim($_POST['username']);
   $agerange=$_POST['age_range'];
+  $gender = $_POST['gender'];
   $height_feet=trim($_POST['height_feet']);
   $height_inches = trim($_POST['height_inches']);
   $weight = trim($_POST['weight']);
@@ -19,7 +20,13 @@
      include('midterm_bmi.php');
      exit();
   }
-
+  
+  if ( empty($gender) ) {
+      $error_message = 'Error: A gender is required.<br />';
+      include('midterm_bmi.php');
+      exit();
+  }
+  
   // What is this doing?
   /*
    * added sashes before characters that need to be escaped
@@ -47,7 +54,7 @@
 <?php
   // Placeholder - just display the entered data
   // Should display the results of the BMI calculation to the user
-    echo 'User '.$username.' with current height '.$height_feet.' ft '.
+    echo 'User '.$username.' who is '.$gender.' with current height '.$height_feet.' ft '.
          $height_inches.' inches and weight '.$weight.' lbs <br/> '.
         ' has a BMI of '.$bmi;
 
