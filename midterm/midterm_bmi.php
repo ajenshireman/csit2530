@@ -9,7 +9,7 @@
      }
   ?>
 
-  <form action="http://ps11.pstcc.edu/~sburlingame/process_bmi.php" method="post">
+  <form action="process_bmi.php" method="post">
     Enter your username (e.g. omcdonald@farm.gov): 
         <input name="username" type="text" size="60"/>
     <br /><br />
