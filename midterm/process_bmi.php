@@ -6,7 +6,7 @@
   //                   
 
   /* Constants */
-  define (CONVERSION_FACTOR, 703.069);
+  define ('CONVERSION_FACTOR', 703.069);
   
   // create short variable names
   $username=trim($_POST['username']);
