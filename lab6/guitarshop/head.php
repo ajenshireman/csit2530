@@ -4,6 +4,6 @@
 
 <!-- the head section -->
 <head>
-    <title>My Guitar Shop</title>
+    <title>A Shireman's Guitar Shop</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
