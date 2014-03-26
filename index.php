@@ -16,5 +16,11 @@
     </li>
     <li><a href="lab4/coursepicker.php">Lab4</a></li>
     <li><a href="lab5/">Lab5</a></li>
+    <li>Lab6
+        <ul>
+            <li><a href="lab6/guitarshop/">Guitar Shop</a></li>
+            <li><a href="lab6/">App Store</a></li>
+        </ul>
+    </li>
 </ul>
 <?php require './includes/foot.php' ?>
