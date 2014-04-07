@@ -20,7 +20,7 @@ class Registry {
      * @param string $index
      * @param mixed $value
      */
-    public function _set ( $index, $value ) {
+    public function set ( $index, $value ) {
         $this->vars[$index] = $value;
     }
     
@@ -31,7 +31,7 @@ class Registry {
      * 
      * @return mixed
      */
-    public function _get ( $index ) {
+    public function get ( $index ) {
         return $this->vars[$index];
     }
 }
