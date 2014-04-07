@@ -1,5 +1,5 @@
 <?php
-/* Set error reporting */
+/* Set error reporting *
 ini_set('display_errors', 1);
 $errorReportingLevel = 2;
 switch ( $errorReportingLevel ) {
@@ -20,4 +20,5 @@ $site_path = realpath(dirname(__FILE__));
 define('SITE_PATH', $site_path);
 
 /* load the config file */
-require './config/initialize.php';
+require 'config/config.php';
+require 'config/initialize.php';
