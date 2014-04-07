@@ -1,5 +1,6 @@
 <?php
 /* include base application classes */
+require SITE_PATH .'/application/' . 'application.class.php';
 require SITE_PATH .'/application/' . 'controller.class.php';
 require SITE_PATH .'/application/' . 'registry.class.php';
 require SITE_PATH .'/application/' . 'router.class.php';
