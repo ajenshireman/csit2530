@@ -9,7 +9,7 @@ class Controller {
     public $db = null;
     
     function __construct () {
-        //$this->getConnection();
+        $this->getConnection();
     }
     
     /**
