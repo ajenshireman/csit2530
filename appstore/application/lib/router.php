@@ -60,7 +60,7 @@ class Router {
             
             $this->controller = ( isset($url[0]) ) ? $url[0] : 'main';
             $this->action = ( isset($url[1]) ) ? $url[1] : 'index';
-            /* */
+            
             if ( count($url) > 2 ) {
                 $this->parameters = array();
                 for ( $i = 2; $i < count($url); $i++ ) {
