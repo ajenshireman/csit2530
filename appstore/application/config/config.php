@@ -14,7 +14,7 @@ if ( !defined(PHP_VERSION_ID) ) {
 }
 
 /* Set the site url */
-define('URL', 'http://127.0.0.1/~ajen/csit2530/appStore');
+define('URL', 'http://127.0.0.1/~ajen/csit2530/appstore');
 
 /* Set the database connection parameters */
 define('DB_TYPE', 'mysql');

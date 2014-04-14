@@ -11,7 +11,7 @@ Options FollowSymLinks
 
 # When using the script within a sub-folder, put this path here, like /mysubfolder/
 # If your app is in the root of your web folder, then leave it commented out
-RewriteBase /~ajen/csit2530/appStore/
+RewriteBase /~ajen/csit2530/appstore/
 
 # General rewrite rules
 RewriteCond %{REQUEST_FILENAME} !-d
