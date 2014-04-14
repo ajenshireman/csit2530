@@ -29,11 +29,12 @@ class Controller {
     
     /**
      * load the model with the given name, and pass the db object to the model
-     * The mode class is in cameCase, but the file is all lowercase
+     * The mode class is in camelCase, but the file is all lowercase
      * 
      * @pram string $modelName the name of the model to load
      */
     private function loadModel ( $modelName ) {
         require 'application/model/' . strtolower($modelName);
     }
+    
 }
