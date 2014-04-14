@@ -19,6 +19,6 @@ define('URL', 'http://127.0.0.1/~ajen/csit2530/appStore');
 /* Set the database connection parameters */
 define('DB_TYPE', 'mysql');
 define('DB_HOST', '127.0.0.1');
-define('DB_NAME', 'dbName');
-define('DB_USER', 'userName');
-define('DB_PASS', 'password');
+define('DB_NAME', 'c2530a07proj');
+define('DB_USER', 'c2530a07');
+define('DB_PASS', 'c2530a07');

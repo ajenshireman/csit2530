@@ -5,7 +5,7 @@ ini_set('display_errors', 'on');
 */
 require 'application/config/config.php';
 
-require 'application/lib/application.php';
+require 'application/lib/router.php';
 require 'application/lib/controller.php';
 
-$app = new Application();
+$router = new Router();
