@@ -1,20 +1,30 @@
 <?php
 /* Turn on error reporting */
-error_reporting('E_ALL');
-ini_set('display_errors', 'on');
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 /* set the timezone */
 date_default_timezone_set('America/New_York');
 
-/* load password_compat if < php 5.5.0 */
-if ( !defined(PHP_VERSION_ID) ) {
-    require 'application/lib/password.php';
-} else if ( PHP_VERSION_ID < 505000 ) {
-    require 'application/lib/password.php';
-}
-
 /* Set the site url */
 define('URL', 'http://127.0.0.1/~ajen/csit2530/appstore');
+
+/* Folder config */
+define('LIB_PATH', 'application/lib/');
+define('CONTROLLER_PATH', 'application/controller/');
+define('MODEL_PATH', 'application/model/');
+define('VIEW_PATH', 'application/view/');
+
+/* Define locations for the common head and foot */
+define('COMMON_HEAD', VIEW_PATH . '_template/head.php');
+define('COMMON_FOOT', VIEW_PATH . '_template/foot.php');
+
+/* load password_compat if < php 5.5.0 */
+if ( !defined(PHP_VERSION_ID) ) {
+    require LIB_PATH . 'password.php';
+} else if ( PHP_VERSION_ID < 505000 ) {
+    require IB_PATH . 'password.php';
+}
 
 /* Set the database connection parameters */
 define('DB_TYPE', 'mysql');
