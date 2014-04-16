@@ -33,8 +33,24 @@ class Controller {
      * 
      * @pram string $modelName the name of the model to load
      */
-    private function loadModel ( $modelName ) {
+    protected function loadModel ( $modelName ) {
         require MODEL_PATH . strtolower($modelName);
     }
     
+    /**
+     * renders the specified page
+     * 
+     * @param string $filename php page to render, without extension
+     * @param boolean $renderHeadAndFoot render the common header and footer, 
+     *          defaluts to true
+     */
+    protected function render ( $filename, $renderHeadAndFoot = true ) {
+        if ( $renderHeadAndFoot == true ) {
+            require COMMON_HEAD;
+            require VIEW_PATH . $filename . '.php';
+            require COMMON_FOOT;
+        } else {
+            require VIEW_PATH . $filename . '.php';
+        }
+    }
 }
