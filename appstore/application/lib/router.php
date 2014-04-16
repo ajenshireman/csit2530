@@ -32,7 +32,6 @@ class Router {
         $this->parseUrl();
         
         if ( file_exists('./application/controller/' . $this->controller . '.php') ) {
-            require './application/controller/' . $this->controller . '.php';
             $this->controller = new $this->controller();
             
             if ( method_exists($this->controller, $this->action) ) {
@@ -43,7 +42,6 @@ class Router {
                 }
             }
         } else {
-            require './application/controller/main.php';
             $main = new Main();
             $main->index();
         }
