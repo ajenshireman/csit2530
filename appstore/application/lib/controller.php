@@ -34,7 +34,7 @@ class Controller {
      * @pram string $modelName the name of the model to load
      */
     private function loadModel ( $modelName ) {
-        require 'application/model/' . strtolower($modelName);
+        require MODEL_PATH . strtolower($modelName);
     }
     
 }
