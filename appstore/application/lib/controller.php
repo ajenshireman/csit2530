@@ -9,32 +9,19 @@ class Controller {
     public $db = null;
     
     function __construct () {
-        $this->getConnection();
+        $this->db = new Database();
     }
     
     /**
-     * set p the database connection
-     * use credentials from application/config/config.php
-     */
-    private  function getConnection () {
-        // Set the PDO options
-        $options = array(
-        	PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ,
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_WARNING
-        );
-        
-        // connect to the database
-        $this->db = new PDO(DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
-    }
-    
-    /**
-     * load the model with the given name, and pass the db object to the model
-     * The mode class is in camelCase, but the file is all lowercase
+     * Loads the model with the given name, and pass the db object to the model
      * 
-     * @pram string $modelName the name of the model to load
+     * @param string $modelName the name of the model to load
+     * 
+     * @return object
      */
     protected function loadModel ( $modelName ) {
-        require MODEL_PATH . strtolower($modelName);
+        $modelName = strtolower($modelName) . 'Model';
+        return new $modelName($this->db);
     }
     
     /**
