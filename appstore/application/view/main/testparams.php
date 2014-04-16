@@ -1,4 +1,4 @@
 <div>
     This is testparams()<br />
-    <?php echo $msg ?><br />
+    <?php echo $this->msg ?><br />
 </div>
