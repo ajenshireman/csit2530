@@ -22,15 +22,15 @@ class Login extends Controller {
      */
     public function login() {
         // make sure the user has entered a username and password
-        if ( !isset($_POST['inputUsername']) || empty($_POST['inputUsername']) ) {
+        if ( !isset($_POST['loginUsername']) || empty($_POST['loginUsername']) ) {
             return;
         }
-        if ( !isset($_POST['inputPassword']) || empty($_POST['inputPassword']) ) {
+        if ( !isset($_POST['loginPassword']) || empty($_POST['loginPassword']) ) {
             return;
         }
         
-        $tryUser = $_POST['inputUsername'];
-        $tryPassword = $_POST['inputPassword'];
+        $tryUser = $_POST['loginUsername'];
+        $tryPassword = $_POST['loginPassword'];
         $model = $this->loadModel('Login');
         if ( $model->login($tryUser, $tryPassword) ) {
             echo 'Login Success!';
@@ -45,6 +45,6 @@ class Login extends Controller {
      * Registers a new user
      */
     public function register () {
-        
+        //
     }
 }
