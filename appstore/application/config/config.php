@@ -10,8 +10,9 @@ date_default_timezone_set('America/New_York');
 define('URL', 'http://127.0.0.1/~ajen/csit2530/appstore');
 
 /* Folder config */
-define('LIB_PATH', 'application/lib/');
+define('CLASS_PATH', 'application/class/');
 define('CONTROLLER_PATH', 'application/controller/');
+define('LIB_PATH', 'application/lib/');
 define('MODEL_PATH', 'application/model/');
 define('VIEW_PATH', 'application/view/');
 

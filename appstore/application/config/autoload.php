@@ -12,6 +12,8 @@ function autoload ( $class ) {
         require CONTROLLER_PATH . $filename;
     } else if ( file_exists(MODEL_PATH . $filename) ) {
         require MODEL_PATH . $filename;
+    } else if ( file_exists(CLASS_PATH . $filename) ) {
+        require CLASS_PATH . $filename;
     } else if ( file_exists(LIB_PATH . $filename) ) {
         require LIB_PATH . $filename;
     } else {
