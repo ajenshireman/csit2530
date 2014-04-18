@@ -3,6 +3,9 @@
  * Handles user login and registration
  */
 class Login extends Controller {
+    /**
+     * Constructor
+     */
     public function __construct() {
         parent::__construct();
     }
@@ -36,5 +39,12 @@ class Login extends Controller {
             // show the login form again
             echo 'Login Failed';
         }
+    }
+    
+    /**
+     * Registers a new user
+     */
+    public function register () {
+        
     }
 }

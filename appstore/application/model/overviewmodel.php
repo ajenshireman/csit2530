@@ -4,6 +4,13 @@
  */
 class OverviewModel extends Model {
     /**
+     * Constructor
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+    
+    /**
      * Shows a list of all registered users
      * 
      * @return array
