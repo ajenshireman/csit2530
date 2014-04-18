@@ -11,7 +11,7 @@ class Overview extends Controller {
      * Shows a list of all registered users
      */
     public function index () {
-        $model = $this->loadModel('Overview');
+        $model = $this->loadModel('Account');
         $this->users = $model->getUsers();
         $this->render('overview/index');
     }
@@ -28,7 +28,7 @@ class Overview extends Controller {
             // No user specified
         }
         
-        $model = $this->loadModel('Overview');
+        $model = $this->loadModel('Account');
         $this->user = $model->getUserDetails($userId);
         $this->render('overview/userdetails');
     }

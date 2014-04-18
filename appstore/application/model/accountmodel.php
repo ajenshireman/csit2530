@@ -1,8 +1,8 @@
 <?php
 /**
- * Shows  ist of registered users
+ * Performs CRUD operations on user accounts
  */
-class OverviewModel extends Model {
+class AccountModel extends Model {
     /**
      * Constructor
      */
@@ -16,7 +16,12 @@ class OverviewModel extends Model {
      * @return array
      */
     public function getUsers () {
-        $stmnt = $this->db->prepare("select userId, username, email, created from user");
+        $stmnt = $this->db->prepare("select user.userId, 
+                                            user.username, 
+                                            user.email, 
+                                            user.created, 
+                                            user.edited
+                                        from user");
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
         $stmnt->execute();
         
