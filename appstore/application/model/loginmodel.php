@@ -1,6 +1,6 @@
 <?php
 /**
- * Handles user login
+ * Handles user login, registration, and related tasks
  */
 class LoginModel extends Model {
     /**
@@ -11,31 +11,38 @@ class LoginModel extends Model {
     }
     
     /**
+     * Checks if a user with the specified name exists
+     * 
+     * returns true if the user exists, false otherwise
+     * 
+     * @param string $username
+     * 
+     * @return boolean true if the $username exists
+     */
+    public function usernameExists ( $username ) {
+        $stmnt = $this->db->prepare("select user.username,
+                                            user.email
+                                         from user
+                                         where user.username = :username
+                                            or user.email = :username");
+        $stmnt->execute(array(':username' => $username));
+        if ( $stmnt->rowCount() == 1  ) { return true; }
+        else { return  false; }
+    }
+    
+    /**
      * Login process
      * 
-     * @param string $tryUser username from login form
-     * @param string $tryPassword password from login form
-     * 
-     * @return boolean 
+     * @return boolean true is the login process was successful
      */
-    public function login ( $tryUsername, $tryPassword ) {
-        $stmnt = $this->db->prepare("select user.username,
-                                            user.email 
-                                         from user 
-                                         where user.username = :username 
-                                            or user.email = :username");
-        $stmnt->execute(array(':username' => $tryUsername));
+    public function login () {
         
-        if ( $stmnt->rowCount() == 1 ) {
-            // valid usename supplied
-            $username = $stmnt->fetchAll();
-            $username = $username[0]['username'];
-            
+        if ( $this->usernameExists($_POST['loginUsername']) ) {
             $stmnt = $this->db->prepare("select password from user where username = :username");
-            $stmnt->execute(array(':username' => $username));
+            $stmnt->execute(array(':username' => $_POST['loginUsername']));
             $password = $stmnt->fetchColumn(0);
             
-            if ( $tryPassword == $password ) {
+            if ( $_POST['loginPassword'] == $password ) {
                 
                 return true;
             } else {
