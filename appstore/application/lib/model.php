@@ -8,7 +8,7 @@ class Model {
     /**
      * No arg constructor
      */
-    private function __construct () {}
+    //private function __construct () {}
     
     /**
      * Constructs a model with the given database connection
