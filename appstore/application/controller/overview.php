@@ -29,7 +29,7 @@ class Overview extends Controller {
         }
         
         $model = $this->loadModel('Account');
-        $this->user = $model->getUserDetails($userId);
+        $this->user = $model->getUserById($userId);
         $this->render('overview/userdetails');
     }
 }

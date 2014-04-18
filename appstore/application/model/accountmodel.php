@@ -39,7 +39,7 @@ class AccountModel extends Model {
      * 
      * @return User $user
      */
-    public function getUserDetails ( $userId ) {
+    public function getUserById ( $userId ) {
         $stmnt = $this->db->prepare("select user.userId,
                                             user.username, 
                                             user.email, 
