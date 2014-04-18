@@ -35,10 +35,13 @@ class OverviewModel extends Model {
      * @return User $user
      */
     public function getUserDetails ( $userId ) {
-        $query = <<<QUERY
-select user.userId,  user.username, user.email, user.created, user.edited
-    from user where user.userId = :userId; 
-QUERY;
+        $stmnt = $this->db->prepare("select user.userId,
+                                            user.username, 
+                                            user.email, 
+                                            user.created, 
+                                            user.edited
+                                        from user 
+                                        where user.userId = :userId;");
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
         $stmnt->execute(array(':userId' => $userId));
         
