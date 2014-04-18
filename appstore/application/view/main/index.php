@@ -2,6 +2,12 @@
     <h1>Main Page, Index</h1>
 </div>
 <div>
+    <a href="<?php echo URL ?>/login">Login</a>
+</div>
+<div>
+    <a href="<?php echo URL ?>/overview">Users</a>
+</div>
+<div>
     <a href="<?php echo URL ?>/main">Link to nowhere</a>
 </div>
 <div>
