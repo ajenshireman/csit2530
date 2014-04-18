@@ -4,6 +4,13 @@
  */
 class LoginModel extends Model {
     /**
+     * Constructor
+     */
+    public function __construct() {
+        parent::__construct();
+    }
+    
+    /**
      * Login process
      * 
      * @param string $tryUser username from login form
