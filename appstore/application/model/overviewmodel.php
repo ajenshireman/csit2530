@@ -6,8 +6,8 @@ class OverviewModel extends Model {
     /**
      * Constructor
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct( $database ) {
+        parent::__construct($database);
     }
     
     /**
@@ -39,7 +39,6 @@ class OverviewModel extends Model {
 select user.userId,  user.username, user.email, user.created, user.edited
     from user where user.userId = :userId; 
 QUERY;
-        $stmnt = $this->db->prepare($query);
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
         $stmnt->execute(array(':userId' => $userId));
         

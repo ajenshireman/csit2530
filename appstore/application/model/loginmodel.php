@@ -6,8 +6,8 @@ class LoginModel extends Model {
     /**
      * Constructor
      */
-    public function __construct() {
-        parent::__construct();
+    public function __construct( $database) {
+        parent::__construct($database);
     }
     
     /**
