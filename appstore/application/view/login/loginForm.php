@@ -1,7 +1,7 @@
 <form name="loginForm" action="<?php echo URL ?>/login/login" method="post">
     <div>
         <label for="loginUsername">Username: </label>
-    	<input type="text" name="inputUsername" />
+    	<input type="text" name="loginUsername" />
     </div>
     <div>
         <label for="loginPassword">Password: </label>
