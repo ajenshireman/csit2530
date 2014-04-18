@@ -1,5 +1,9 @@
 <?php
 class Overview extends Controller {
+    public function __construct() {
+        parent::__construct();
+    }
+    
     /**
      * Shows a list of all registered users
      */
@@ -12,7 +16,7 @@ class Overview extends Controller {
     /**
      * Shows the details for a user
      * 
-     * @param int $userId
+     * @param array $parameters [0] must be the userId
      */
     public function showUserDetails ( $parameters = array() ) {
         if ( isset($parameters[0]) ) {
