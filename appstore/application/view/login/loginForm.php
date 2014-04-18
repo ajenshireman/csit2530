@@ -1,4 +1,4 @@
-<form name="loginForm" action="<?php echo URL ?>/login/doLogin" method="post">
+<form name="loginForm" action="<?php echo URL ?>/login/login" method="post">
     <div>
         <label for="inputUserName">Username: </label>
     	<input type="text" name="inputUsername" />
