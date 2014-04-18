@@ -14,7 +14,7 @@ class Login extends Controller {
      * Show the login form
      */
     public function index () {
-        $this->render('login/loginForm');
+        $this->render('login/dualForm');
     }
     
     /**
