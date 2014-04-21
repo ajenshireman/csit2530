@@ -11,5 +11,13 @@
     Joined: <?php echo $this->user->get('created') ?>
 </div>
 <div>
+    Roles: 
+    <?php 
+    for ( $i = 0; $i < count($this->userRoles); $i++ ) {
+        echo $this->userRoles[$i]->get('name') . ' ';
+    }
+    ?>
+</div>
+<div>
     <a href="<?php echo URL ?>/overview">User List</a>
 </div>

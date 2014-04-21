@@ -24,6 +24,9 @@
             <li>
             	<a href="<?php echo URL ?>/login/logout">Logout</a>
             </li>
+            <li>
+                Logged in as: <?php echo $_SESSION['username'] ?>
+            </li>
             <?php } else { ?>
             <li>
             	<a href="<?php echo URL ?>/login">Login</a>

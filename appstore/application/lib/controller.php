@@ -42,4 +42,5 @@ class Controller {
             require VIEW_PATH . $filename . '.php';
         }
     }
+    
 }

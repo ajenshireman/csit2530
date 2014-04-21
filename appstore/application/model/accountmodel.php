@@ -63,6 +63,63 @@ class AccountModel extends Model {
     }
     
     /**
+     * checks if a user has a certain role
+     * 
+     * @param int $userId user to check
+     * @param string $role name of role needed
+     * 
+     * @return boolean
+     */
+    public function userInRole ( $userId, $role ) {
+        $stmnt = $this->db->prepare("select user.username as User, role.name as Role
+                                         from user_role
+                                         join user on user.userId = user_role.userId
+                                         join role on role.roleId = user_role.roleId
+                                         where role.name = :roleName and user.userId = :userId;");
+        $stmnt->execute(array(':roleName' => $role, ':userId' => $userId));
+        return ( $stmnt->rowCount() == 1 );
+    }
+    
+    /**
+     * gets all roles assigned to a user
+     * 
+     * @param int $userId
+     * 
+     * @return array
+     */
+    public function getUserRoles ( $userId ) {
+        $stmnt = $this->db->prepare("select role.roleId, 
+                                            role.name, 
+                                            role.description, 
+                                            role.isAdmin
+                                    from role
+                                    join user_role on user_role.roleId = role.roleId
+                                    join user on user.userId = user_role.userId
+                                    where user.userId = :userId");
+        $stmnt->setFetchMode(PDO::FETCH_CLASS, 'Role');
+        $stmnt->execute(array(':userId' => $userId));
+        
+        $roles = array();
+        while ( $role = $stmnt->fetch() ) {
+            array_push($roles, $role);
+        }
+        
+        return $roles;
+    }
+    
+    /**
+     * Assignes a role to a user
+     * 
+     * @param int $uesrId
+     * @param int $roleId
+     */
+    public function placeUserInRole ( $userId, $roleId ) {
+        $stmnt = $this->db->prepare("insert into user_role ( userId, roleId ) 
+                                     values ( :userId, :roleId );");
+        $stmnt->execute(array(':userId' => $userId, ':roleId' => $roleId));
+    }
+    
+    /**
      * Creates a new user in the database
      * 
      * @param User $newUser Registration information for the new user
@@ -70,9 +127,6 @@ class AccountModel extends Model {
      * @return User The new user, pulled from the database
      */
     public function createUser ( $newUser ) {
-        // Hash the user's password
-        // $newUser->set('password', password_hash($newUser->get('password'), PASSWORD_DEFAULT)));
-        
         // set the create date to now
         $newUser->set('created', time() );
         
@@ -86,10 +140,12 @@ class AccountModel extends Model {
             ':created'  => $newUser->get('created')
         ));
         
-        //print_r($stmnt->errorInfo());
+        $user = $this->getUserById($this->db->lastInsertId());
+        
+        $this->placeUserInRole($user->get('userId'), 2);
         
         // return the updated information from the database
-        return $this->getUserById($this->db->lastInsertId());
+        return $user;
     }
     
     /**
@@ -126,7 +182,9 @@ class AccountModel extends Model {
      * @param int $userId User to delete
      */
     public function deleteUser ( $userId ) {
-        
+        $stmnt = $this->db->prepare("delete from user where user.userId = :userId");
+        $stmnt->execute(array(':userId' => $userId));
+        return;
     }
     
     /**
@@ -134,9 +192,9 @@ class AccountModel extends Model {
      * 
      * Checks if the password needs to be rehashed, and reshashes if needed
      * 
-     * @param int $userId user whi needs thier password checked
+     * @param int $userId user who needs thier password checked
      * 
-     * @return boolean true if success
+     * @return User|string updated user if success, message if not
      */
     public function rehashPassword ( $userId ) {
         // get the user's hashed password
@@ -145,13 +203,9 @@ class AccountModel extends Model {
         if ( password_needs_rehash($password, PASSWORD_DEFAULT) ) {
             $password = password_hash($password, PASSWORD_DEFAULT);
             $user->set('password', $password);
-            if ( $this->updateUser($userId, $user) ) {
-                return true;
-            } else {
-                return false;
-            }
+            return $this->updateUser($userId, $user);
         } else {
-            return false;
+            return 'Password did not neeed rehash';
         }
     }
 }

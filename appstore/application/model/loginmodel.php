@@ -69,7 +69,6 @@ class LoginModel extends Model {
         $stmnt->execute(array(':userId' => $userId));
         if ( $stmnt->rowCount() == 1  ) {
             $password = $stmnt->fetchColumn(0);
-            //if ( $tryPassword == $password ) { return true; } 
             if ( password_verify($tryPassword, $password) ) { return true; }
             else { return false; }
         } else {
