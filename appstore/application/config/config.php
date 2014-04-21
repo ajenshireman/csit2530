@@ -8,6 +8,7 @@ date_default_timezone_set('America/New_York');
 
 /* Set the site url */
 define('URL', 'http://127.0.0.1/~ajen/csit2530/appstore');
+//define('URL', 'http://ps11.pstcc.edu/~c2530a07/appstore');
 
 /* Folder config */
 define('CLASS_PATH', 'application/class/');
