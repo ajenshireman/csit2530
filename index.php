@@ -19,8 +19,8 @@
     <li>Lab6
         <ul>
             <li><a href="lab6/guitarshop/">Guitar Shop</a></li>
-            <li><a href="lab6/">App Store</a></li>
         </ul>
     </li>
+    <li><a href="appstore">App Store</a></li>
 </ul>
 <?php require './includes/foot.php' ?>
