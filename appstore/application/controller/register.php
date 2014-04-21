@@ -24,6 +24,8 @@ class Register extends Controller {
         $model =$this->loadModel('Login');
         if ( $model->register() ) {
             header('Location: ' . URL . '/overview');
+        } else {
+            echo 'Registration Failed';
         }
     }
 }
