@@ -42,13 +42,13 @@ class AccountModel extends Model {
      */
     public function getUserById ( $userId, $fetch_password = false ) {
         $query = "select user.userId,
-                        user.username,";
+                         user.username,";
         if ( $fetch_password ) {
-            $query .= " user.password, ";
+            $query .= "  user.password, ";
         }
-        $query .= "     user.email, 
-                        user.created, 
-                        user.edited
+        $query .= "      user.email, 
+                         user.created, 
+                         user.edited
                    from user 
                    where user.userId = :userId;";
         $stmnt = $this->db->prepare($query);
@@ -114,9 +114,12 @@ class AccountModel extends Model {
      * @param int $roleId
      */
     public function placeUserInRole ( $userId, $roleId ) {
-        $stmnt = $this->db->prepare("insert into user_role ( userId, roleId ) 
-                                     values ( :userId, :roleId );");
-        $stmnt->execute(array(':userId' => $userId, ':roleId' => $roleId));
+        $stmnt = $this->db->prepare("insert into user_role ( userId, roleId, created ) 
+                                     values ( :userId, :roleId, :created );");
+        $stmnt->execute(array(':userId' => $userId, 
+                              ':roleId' => $roleId,
+                              ':created' => time()
+        ));
     }
     
     /**
@@ -137,7 +140,7 @@ class AccountModel extends Model {
         	':username' => $newUser->get('username'),
             ':password' => $newUser->get('password'),
             ':email'    => $newUser->get('email'),
-            ':created'  => $newUser->get('created')
+            ':created'  => time()
         ));
         
         $user = $this->getUserById($this->db->lastInsertId());
