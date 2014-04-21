@@ -8,7 +8,7 @@
     e-mail: <?php echo $this->user->get('email') ?>
 </div>
 <div>
-    Joined: <?php echo $this->user->get('created') ?>
+    Joined: <?php echo $this->user->createDate() ?>
 </div>
 <div>
     Roles: 

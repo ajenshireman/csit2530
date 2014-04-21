@@ -8,7 +8,7 @@
         <?php foreach ( $this->users as $user ) { ?>
         <tr>
             <td><?php echo $user->get('username') ?></td>
-            <td><?php echo $user->get('created')?></td>
+            <td><?php echo $user->createDate() ?></td>
             <td><a href="<?php echo URL ?>/overview/showuserdetails/<?php echo $user->get('userId') ?>"><button>Details</button></a></td>
             <?php if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') || 
                      ( $_SESSION['userId'] == $user->get('userId') ) ) { ?>
