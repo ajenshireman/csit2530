@@ -15,6 +15,7 @@ define('CONTROLLER_PATH', 'application/controller/');
 define('LIB_PATH', 'application/lib/');
 define('MODEL_PATH', 'application/model/');
 define('VIEW_PATH', 'application/view/');
+define('PUBLIC_PATH', URL . '/public/');
 
 /* Define locations for the common head and foot */
 define('COMMON_HEAD', VIEW_PATH . '_template/head.php');
