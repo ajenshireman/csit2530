@@ -6,7 +6,7 @@
     
     <title></title>
     
-    <link rel="stylesheet" type="text/css" href="public/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo URL ?>/public/css/styles.css" />
     
     <script></script>
 </head>
