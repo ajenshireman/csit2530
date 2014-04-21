@@ -14,7 +14,7 @@ class Login extends Controller {
      * Show the login form
      */
     public function index () {
-        $this->render('login/dualForm');
+        $this->render('login/loginForm');
     }
     
     /**
@@ -34,6 +34,7 @@ class Login extends Controller {
         if ( $model->login() ) {
             echo 'Login Success!';
             // redirect to main page? or previous page
+            header('Location: ' . URL );
         } else {
             // show the login form again
             echo 'Login Failed';
@@ -41,12 +42,10 @@ class Login extends Controller {
     }
     
     /**
-     * Registers a new user
+     * logs the user out
      */
-    public function register () {
-        $model =$this->loadModel('Login');
-        $model->register();
-        header('Location: ' . URL . '/overview');
-        
+    public function logout () {
+        Session::destroy();
+        header('Location: ' . URL);
     }
 }

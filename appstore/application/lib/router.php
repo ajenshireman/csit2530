@@ -69,8 +69,10 @@ class Router {
             /* debug *
             echo 'Controller: ' . $this->controller . '<br />';
             echo 'Action: ' . $this->action . '<br />';
-            foreach ( $this->parameters as $parameter ) {
-                echo 'Parameter: ' . $parameter . '<br />';
+            if ( is_array($this->parameters) ) {
+                foreach ( $this->parameters as $parameter ) {
+                    echo 'Parameter: ' . $parameter . '<br />';
+                }
             }
             /* */
         }

@@ -9,7 +9,7 @@ class Controller {
     public $db = null;
     
     function __construct () {
-        Session::initilize();
+        Session::initialize();
         
         $this->db = new Database();
     }

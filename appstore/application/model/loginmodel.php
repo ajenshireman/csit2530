@@ -69,7 +69,8 @@ class LoginModel extends Model {
         $stmnt->execute(array(':userId' => $userId));
         if ( $stmnt->rowCount() == 1  ) {
             $password = $stmnt->fetchColumn(0);
-            if ( $tryPassword == $password ) { return true; } 
+            //if ( $tryPassword == $password ) { return true; } 
+            if ( password_verify($tryPassword, $password) ) { return true; }
             else { return false; }
         } else {
             throw new Exception('User not found');
@@ -92,9 +93,19 @@ class LoginModel extends Model {
     public function login () {
         
         try {
+            // check if the username is valid
             $userId = $this->getUserId($_POST['loginUsername']);
             try {
+                // check if the password is corret
                 if ( $this->verifyUserPassword($_POST['loginPassword'], $userId) ) {
+                    // credentails ok
+                    $accountModel = new AccountModel($this->db);
+                    $user = $accountModel->getUserById($userId);
+                    Session::initialize();
+                    Session::set('loggedIn', true);
+                    Session::set('username', $user->get('username'));
+                    Session::set('userId', $user->get('userId'));
+                    // TODO set roles?
                     return true;
                 } else {
                     return false;
@@ -149,19 +160,19 @@ class LoginModel extends Model {
             }
         }
         
-        if ( isset($errors) ) { 
-            echo 'Errors:<br />';
-            var_dump($errors);
-            echo '<br />';
+        if ( isset($errors) ) {
+            Session::set('errors', $errors); 
+            return false;
         }
         
         $newUser = new User();
         $newUser->set('username', $_POST['registerUsername']);
-        $newUser->set('password', $_POST['registerPassword']);
+        $newUser->set('password', password_hash($_POST['registerPassword'], PASSWORD_DEFAULT));
         $newUser->set('email', $_POST['registerEmail']);
         
         $accountModel = new AccountModel($this->db);
         $user = $accountModel->createUser($newUser);
         return  $user;
     }
+    
 }

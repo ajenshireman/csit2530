@@ -1,4 +1,4 @@
-<form name="registratioForm" action="<?php echo URL ?>/login/register" method="post">
+<form name="registratioForm" action="<?php echo URL ?>/register/register" method="post">
     <div>
         <label for="registerUsername">Username: </label>
         <input type="text" name="registerUsername" />

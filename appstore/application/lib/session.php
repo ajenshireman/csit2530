@@ -11,7 +11,7 @@ class Session {
     /**
      * starts the session if none exists
      */
-    public static function initilize () {
+    public static function initialize () {
         if ( session_id() =='' ) {
             session_start();
         }
