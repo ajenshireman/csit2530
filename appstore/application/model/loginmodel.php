@@ -52,6 +52,8 @@ class LoginModel extends Model {
         }
     }
     
+    
+    
     /**
      * Checks if the given passord matches the given users password
      * 
@@ -72,6 +74,14 @@ class LoginModel extends Model {
         } else {
             throw new Exception('User not found');
         }
+    }
+    
+    /**
+     * Validates the format of a given email address
+     */
+    public function validateFormat ( $string ) {
+        // TODO use regex yo vaidate email format
+        return true;
     }
     
     /**
@@ -97,5 +107,61 @@ class LoginModel extends Model {
             return false;
         }
         
+    }
+    
+    /**
+     * Registers a new user
+     * 
+     * @return boolean
+     */
+    public function register () {
+        // validate input
+        if ( !isset($_POST['registerUsername']) || empty($_POST['registerUsername']) ) {
+            // username is required
+            $errors['username'] = 'Please enter a username';
+        } else {
+            if ( $this->usernameExists($_POST['registerUsername']) ) {
+                $errors['username'] = 'Username already exists';
+            }
+        }
+        if ( !isset($_POST['registerEmail']) || empty($_POST['registerEmail']) ) {
+            // email is required
+            $errors['email'] = 'Please enter a valid email address';
+        } else {
+            // validate email format
+            if ( $this->validateFormat($_POST['registerEmail']) ) {
+                // check if the email is in use
+                if ( $this->usernameExists($_POST['registerUsername']) ) {
+                    $errors['username'] = 'Email already in use';
+                }
+            } else {
+                // email is malformed
+                $errors['email'] = 'Incorrect email format';
+            }
+        }
+        if ( !isset($_POST['registerPassword']) || empty($_POST['registerPassword']) ) {
+            // password is required
+            $errors['password'] = 'Please enter a password';
+        } else {
+            if ( !isset($_POST['registerPasswordConfirm']) || ( $_POST['registerPassword'] != $_POST['registerPasswordConfirm'] )) {
+                // passwords must match
+                $errors['password'] = 'Passwords do not match';
+            }
+        }
+        
+        if ( isset($errors) ) { 
+            echo 'Errors:<br />';
+            var_dump($errors);
+            echo '<br />';
+        }
+        
+        $newUser = new User();
+        $newUser->set('username', $_POST['registerUsername']);
+        $newUser->set('password', $_POST['registerPassword']);
+        $newUser->set('email', $_POST['registerEmail']);
+        
+        $accountModel = new AccountModel($this->db);
+        $user = $accountModel->createUser($newUser);
+        return  $user;
     }
 }

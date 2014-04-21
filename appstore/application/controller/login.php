@@ -29,10 +29,9 @@ class Login extends Controller {
             return;
         }
         
-        $tryUser = $_POST['loginUsername'];
-        $tryPassword = $_POST['loginPassword'];
+        
         $model = $this->loadModel('Login');
-        if ( $model->login($tryUser, $tryPassword) ) {
+        if ( $model->login() ) {
             echo 'Login Success!';
             // redirect to main page? or previous page
         } else {
@@ -45,6 +44,9 @@ class Login extends Controller {
      * Registers a new user
      */
     public function register () {
-        //
+        $model =$this->loadModel('Login');
+        $model->register();
+        header('Location: ' . URL . '/overview');
+        
     }
 }
