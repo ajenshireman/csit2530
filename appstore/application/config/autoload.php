@@ -21,5 +21,5 @@ function autoload ( $class ) {
     }
 }
 
-// reister the autoload functions with spl_autoload
+// register the autoload functions with spl_autoload
 spl_autoload_register('autoload');

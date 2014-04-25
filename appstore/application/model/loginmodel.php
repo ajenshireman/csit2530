@@ -26,6 +26,7 @@ class LoginModel extends Model {
                                          where user.username = :username
                                             or user.email = :username");
         $stmnt->execute(array(':username' => $username));
+        //echo $stmnt->rowCount();
         if ( $stmnt->rowCount() == 1  ) { return true; }
         else { return  false; }
     }

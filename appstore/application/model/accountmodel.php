@@ -187,6 +187,7 @@ class AccountModel extends Model {
     public function deleteUser ( $userId ) {
         $stmnt = $this->db->prepare("delete from user where user.userId = :userId");
         $stmnt->execute(array(':userId' => $userId));
+        print_r($stmnt->errorInfo());
         return;
     }
     
