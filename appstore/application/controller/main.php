@@ -5,11 +5,11 @@ class Main extends Controller {
     }
     
     public function index () {
-        $this->render('main/index');
+        $this->render('main' . DS .'index');
     }
     
     public function testLink () {
-        $this->render('main/testlink');
+        $this->render('main' . DS .'testlink');
     }
     
     public function testParams ( $parameters = array() ) {
@@ -19,6 +19,6 @@ class Main extends Controller {
             $this->msg = 'There is no message';
         }
         
-        $this->render('main/testparams');
+        $this->render('main' . DS .'testparams');
     }
 }

@@ -15,7 +15,7 @@ class Overview extends Controller {
     public function index () {
         $this->model = $this->loadModel('Account');
         $this->users = $this->model->getUsers();
-        $this->render('overview/index');
+        $this->render('overview' . DS .'index');
     }
     
     /**
@@ -33,7 +33,7 @@ class Overview extends Controller {
         $this->model = $this->loadModel('Account');
         $this->user = $this->model->getUserById($userId);
         $this->userRoles = $this->model->getUserRoles($userId);
-        $this->render('overview/userdetails');
+        $this->render('overview' . DS .'userdetails');
     }
     
     /**
@@ -51,9 +51,9 @@ class Overview extends Controller {
         $model = $this->loadModel('Account');
         $this->user = $model->rehashPassword($userId);
         if ( get_class($this->user) == 'User') {
-            $this->render('overview/rehashSuccess');
+            $this->render('overview' . DS .'rehashSuccess');
         } else {
-            $this->render('overview/rehashFail');
+            $this->render('overview' . DS .'rehashFail');
         }
     }
 }

@@ -14,7 +14,7 @@ class Register extends Controller {
      * Displays the registration form
      */
     public function index () {
-        $this->render('login/registrationForm');
+        $this->render('login' . DS .'registrationForm');
     }
     
     /**
