@@ -23,8 +23,8 @@ insert into user ( username, password, email, statusId, created, edited )
     values ( 'testuser', '$2y$10$JFIPq0qKF.wg3mw4TDl4/ucIssmgoNhEFrpC1iLsXOr.zus75wRRu', 'testuser@somewhere.org', 
         ( select status.statusId from status where status.name = 'Active' ), 
         unix_timestamp(), unix_timestamp() );
-insert into user ( username, password, email, statusId, created, edited )
-    values ( 'Godzilla', '$2y$10$rhi3aLiivCqzjSJWOvVscuoy5AhZZQmz0tgLkGOCnQ.Fmrge5GoRO', 'biggreenandbeautiful@tokyo.jp', 
+insert into user ( username, password, email, pstcc_email, statusId, created, edited )
+    values ( 'Godzilla', '$2y$10$rhi3aLiivCqzjSJWOvVscuoy5AhZZQmz0tgLkGOCnQ.Fmrge5GoRO', 'biggreenandbeautiful@tokyo.jp', 'godzilla@pstcc.edu', 
         ( select status.statusId from status where status.name = 'Active' ), 
         unix_timestamp(), unix_timestamp() );
 
