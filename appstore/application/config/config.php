@@ -27,7 +27,7 @@ define('COMMON_FOOT', VIEW_PATH . '_template' . DS . 'foot.php');
 if ( !defined(PHP_VERSION_ID) ) {
     require LIB_PATH . 'password.php';
 } else if ( PHP_VERSION_ID < 505000 ) {
-    require IB_PATH . 'password.php';
+    require LIB_PATH . 'password.php';
 }
 
 /* Set the database connection parameters */
