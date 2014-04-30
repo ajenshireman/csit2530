@@ -19,5 +19,14 @@
     ?>
 </div>
 <div>
+    Status: <?php echo $this->user->get('status') ?>
+</div>
+<?php if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) { ?>
+<div>
+    <strong>Set Account Status</strong><br />
+    <?php echo $this->statusChange ?>
+</div>
+<?php } ?>
+<div>
     <a href="<?php echo URL ?>/overview">User List</a>
 </div>

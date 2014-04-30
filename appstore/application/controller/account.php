@@ -10,13 +10,15 @@ class Account extends Controller {
     }
     
     public function index () {
-        header('Location: ' . URL);
+        $model = $this->loadModel('Account');
+        $this->user = $model->getUserById($_SESSION['userId']);
+        $this->render('account/main');
     }
     
     /**
      * Deletes a user
      * 
-     * @param array [0] must be usrId
+     * @param array [0] must be userId
      */
     public function delete ( $parameters ) {
         $userId = $parameters[0];
@@ -29,5 +31,29 @@ class Account extends Controller {
         } else {
             header('Location: ' . URL);
         }
+    }
+    
+    /**
+     * Change a user's status
+     * 
+     * @param array:
+     *  [0]: userId
+     *  [1]: statusId
+     *  [2:]: url to return to
+     */
+    public function setStatus ( $parameters ) {
+        $userId = $parameters[0];
+        $statusId = $parameters[1];
+        $returnPage = '/overview';
+        if ( count($parameters) > 2 ) {
+            $returnPage = '/';
+            for ( $i = 2; $i < count($parameters); $i++ ) {
+                $returnPage += $parameters;
+            }
+        }
+        $model = $this->loadModel('Account');
+        $model->setUserStatus($userId, $statusId);
+        
+        header('Location: ' . URL . $returnPage);
     }
 }

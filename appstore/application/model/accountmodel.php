@@ -4,24 +4,24 @@
  */
 class AccountModel extends Model {
     /**
-     * Constructor
-     */
-    public function __construct( $database ) {
-        parent::__construct($database);
-    }
-    
-    /**
-     * Shows a list of all registered users
+     * gets a list of all registered users
+     * 
+     * @param int $status 
      * 
      * @return array
      */
-    public function getUsers () {
-        $stmnt = $this->db->prepare("select user.userId, 
-                                            user.username, 
-                                            user.email, 
-                                            user.created, 
-                                            user.edited
-                                        from user");
+    public function getUsers ( $status = false ) {
+        $query = "select user.userId, 
+                        user.username, 
+                        user.email, 
+                        user.statusId,
+                        status.name as status,  
+                        user.created, 
+                        user.edited
+                    from user
+                    join status on status.statusId = user.statusId";
+        $query .= ( $status ) ? $status . ";" : ";";
+        $stmnt = $this->db->prepare($query);
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
         $stmnt->execute();
         
@@ -30,6 +30,8 @@ class AccountModel extends Model {
             array_push($users, $user);
         }
         return $users;
+        
+        return $this->resultToArray($stmnt);
     }
     
     /**
@@ -47,9 +49,12 @@ class AccountModel extends Model {
             $query .= "  user.password, ";
         }
         $query .= "      user.email, 
+                         user.statusId,
+                         status.name as status, 
                          user.created, 
                          user.edited
                    from user 
+                   join status on status.statusId = user.statusId
                    where user.userId = :userId;";
         $stmnt = $this->db->prepare($query);
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
@@ -162,9 +167,15 @@ class AccountModel extends Model {
     public function updateUser( $userId, $newUser ) {
         $existingUser = $this->getUserById($userId, true);
         $updatedUser = $existingUser->update($newUser);
+        echo var_dump($existingUser);
+        echo '<br />';
+        echo var_dump($newUser);
+        echo '<br />';
+        echo var_dump($updatedUser);
         $stmnt = $this->db->prepare("update user 
                                      set username = :username, 
                                          password = :password,
+                                         statusId = :statusId, 
                                          email = :email,
                                          edited = :edited
                                      where userId = :userId");
@@ -172,23 +183,41 @@ class AccountModel extends Model {
             'userId'   => $userId,
         	'username' => $updatedUser->get('username'),
             'password' => $updatedUser->get('password'),
+            'statusId' => $updatedUser->get('statusId'),
             'email'    => $updatedUser->get('email'),
             'edited'   => time()
         ));
         
-        return $this->getUserById($userId, true);
+        $user = $this->getUserById($userId, true);
+        
+        return $user;
     }
     
     /**
      * Deletes a user from the database
      * 
      * @param int $userId User to delete
+     * 
+     * @deprecated
      */
     public function deleteUser ( $userId ) {
-        $stmnt = $this->db->prepare("delete from user where user.userId = :userId");
-        $stmnt->execute(array(':userId' => $userId));
-        print_r($stmnt->errorInfo());
+         $stmnt = $this->db->prepare("delete from user where user.userId = :userId");
+         print_r($stmnt->errorInfo());
+       
         return;
+    }
+    
+    /**
+     * Assigns a status to a user's account
+     * 
+     * @param int $userId
+     * @param int $statusId
+     */
+    public function setUserStatus ( $userId, $statusId ) {
+        $newUser = new User();
+        
+        $newUser->set('statusId', $statusId);
+        $user = $this->updateUser($userId, $newUser);
     }
     
     /**

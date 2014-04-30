@@ -9,17 +9,11 @@ class User extends DatabaseObject {
     protected $username;
     protected $password;
     protected $email;
+    protected $statusId;
+    protected $status;
     protected $created;
     protected $edited;
-    /*
-    public function set ($key, $value) {
-        $this->$key = $value;
-    }
     
-    public function get ( $key ) {
-        return $this->$key;
-    }
-    */
     /**
      * updates the user with new information
      * 
@@ -36,6 +30,10 @@ class User extends DatabaseObject {
                 $newUser->get('password') : $this->password );
         $updatedUser->set('email', ( $newUser->get('email') != null ) ? 
                 $newUser->get('email') : $this->email );
+        $updatedUser->set('statusId', $newUser->get('statusId') != null ?
+                $newUser->get('statusId') : $this->statusId );
+        $updatedUser->set('status', $newUser->get('status') != null ?
+                $newUser->get('status') : $this->status );
         $updatedUser->set('created', $this->created);
         $updatedUser->set('edited', time());
         

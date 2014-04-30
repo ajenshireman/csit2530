@@ -106,8 +106,30 @@ class LoginModel extends Model {
                     Session::set('username', $user->get('username'));
                     Session::set('userId', $user->get('userId'));
                     // TODO set roles?
+                    /*
+                    // log login
+                    $stmnt = $this->db->prepare('insert into login ( userId, ip, success, created )
+                                                    values ( :userId, :ip, :success :created );');
+                    $stmnt->execute(array(
+                    	':userId'  => $user->get('userId'),
+                        ':ip'      => $_SERVER['HOST_ADDR'],
+                        ':success' => 1,
+                        ':created' => time()
+                    ));
+                    */
                     return true;
                 } else {
+                    /*
+                    // log login
+                    $stmnt = $this->db->prepare('insert into login ( userId, ip, success, created )
+                                                    values ( :userId, :ip, :success :created );');
+                    $stmnt->execute(array(
+                            ':userId'  => $user->get('userId'),
+                            ':ip'      => $_SERVER['HOST_ADDR'],
+                            ':success' => 0,
+                            ':created' => time()
+                    ));
+                    */
                     return false;
                 }
             } catch ( Exception $e ) {

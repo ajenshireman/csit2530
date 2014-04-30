@@ -33,6 +33,19 @@ class Overview extends Controller {
         $this->model = $this->loadModel('Account');
         $this->user = $this->model->getUserById($userId);
         $this->userRoles = $this->model->getUserRoles($userId);
+        
+        $statusmodel = $this->loadModel('Status');
+        $statuses = $statusmodel->getStatuses();
+        $this->statusChange = "";
+        if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) {
+            foreach ( $statuses as $status ) {
+                if ( $this->user->get('statusId') != $status->get('statusId') ) {
+                    $this->statusChange .= '<a href="'. URL . '/account/setstatus/' . 
+                    $this->user->get('userId') . '/' . $status->get('statusId') . 
+                    '"><button>' . $status->get('name') . '</button></a>';
+                }
+            }
+        }
         $this->render('overview' . DS .'userdetails');
     }
     
