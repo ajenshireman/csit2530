@@ -167,11 +167,6 @@ class AccountModel extends Model {
     public function updateUser( $userId, $newUser ) {
         $existingUser = $this->getUserById($userId, true);
         $updatedUser = $existingUser->update($newUser);
-        echo var_dump($existingUser);
-        echo '<br />';
-        echo var_dump($newUser);
-        echo '<br />';
-        echo var_dump($updatedUser);
         $stmnt = $this->db->prepare("update user 
                                      set username = :username, 
                                          password = :password,
