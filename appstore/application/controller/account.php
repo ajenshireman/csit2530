@@ -19,18 +19,16 @@ class Account extends Controller {
      * Change a user's status
      * 
      * @param array:
-     *  [0]: userId
-     *  [1]: statusId
-     *  [2:]: url to return to
+     *  [0:]: url to return to
      */
     public function setStatus ( $parameters = array() ) {
         $userId = $_POST['inputUserId'];
         $statusId = $_POST['inputStatusId'];
         $returnPage = '/overview';
-        if ( count($parameters) > 2 ) {
-            $returnPage = '/';
-            for ( $i = 2; $i < count($parameters); $i++ ) {
-                $returnPage += $parameters;
+        if ( isset($parameters) ) {
+            $returnPage = '';
+            for ( $i = 0; $i < count($parameters); $i++ ) {
+                $returnPage .= '/' . $parameters[$i];
             }
         }
         $model = $this->loadModel('Account');
