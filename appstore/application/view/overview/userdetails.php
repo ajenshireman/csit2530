@@ -23,7 +23,7 @@
 </div>
 <?php if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) { ?>
 <div>
-    <form action="<?php echo URL ?>/account/setstatus" method="post">
+    <form action="<?php echo URL ?>/account/setstatus/overview/showuserdetails/<?php echo $this->user->get('userId') ?>" method="post">
         <div style="display: inline">
         	<strong>Set Account Status: </strong>
         	<select name="inputStatusId">
