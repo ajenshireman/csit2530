@@ -19,9 +19,11 @@ class Session {
     
     /**
      * reenerates the session id
+     * 
+     * bool $delete_old_session
      */
-    public function refresh () {
-        session_regenerate_id();
+    public function refresh ( $delete_old_session = false ) {
+        session_regenerate_id($delete_old_session);
     }
     
     /**
