@@ -11,10 +11,17 @@ class Overview extends Controller {
     
     /**
      * Shows a list of all registered users
+     * 
+     * @param int $statusId show only users with a certain status
      */
-    public function index () {
+    public function index ( $parameters = array() ) {
+        $statusId = ( isset($parameters[0]) ) ? $parameters[0] : false;
         $this->model = $this->loadModel('Account');
-        $this->users = $this->model->getUsers();
+        $this->users = $this->model->getUsers($statusId);
+        
+        $statusmodel = $this->loadModel('Status');
+        $this->statuses = $statusmodel->getStatuses();
+        
         $this->render('overview' . DS .'index');
     }
     

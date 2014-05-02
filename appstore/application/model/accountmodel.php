@@ -10,7 +10,7 @@ class AccountModel extends Model {
      * 
      * @return array
      */
-    public function getUsers ( $status = false ) {
+    public function getUsers ( $statusId = false ) {
         $query = "select user.userId, 
                         user.username, 
                         user.email, 
@@ -20,10 +20,10 @@ class AccountModel extends Model {
                         user.edited
                     from user
                     join status on status.statusId = user.statusId";
-        $query .= ( $status ) ? $status . ";" : ";";
+        $query .= ( $statusId ) ? ' where user.statusId = :statusId' : ';';
         $stmnt = $this->db->prepare($query);
         $stmnt->setFetchMode(PDO::FETCH_CLASS, 'User');
-        $stmnt->execute();
+        $stmnt->execute(array(':statusId' => $statusId));
         
         $users = array();
         while ( $user = $stmnt->fetch() ) {

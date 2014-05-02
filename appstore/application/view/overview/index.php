@@ -1,4 +1,12 @@
 <div>
+    <strong>Status: </strong>
+    <a href="<?php echo URL ?>/overview"><button>All</button></a>
+    <?php foreach ( $this->statuses as $status ) { ?>
+    <a href="<?php echo URL . '/overview/index/' . $status->get('statusId') 
+    ?>"><button><?php echo $status->get('name') ?></button></a>
+    <?php } ?>
+</div>
+<div>
     <table>
         <tr>
             <th>User</th>
