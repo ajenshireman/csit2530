@@ -18,6 +18,13 @@ class Session {
     }
     
     /**
+     * reenerates the session id
+     */
+    public function refresh () {
+        session_regenerate_id();
+    }
+    
+    /**
      * sets a $_SESSION key to a value
      * 
      * @param mixed $key

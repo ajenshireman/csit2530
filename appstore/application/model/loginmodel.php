@@ -101,6 +101,7 @@ class LoginModel extends Model {
                     // credentails ok
                     $accountModel = new AccountModel($this->db);
                     $user = $accountModel->getUserById($userId);
+                    Session::refresh();
                     Session::initialize();
                     Session::set('loggedIn', true);
                     Session::set('username', $user->get('username'));
