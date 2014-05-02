@@ -37,7 +37,7 @@ class Account extends Controller {
     }
     
     /**
-     * show the frm to change the user's avatar
+     * show the form to change the user's avatar
      */
     public function changeAvatar () {
         $model = $this->loadModel('Account');
