@@ -31,7 +31,7 @@ class Overview extends Controller {
         $statusmodel = $this->loadModel('Status');
         $this->statuses = $statusmodel->getStatuses();
     
-        $this->render('overview' . DS .'index');
+        $this->render('overview' . DS .'userlist');
     }
     
     /**
