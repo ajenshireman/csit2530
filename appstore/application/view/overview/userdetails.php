@@ -37,5 +37,5 @@
 </div>
 <?php } ?>
 <div>
-    <a href="<?php echo URL ?>/overview">User List</a>
+    <a href="<?php echo URL ?>/overview/users">User List</a>
 </div>

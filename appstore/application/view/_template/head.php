@@ -22,7 +22,7 @@
             	<a href="<?php echo URL ?>/main">Main</a>
             </li>
 	        <li>
-	        	<a href="<?php echo URL ?>/overview">Users</a>
+	        	<a href="<?php echo URL ?>/overview/users">Users</a>
 	        </li>
 	        <?php if ( isset($_SESSION['loggedIn']) ) { ?>
 	        <li>

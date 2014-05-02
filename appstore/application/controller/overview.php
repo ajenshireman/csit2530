@@ -15,13 +15,22 @@ class Overview extends Controller {
      * @param int $statusId show only users with a certain status
      */
     public function index ( $parameters = array() ) {
+        $this->users();
+    }
+    
+    /**
+     * Shows a list of users with a certain status
+     * 
+     * @param array $parameters[0]: int statusId to show
+     */
+    public function users ( $parameters = array() ) {
         $statusId = ( isset($parameters[0]) ) ? $parameters[0] : false;
         $this->model = $this->loadModel('Account');
         $this->users = $this->model->getUsers($statusId);
-        
+    
         $statusmodel = $this->loadModel('Status');
         $this->statuses = $statusmodel->getStatuses();
-        
+    
         $this->render('overview' . DS .'index');
     }
     
