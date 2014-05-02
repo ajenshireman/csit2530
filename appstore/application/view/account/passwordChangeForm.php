@@ -1,4 +1,4 @@
-<form name="changePasswordForm" action="<?php echo URL ?>account/changepassword" method="post">
+<form name="changePasswordForm" action="<?php echo URL ?>/account/changepassword" method="post">
     <?php if ( isset($this->errors) ) { ?>
     <div>
         <?php echo $this->errors ?>
