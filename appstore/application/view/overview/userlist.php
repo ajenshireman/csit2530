@@ -21,7 +21,6 @@
             <td><a href="<?php echo URL ?>/overview/showuserdetails/<?php echo $user->get('userId') ?>"><button>Details</button></a></td>
             <?php if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) { ?>
             <td><a href="<?php echo URL ?>/overview/rehashPassword/<?php echo $user->get('userId')?>"><button>Rehash PW</button></a></td>
-            <td><a href="<?php echo URL ?>/account/setstatus/<?php echo $user->get('userId')?>/4"><button>Delete</button></a></td>
             <?php } ?>
         </tr>
         <?php } ?>
