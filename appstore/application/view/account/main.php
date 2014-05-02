@@ -13,4 +13,8 @@
 	       Joined: <?php echo $this->user->createDate() ?>
 	    </div>
 	</div>
+	<div>
+        <img src="<?php echo AVATAR_PATH . $this->user->get('userId') ?>" />
+	    <a href="<?php echo URL ?>/account/changeavatar"><button>Change Avatar</button></a>
+	</div>
 </div>
