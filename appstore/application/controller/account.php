@@ -21,7 +21,7 @@ class Account extends Controller {
      * @param array:
      *  [0:]: url to return to
      */
-    public function setStatus ( $parameters = array() ) {
+    public function setStatus ( $parameters ) {
         $userId = $_POST['inputUserId'];
         $statusId = $_POST['inputStatusId'];
         $returnPage = '/overview';
