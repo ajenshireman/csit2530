@@ -2,6 +2,11 @@
     <h3>Details for <?php echo $this->user->get('username') ?></h3>
 </div>
 <div>
+    <?php if ( file_exists(AVATAR_UPLOAD_PATH . $this->user->get('userId')) ) { ?>
+    <img src="<?php echo AVATAR_PATH . $this->user->get('userId') ?>" />
+    <?php } ?>
+</div>
+<div>
     UserID: <?php echo $this->user->get('userId') ?>
 </div>
 <div>

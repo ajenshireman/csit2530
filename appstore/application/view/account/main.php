@@ -3,6 +3,11 @@
         <h4>Account Details</h4>
     </div>
 	<div class="panelBody">
+        <div>
+            <?php if ( file_exists(AVATAR_UPLOAD_PATH . $this->user->get('userId')) ) { ?>
+            <img src="<?php echo AVATAR_PATH . $this->user->get('userId') ?>" />
+            <?php } ?>
+        </div>
 	    <div>
 	       Username: <?php echo $this->user->get('username') ?>
 	   </div>
@@ -14,7 +19,6 @@
 	    </div>
 	</div>
 	<div>
-        <img src="<?php echo AVATAR_PATH . $this->user->get('userId') ?>" />
-	    <a href="<?php echo URL ?>/account/changeavatar"><button>Change Avatar</button></a>
+	   <a href="<?php echo URL ?>/account/changeavatar"><button>Change Avatar</button></a>
 	</div>
 </div>

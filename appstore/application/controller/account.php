@@ -79,7 +79,7 @@ class Account extends Controller {
         	    echo 'invalid image type';
         	    break;
         }
-        $location = AVATAR_PATH . $this->user->get('userId');
+        $location = AVATAR_UPLOAD_PATH . $this->user->get('userId');
         if ( move_uploaded_file($file['tmp_name'], $location) ) {
             header('Location: ' . URL . '/account');
             echo 'file location: ' . $location;
