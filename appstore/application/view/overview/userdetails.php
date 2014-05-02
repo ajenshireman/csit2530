@@ -23,8 +23,17 @@
 </div>
 <?php if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) { ?>
 <div>
-    <strong>Set Account Status</strong><br />
-    <?php echo $this->statusChange ?>
+    <form action="<?php echo URL ?>/account/setstatus" method="post">
+        <div style="display: inline">
+        	<strong>Set Account Status: </strong>
+        	<select name="inputStatusId">
+        	    <?php echo $this->statusChange ?>
+        	</select>
+        </div>
+        <div style="display: inline">
+            <button type="submit" name="inputUserId" value="<?php echo $this->user->get('userId') ?>">Change</button>
+        </div>
+    </form>
 </div>
 <?php } ?>
 <div>

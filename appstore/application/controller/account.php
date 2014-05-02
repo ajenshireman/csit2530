@@ -23,9 +23,9 @@ class Account extends Controller {
      *  [1]: statusId
      *  [2:]: url to return to
      */
-    public function setStatus ( $parameters ) {
-        $userId = $parameters[0];
-        $statusId = $parameters[1];
+    public function setStatus ( $parameters = array() ) {
+        $userId = $_POST['inputUserId'];
+        $statusId = $_POST['inputStatusId'];
         $returnPage = '/overview';
         if ( count($parameters) > 2 ) {
             $returnPage = '/';
@@ -35,7 +35,6 @@ class Account extends Controller {
         }
         $model = $this->loadModel('Account');
         $model->setUserStatus($userId, $statusId);
-        
         header('Location: ' . URL . $returnPage);
     }
 }

@@ -37,6 +37,7 @@ class Overview extends Controller {
         $statusmodel = $this->loadModel('Status');
         $statuses = $statusmodel->getStatuses();
         $this->statusChange = "";
+        /*
         if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) {
             foreach ( $statuses as $status ) {
                 if ( $this->user->get('statusId') != $status->get('statusId') ) {
@@ -46,6 +47,17 @@ class Overview extends Controller {
                 }
             }
         }
+        */
+        if ( $this->model->userInRole($_SESSION['userId'], 'Administrator') ) {
+            foreach ( $statuses as $status ) {
+                $this->statusChange .= '<option value="' . $status->get('statusId') . '"';
+                if ( $this->user->get('statusId') == $status->get('statusId') ) {
+                    $this->statusChange .= ' selected="selected"';
+                }
+                $this->statusChange .= '>' . $status->get('name') . "</option>\n";
+            }
+        }
+        
         $this->render('overview' . DS .'userdetails');
     }
     
