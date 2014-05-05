@@ -23,9 +23,11 @@ class Login extends Controller {
     public function login() {
         // make sure the user has entered a username and password
         if ( !isset($_POST['loginUsername']) || empty($_POST['loginUsername']) ) {
+            echo 'Please enter a username';
             return;
         }
         if ( !isset($_POST['loginPassword']) || empty($_POST['loginPassword']) ) {
+            echo 'Please enter a password';
             return;
         }
         
