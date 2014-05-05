@@ -14,4 +14,16 @@ class Authorize {
             header('Location: ' . URL . '/login');
         }
     }
+    
+    /**
+     * User must not be logged in
+     * 
+     * used for login and registration pages
+     */
+    public static function requireLoggedOut () {
+        Session::initialize();
+        if ( isset($_SESSION['loggedIn']) ) {
+            header('Location: ' . URL);
+        }
+    }
 }

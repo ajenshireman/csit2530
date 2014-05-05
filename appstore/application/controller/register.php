@@ -14,6 +14,9 @@ class Register extends Controller {
      * Displays the registration form
      */
     public function index () {
+        // if the user is already logged in, send them back to the main page
+        Authorize::requireLoggedOut();
+        
         $this->render('login' . DS .'registrationForm');
     }
     

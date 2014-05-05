@@ -14,6 +14,9 @@ class Login extends Controller {
      * Show the login form
      */
     public function index () {
+        // if the user is already logged in, send them back to the main page
+        Authorize::requireLoggedOut();
+        
         $this->render('login/loginForm');
     }
     
