@@ -21,4 +21,7 @@
 	<div>
 	   <a href="<?php echo URL ?>/account/changeavatar"><button>Change Avatar</button></a>
 	</div>
+	<div>
+	   <a href="<?php echo URL ?>/account/changepassword"><button>Change Password</button></a>
+	</div>
 </div>
