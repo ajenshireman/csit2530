@@ -87,4 +87,12 @@ class Account extends Controller {
             echo "upload error";
         }
     }
+    
+    /**
+     * shows the form to chane a user's password
+     */
+    public function changePassword () {
+        $model = $this->loadModel('Account');
+        $this->render('account/passwordChangeForm');
+    }
 }
