@@ -16,7 +16,7 @@ class Register extends Controller {
     public function index () {
         // if the user is already logged in, send them back to the main page
         Authorize::requireLoggedOut();
-        
+        $this->getFeedback();
         $this->render('login' . DS .'registrationForm');
     }
     
@@ -26,9 +26,11 @@ class Register extends Controller {
     public function register () {
         $model =$this->loadModel('Login');
         if ( $model->register() ) {
-            header('Location: ' . URL . '/overview');
+            Session::set(FEEDBACK_POSITIVE . "['registration']", FEEDBACK_REGISTRAION_SUCCESS);
+            header('Location: ' . URL . '/login');
         } else {
-            echo 'Registration Failed';
+            Session::set(FEEDBACK_NEGATIVE . "['registration']", FEEDBACK_REGISTRAION_FAIL);
+            header('Location: ' . URL . '/register');
         }
     }
 }
