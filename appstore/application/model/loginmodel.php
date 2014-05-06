@@ -198,4 +198,11 @@ class LoginModel extends Model {
         return  $user;
     }
     
+    /**
+     * logs the user out
+     */
+    public function logout () {
+        Session::destroy();
+    }
+    
 }

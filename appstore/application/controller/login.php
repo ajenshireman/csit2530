@@ -50,7 +50,8 @@ class Login extends Controller {
      * logs the user out
      */
     public function logout () {
-        Session::destroy();
+        $model = $this->loadModel('Login');
+        $model->logout();
         header('Location: ' . URL);
     }
 }
