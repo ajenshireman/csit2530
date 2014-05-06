@@ -152,50 +152,50 @@ class LoginModel extends Model {
         // validate input
         if ( !isset($_POST['registerUsername']) || empty($_POST['registerUsername']) ) {
             // username is required
-            $errors['username'] = 'Please enter a username';
+            $errors['username'] = FEEDBACK_USERNAME_EMPTY;
         } else {
             if ( $this->usernameExists($_POST['registerUsername']) ) {
-                $errors['username'] = 'Username already exists';
+                $errors['username'] = FEEDBACK_USERNAME_EXISTS;
             }
         }
         if ( !isset($_POST['registerEmail']) || empty($_POST['registerEmail']) ) {
             // email is required
-            $errors['email'] = 'Please enter a valid email address';
+            $errors['email'] = FEEDBACK_EMAIL_EMPTY;
         } else {
             // validate email format
             if ( $this->validateFormat($_POST['registerEmail']) ) {
                 // check if the email is in use
                 if ( $this->usernameExists($_POST['registerUsername']) ) {
-                    $errors['username'] = 'Email already in use';
+                    $errors['username'] = FEEDBACK_EMAIL_EXISTS;
                 }
             } else {
                 // email is malformed
-                $errors['email'] = 'Incorrect email format';
+                $errors['email'] = FEEDBACK_EMAIL_FORMAT_WRONG;
             }
         }
         if ( !isset($_POST['registerPassword']) || empty($_POST['registerPassword']) ) {
             // password is required
-            $errors['password'] = 'Please enter a password';
+            $errors['password'] = FEEDBACK_PASSWORD_EMPTY;
         } else {
             if ( !isset($_POST['registerPasswordConfirm']) || ( $_POST['registerPassword'] != $_POST['registerPasswordConfirm'] )) {
                 // passwords must match
-                $errors['password'] = 'Passwords do not match';
+                $errors['password'] = FEEDBACK_PASSWORD_MISMATCH;
             }
         }
         
         if ( isset($errors) ) {
-            Session::set('errors', $errors); 
+            Session::set(FEEDBACK_NEGATIVE, $errors); 
             return false;
+        } else {
+            $newUser = new User();
+            $newUser->set('username', $_POST['registerUsername']);
+            $newUser->set('password', password_hash($_POST['registerPassword'], PASSWORD_DEFAULT));
+            $newUser->set('email', $_POST['registerEmail']);
+            
+            $accountModel = new AccountModel($this->db);
+            $user = $accountModel->createUser($newUser);
+            return  $user;
         }
-        
-        $newUser = new User();
-        $newUser->set('username', $_POST['registerUsername']);
-        $newUser->set('password', password_hash($_POST['registerPassword'], PASSWORD_DEFAULT));
-        $newUser->set('email', $_POST['registerEmail']);
-        
-        $accountModel = new AccountModel($this->db);
-        $user = $accountModel->createUser($newUser);
-        return  $user;
     }
     
     /**
