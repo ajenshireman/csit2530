@@ -203,6 +203,7 @@ class LoginModel extends Model {
      */
     public function logout () {
         Session::destroy();
+        $_SESSION = array();
     }
     
 }
