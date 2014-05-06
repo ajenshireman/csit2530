@@ -40,6 +40,11 @@ define('DB_NAME', 'c2530a07proj');
 define('DB_USER', 'c2530a07');
 define('DB_PASS', 'c2530a07');
 
+/* session keys for feedback */
+define('FEEDBACK_GENERAL', 'feedbackGeneral');
+define('FEEDBACK_POSITIVE', 'feedbackPositive');
+define('FEEDBACK_NEGATIVE', 'feedbackNegative');
+
 /* messages for user feedback */
 define('FEEDBACK_LOGIN_SUCCESS', 'Login Successful');
 define('FEEDBACK_LOGIN_FAIL', 'Login Failed');
