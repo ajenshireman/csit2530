@@ -129,7 +129,8 @@ class Account extends Controller {
             $accountModel = $this->loadModel('Account');
             $accountModel->setUserPassword($userId, $newPassword);
             Session::set('feedbackPositive', 'Password Successfully changed');
-            header('Location: ' . URL . '/account');
+            $loginModel->logout();
+            $this->render('account/passwordchanged');
         } else {
             $errors['currentPassword'] = 'The password is incorrecct';
             Session::set('errors', $errors);
