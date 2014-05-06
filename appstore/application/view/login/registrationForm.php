@@ -1,4 +1,13 @@
 <form name="registratioForm" action="<?php echo URL ?>/register/register" method="post">
+    <?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
+    <div>
+        <?php 
+        foreach ( $this->FEEDBACK_NEGATIVE as $message ) {
+            echo '<div class="error">' . $message ."</div>\n";
+        }
+        ?>
+    </div>
+    <?php } ?>
     <div>
         <label for="registerUsername">Username: </label>
         <input type="text" name="registerUsername" />
