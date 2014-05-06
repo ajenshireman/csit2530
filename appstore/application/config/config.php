@@ -53,6 +53,7 @@ define('FEEDBACK_PASSWORD_EMPTY', 'Please enter a password');
 define('FEEDBACK_REGISTRATION_SUCCESS', 'Registration Successful');
 define('FEEDBACK_REGISTRAION_FAIL', 'Registration Failed');
 define('FEEDBACK_USERNAME_EXISTS', 'Username already exists');
+define('FEEDBACK_EMAIL_EMPTY', 'Please enter a valid email address');
 define('FEEDBACK_EMAIL_EXISTS', 'Email aready in use');
 define('FEEDBACK_EMAIL_FORMAT_WRONG', 'Incorrect email format');
 define('FEEDBACK_PASSWORD_MISMATCH', 'Passwords do not match');
