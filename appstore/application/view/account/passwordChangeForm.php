@@ -1,3 +1,8 @@
+<div>
+    To change your password, enter your current password and your desired new password.<br />
+    Once your password has been changed, you will automaticay be logged out.<br />
+    You can then log in with your new pasword.<br />
+</div>
 <form name="changePasswordForm" action="<?php echo URL ?>/account/updatepassword" method="post">
     <?php if ( isset($this->errors) ) { ?>
     <div>
