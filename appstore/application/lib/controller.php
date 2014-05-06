@@ -44,15 +44,28 @@ class Controller {
     }
     
     /**
-     * gets the messages from the session a feedback variable
+     * Retrieves feedback messages from the session variables
      * 
+     * If a type is specified, returns the value in that session key.
+     * If no type is specified, gets the value from each feedback variable and 
+     *  assigns it to a class variable.
+     * Each feedback variable is cleared after retrieval
      * 
-     * Clears feedback negative after retrieval.
-     * A specific key can be specified, and will result in only that key from
-     *  feedbackNegative being returned and cleared
+     * @param mixed $type
      * 
-     * @param mixed $key if set, print only a particular key
+     * @return mixed
      */
-    protected function getFeedback ( $) 
+    protected function getFeedback ( $type = false ) {
+        if ( $type == false ) {
+            $this->FEEDBACK_GENERAL = $this->getFeedback(FEEDBACK_GENERAL);
+            $this->FEEDBACK_NEGATIVE = $this->getFeedback(FEEDBACK_NEGATIVE);
+            $this->FEEDBACK_POSITIVE = $this->getFeedback(FEEDBACK_POSITIVE);
+            return;
+        } else {
+            $messages = Session::get($type);
+            Session::remove($type);
+            return $messages;
+        }
+    }
     
 }
