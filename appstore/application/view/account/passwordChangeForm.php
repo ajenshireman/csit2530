@@ -1,7 +1,14 @@
 <form name="changePasswordForm" action="<?php echo URL ?>/account/updatepassword" method="post">
     <?php if ( isset($this->errors) ) { ?>
     <div>
-        <?php echo $this->errors ?>
+        <?php 
+        foreach ( $this->errors as $error ) {
+            echo <<<err
+        <div class="error">$error</div>\n        
+err;
+        }
+        Session::remove('errors');
+        ?>
     </div>
     <?php } ?>
     <div>

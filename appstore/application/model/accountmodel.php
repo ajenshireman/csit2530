@@ -236,4 +236,20 @@ class AccountModel extends Model {
             return 'Password did not neeed rehash';
         }
     }
+    
+    /**
+     * Sets the user's password
+     * 
+     * @param int $userId
+     * @param string $password
+     * 
+     * @return boolean
+     */
+    public function setUserPassword ( $userId, $password ) {
+        //$user = $this->getUserById($userId, true);
+        $newUser = new User();
+        $newUser->set('password', password_hash($password, PASSWORD_DEFAULT));
+        //echo $newUser->get('password');
+        $this->updateUser($userId, $newUser);
+    }
 }

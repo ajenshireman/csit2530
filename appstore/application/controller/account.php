@@ -89,10 +89,51 @@ class Account extends Controller {
     }
     
     /**
-     * shows the form to chane a user's password
+     * shows the form to change a user's password
      */
     public function changePassword () {
+        $this->errors = Session::get('errors');
         $model = $this->loadModel('Account');
         $this->render('account/passwordChangeForm');
+    }
+    
+    /**
+     * changes the user's password
+     */
+    public function updatePassword () {
+        // make sure a fields are filled out
+        if ( !isset($_POST['currentPassword']) ) {
+            $errors['currentPassword'] = 'You must enter your current password';
+        }
+        if ( !isset($_POST['newPassword']) || strlen($_POST['newPassword']) == 0 ) {
+            $errors['newPassword'] = 'You must enter a new password';
+        }
+        if ( !isset($_POST['confirmPassword']) || $_POST['newPassword'] != $_POST['confirmPassword'] ) {
+            $errors['confirmPassword'] = 'Passwords do not match';
+        }
+        if ( isset($errors) ) { 
+            Session::set('errors', $errors); 
+            header('Location: ' . URL . '/account/changepassword');
+            return;
+        }
+        
+        // collect post variables
+        $currentPassword = $_POST['currentPassword'];
+        $newPassword = $_POST['newPassword'];
+        $userId = $_SESSION['userId'];
+        
+        // vaidate the currentPassword
+        $loginModel = $this->loadModel('Login');
+        if ( $loginModel->verifyUserPassword($currentPassword, $userId) ) {
+            // password correct, update the password
+            $accountModel = $this->loadModel('Account');
+            $accountModel->setUserPassword($userId, $newPassword);
+            Session::set('feedbackPositive', 'Password Successfully changed');
+            header('Location: ' . URL . '/account');
+        } else {
+            $errors['currentPassword'] = 'The password is incorrecct';
+            Session::set('errors', $errors);
+            header('Location: ' . URL . '/account/changepassword');
+        }
     }
 }

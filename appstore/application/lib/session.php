@@ -50,6 +50,17 @@ class Session {
     }
     
     /**
+     * unsets a $_SESSION key
+     * 
+     * @param mixed $key
+     */
+    public static function remove ( $key ) {
+        if ( isset($_SESSION[$key]) ) {
+            unset($_SESSION[$key]);
+        }
+    }
+    
+    /**
      * destroys the current session
      */
     public static function destroy () {

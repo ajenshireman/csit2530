@@ -1,4 +1,13 @@
 <div class="panel">
+<?php 
+if ( isset($_SESSION['feedbackPositive']) ) { ?>
+    <div class="message_success">
+        <?php echo $_SESSION['feedbackPositive'] ?>
+    </div>
+<?php 
+} 
+Session::remove('feedbackPositive');
+?>
     <div class="panelTitle">
         <h4>Account Details</h4>
     </div>
