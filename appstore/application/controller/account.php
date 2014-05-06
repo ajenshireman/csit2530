@@ -11,7 +11,6 @@ class Account extends Controller {
     
     public function index () {
         $this->getFeedback();
-        var_dump($this->FEEDBACK_POSITIVE);
         $model = $this->loadModel('Account');
         $this->user = $model->getUserById($_SESSION['userId']);
         $this->render('account/main');
