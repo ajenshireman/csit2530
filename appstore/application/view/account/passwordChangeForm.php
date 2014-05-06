@@ -4,10 +4,10 @@
     You can then log in with your new pasword.<br />
 </div>
 <form name="changePasswordForm" action="<?php echo URL ?>/account/updatepassword" method="post">
-    <?php if ( isset($this->errors) ) { ?>
+    <?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
     <div>
         <?php 
-        foreach ( $this->errors as $error ) {
+        foreach ( $this->FEEDBACK_NEGATIVE as $error ) {
             echo <<<err
         <div class="error">$error</div>\n        
 err;

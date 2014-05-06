@@ -92,7 +92,8 @@ class Account extends Controller {
      * shows the form to change a user's password
      */
     public function changePassword () {
-        $this->errors = Session::get('errors');
+        //$this->errors = Session::get('errors');
+        $this->getFeedback();
         $model = $this->loadModel('Account');
         $this->render('account/passwordChangeForm');
     }
@@ -103,16 +104,16 @@ class Account extends Controller {
     public function updatePassword () {
         // make sure a fields are filled out
         if ( !isset($_POST['currentPassword']) ) {
-            $errors['currentPassword'] = 'You must enter your current password';
+            $errors['currentPassword'] = FEEDBACK_PASSWORD_EMPTY;
         }
         if ( !isset($_POST['newPassword']) || strlen($_POST['newPassword']) == 0 ) {
-            $errors['newPassword'] = 'You must enter a new password';
+            $errors['newPassword'] = FEEDBACK_PASSWORD_NEW_EMPTY;
         }
         if ( !isset($_POST['confirmPassword']) || $_POST['newPassword'] != $_POST['confirmPassword'] ) {
-            $errors['confirmPassword'] = 'Passwords do not match';
+            $errors['confirmPassword'] = FEEDBACK_PASSWORD_MISMATCH;
         }
         if ( isset($errors) ) { 
-            Session::set('errors', $errors); 
+            Session::set(FEEDBACK_NEGATIVE, $errors); 
             header('Location: ' . URL . '/account/changepassword');
             return;
         }
@@ -128,12 +129,12 @@ class Account extends Controller {
             // password correct, update the password
             $accountModel = $this->loadModel('Account');
             $accountModel->setUserPassword($userId, $newPassword);
-            Session::set('feedbackPositive', 'Password Successfully changed');
+            Session::set(FEEDBACK_POSITIVE, FEEDBACK_PASSWORD_CHANGE_SUCCESS);
             $loginModel->logout();
             $this->render('account/passwordchanged');
         } else {
-            $errors['currentPassword'] = 'The password is incorrecct';
-            Session::set('errors', $errors);
+            $errors['currentPassword'] = FEEDBACK_PASWORD_INCORRECT;
+            Session::set(FEEDBACK_NEGATIVE, $errors);
             header('Location: ' . URL . '/account/changepassword');
         }
     }
