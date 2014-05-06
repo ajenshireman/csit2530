@@ -165,7 +165,7 @@ class LoginModel extends Model {
             // validate email format
             if ( $this->validateFormat($_POST['registerEmail']) ) {
                 // check if the email is in use
-                if ( $this->usernameExists($_POST['registerUsername']) ) {
+                if ( $this->usernameExists($_POST['registerEmail']) ) {
                     $errors['username'] = FEEDBACK_EMAIL_EXISTS;
                 }
             } else {
