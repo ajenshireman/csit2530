@@ -39,3 +39,19 @@ define('DB_HOST', '127.0.0.1');
 define('DB_NAME', 'c2530a07proj');
 define('DB_USER', 'c2530a07');
 define('DB_PASS', 'c2530a07');
+
+/* messages for user feedback */
+define('FEEDBACK_LOGIN_SUCCESS', 'Login Successful');
+define('FEEDBACK_LOGIN_FAIL', 'Login Failed');
+define('FEEDBACK_USERNAME_EMPTY', 'Please enter a username');
+define('FEEDBACK_PASSWORD_EMPTY', 'Please enter a password');
+define('FEEDBACK_REGISTRATION_SUCCESS', 'Registration Successful');
+define('FEEDBACK_REGISTRAION_FAIL', 'Registration Failed');
+define('FEEDBACK_USERNAME_EXISTS', 'Username already exists');
+define('FEEDBACK_EMAIL_EXISTS', 'Email aready in use');
+define('FEEDBACK_EMAIL_FORMAT_WRONG', 'Incorrect email format');
+define('FEEDBACK_PASSWORD_MISMATCH', 'Passwords do not match');
+define('FEEDBACK_NEW_PASSWORD_EMPTY', 'Please enter a new password');
+define('FEEDBACK_EMAIL_CHANGE_SUCCESS', 'Your email has been changed');
+define('FEEDBACK_EMAIL_CHANE_FAIL', 'Your email was not changed');
+define('FEEDBACK_PASWORD_INCORRECT', 'Incorrect Password');
