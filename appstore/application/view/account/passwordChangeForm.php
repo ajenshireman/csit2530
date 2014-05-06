@@ -8,11 +8,8 @@
     <div>
         <?php 
         foreach ( $this->FEEDBACK_NEGATIVE as $error ) {
-            echo <<<err
-        <div class="error">$error</div>\n        
-err;
+            echo '<div class="error">' . $error ."</div>\n";
         }
-        Session::remove('errors');
         ?>
     </div>
     <?php } ?>
