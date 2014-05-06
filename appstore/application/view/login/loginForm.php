@@ -24,7 +24,7 @@
     </div>
     <div>
         <label for="loginPassword">Password: </label>
-    	<input type="text" name="loginPassword" />
+    	<input type="password" name="loginPassword" />
     </div>
     <div>
     	<button type="submit" id="btnLoginSubmit" action="login" value="login">Log In</button>

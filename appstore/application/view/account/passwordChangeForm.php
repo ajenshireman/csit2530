@@ -19,11 +19,11 @@
     </div>
      <div>
         <label for="newPassword">New Password:</label>
-        <input type="text" name="newPassword" />
+        <input type="password" name="newPassword" />
     </div>
      <div>
         <label for="confirmPassword">Confirm Password:</label>
-        <input type="text" name="confirmPassword" />
+        <input type="password" name="confirmPassword" />
     </div>
     <div>
     	<button type="submit" id="btnChangePasswordSubmit">Submit</button>

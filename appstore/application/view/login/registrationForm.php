@@ -18,11 +18,11 @@
     </div>
     <div>
         <label for="registerPassword">Password: </label>
-        <input type="text" name="registerPassword" />
+        <input type="password" name="registerPassword" />
     </div>
     <div>
         <label for="registerPasswordConfirm">Confirm Password: </label>
-        <input type="text" name="registerPasswordConfirm" />
+        <input type="password" name="registerPasswordConfirm" />
     </div>
     <div>
     	<button type="submit" id="btnLoginSubmit">Register</button>

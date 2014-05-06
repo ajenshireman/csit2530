@@ -10,7 +10,7 @@
     <?php } ?>
     <div>
         <label for="emailPassword">Current Password:</label>
-        <input type="text" name="emailPassword" />
+        <input type="password" name="emailPassword" />
     </div>
      <div>
         <label for="newEmail">New Email:</label>
