@@ -9,36 +9,63 @@
     <!-- normalize.css - imrove cross-browser rendering -->
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/normlize.css" />
     
-    <!-- custom styles -->
+    <!-- Foundation 5.1.1 -->
+    <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/foundation.css" />
+    
+    <!-- custom styles --
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/styles.css" />
+    -->
+    <!--  Foundation 5.1.1 html5 shim -->
+    <script src="<?php echo PUBLIC_PATH ?>js/vendor/modernizr.js"></script>
     
     <script></script>
 </head>
 <body>
     <!-- common top bar menu -->
-	<nav class="topbar">
-	    <ul class="navbar">
-            <li>
-            	<a href="<?php echo URL ?>/main">Main</a>
-            </li>
-	        <li>
-	        	<a href="<?php echo URL ?>/overview/users">Users</a>
-	        </li>
-	        <?php if ( isset($_SESSION['loggedIn']) ) { ?>
-	        <li>
-	        	<a href="<?php echo URL ?>/login/logout">Logout</a>
-	        </li>
-	        <li>
-	            Logged in as: <a href="<?php echo URL ?>/account"><?php echo $_SESSION['username'] ?></a>
-	        </li>
-	        <?php } else { ?>
-	        <li>
-	        	<a href="<?php echo URL ?>/login">Login</a>
-	        </li>
-	        <li>
-	        	<a href="<?php echo URL ?>/register">Register</a>
-	        </li>
-	        <?php } ?>
-    	</ul>
-	</nav>
+	<div class="fixed">
+		<nav class="top-bar" data-topbar></body>
+		        <ul class="title-area">
+		            <li class="name">
+		                <h1><a href="#">PSTCC App Store</a></h1>
+		            </li>
+		            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		        </ul>
+		        
+		    <section class="top-bar-section">
+		    	<ul class="left">
+		                <li>
+		                    <a href="<?php echo URL ?>/main">Main</a>
+		                </li>
+		                <li>
+		                    <a href="<?php echo URL ?>/overview/users">Users</a>
+		                </li>
+		    	</ul>
+		    </section>
+		    
+		    <section class="top-bar-section">
+		            <ul class="right">
+		    	    	<?php if ( isset($_SESSION['loggedIn']) ) { ?>
+		    	    	<li class="has-dropdown">
+		                    <a href="#"><?php echo $_SESSION['username'] ?></a>
+		                    <ul class="dropdown">
+		                        <li>
+		                            <a href="<?php echo URL ?>/account">My Account</a>
+		                        </li>
+		                        <li>
+		                            <a href="<?php echo URL ?>/login/logout">Logout</a>
+		                        </li>
+		                    </ul>
+		                </li>
+		                <?php } else { ?>
+		                <li>
+		                    <a href="<?php echo URL ?>/login">Login</a>
+		                </li>
+		                <li>
+		                    <a href="<?php echo URL ?>/register">Register</a>
+		                </li>
+		                <?php } ?>
+		            </ul>
+		    </section>
+		</nav>
+	</div>
     
