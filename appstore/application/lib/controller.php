@@ -43,4 +43,16 @@ class Controller {
         }
     }
     
+    /**
+     * gets the messages from the session a feedback variable
+     * 
+     * 
+     * Clears feedback negative after retrieval.
+     * A specific key can be specified, and will result in only that key from
+     *  feedbackNegative being returned and cleared
+     * 
+     * @param mixed $key if set, print only a particular key
+     */
+    protected function getFeedback ( $) 
+    
 }
