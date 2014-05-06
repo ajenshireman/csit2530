@@ -1,5 +1,5 @@
 <form name="loginForm" action="<?php echo URL ?>/login/login" method="post">
-<?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
+    <?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
     <div>
         <?php 
         foreach ( $this->FEEDBACK_NEGATIVE as $error ) {
