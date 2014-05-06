@@ -1,4 +1,13 @@
 <form name="loginForm" action="<?php echo URL ?>/login/login" method="post">
+<?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
+    <div>
+        <?php 
+        foreach ( $this->FEEDBACK_NEGATIVE as $error ) {
+            echo '<div class="error">' . $error ."</div>\n";
+        }
+        ?>
+    </div>
+    <?php } ?>
     <div>
         <label for="loginUsername">Username: </label>
     	<input type="text" name="loginUsername" />
