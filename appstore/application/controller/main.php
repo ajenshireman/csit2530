@@ -21,4 +21,13 @@ class Main extends Controller {
         
         $this->render('main' . DS . 'testparams');
     }
+    
+    public function feedbackTest () {
+        $error['currentPassword'] = FEEDBACK_PASWORD_INCORRECT;
+        $error['login'] = FEEDBACK_LOGIN_FAIL;
+        Session::set(FEEDBACK_NEGATIVE, $error);
+        
+        $this->getFeedback();
+        $this->render('main/feedbacktest');
+    }
 }

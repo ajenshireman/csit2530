@@ -19,3 +19,6 @@
 <div>
     <a href="<?php echo URL ?>/main/testparams/yeahhhhh">Parm = yeahhhhhh</a>
 </div>
+<div>
+    <a href="<?php echo URL ?>/main/feedbacktest">Test Feedback</a>
+</div>
