@@ -10,6 +10,8 @@ class Account extends Controller {
     }
     
     public function index () {
+        $this->getFeedback();
+        var_dump($this->FEEDBACK_POSITIVE);
         $model = $this->loadModel('Account');
         $this->user = $model->getUserById($_SESSION['userId']);
         $this->render('account/main');
@@ -92,7 +94,6 @@ class Account extends Controller {
      * shows the form to change a user's password
      */
     public function changePassword () {
-        //$this->errors = Session::get('errors');
         $this->getFeedback();
         $model = $this->loadModel('Account');
         $this->render('account/passwordChangeForm');
@@ -103,17 +104,17 @@ class Account extends Controller {
      */
     public function updatePassword () {
         // make sure a fields are filled out
-        if ( !isset($_POST['currentPassword']) ) {
-            $errors['currentPassword'] = FEEDBACK_PASSWORD_EMPTY;
+        if ( !isset($_POST['currentPassword']) || strlen($_POST['currentPassword']) == 0 ) {
+            $FEEDBACK_NEGATIVE['currentPassword'] = FEEDBACK_PASSWORD_EMPTY;
         }
         if ( !isset($_POST['newPassword']) || strlen($_POST['newPassword']) == 0 ) {
-            $errors['newPassword'] = FEEDBACK_PASSWORD_NEW_EMPTY;
+            $FEEDBACK_NEGATIVE['newPassword'] = FEEDBACK_PASSWORD_NEW_EMPTY;
         }
         if ( !isset($_POST['confirmPassword']) || $_POST['newPassword'] != $_POST['confirmPassword'] ) {
-            $errors['confirmPassword'] = FEEDBACK_PASSWORD_MISMATCH;
+            $FEEDBACK_NEGATIVE['confirmPassword'] = FEEDBACK_PASSWORD_MISMATCH;
         }
-        if ( isset($errors) ) { 
-            Session::set(FEEDBACK_NEGATIVE, $errors); 
+        if ( isset($FEEDBACK_NEGATIVE) ) { 
+            Session::set(FEEDBACK_NEGATIVE, $FEEDBACK_NEGATIVE); 
             header('Location: ' . URL . '/account/changepassword');
             return;
         }
@@ -129,13 +130,77 @@ class Account extends Controller {
             // password correct, update the password
             $accountModel = $this->loadModel('Account');
             $accountModel->setUserPassword($userId, $newPassword);
-            Session::set(FEEDBACK_POSITIVE, FEEDBACK_PASSWORD_CHANGE_SUCCESS);
+            $FEEDBACK_POSITIVE['changePassword'] = FEEDBACK_PASSWORD_CHANGE_SUCCESS;
+            Session::set(FEEDBACK_POSITIVE, $FEEDBACK_POSITIVE);
             $loginModel->logout();
             $this->render('account/passwordchanged');
         } else {
-            $errors['currentPassword'] = FEEDBACK_PASWORD_INCORRECT;
-            Session::set(FEEDBACK_NEGATIVE, $errors);
+            $FEEDBACK_NEGATIVE['currentPassword'] = FEEDBACK_PASWORD_INCORRECT;
+            Session::set(FEEDBACK_NEGATIVE, $FEEDBACK_NEGATIVE);
             header('Location: ' . URL . '/account/changepassword');
         }
+    }
+    
+    /**
+     * shows the form to change the user's email
+     */
+    public function changeEmail () {
+        $this->getFeedback();
+        $model = $this->loadModel('Account');
+        $this->render('account/emailChangeForm');
+    }
+    
+    /**
+     * changes the user's email
+     */
+    public function updateEmail () {
+        // make sure all fields are filled out
+        if ( !isset($_POST['emailPassword']) || strlen($_POST['emailPassword']) == 0 ) {
+            $FEEDBACK_NEGATIVE['emailPassword'] = FEEDBACK_PASSWORD_EMPTY;
+        }
+        if ( !isset($_POST['newEmail']) || strlen($_POST['newEmail']) == 0 ) {
+            $FEEDBACK_NEGATIVE['newEmail'] = FEEDBACK_EMAIL_EMPTY;
+        }
+        if ( isset($FEEDBACK_NEGATIVE) ) {
+            Session::set(FEEDBACK_NEGATIVE, $FEEDBACK_NEGATIVE);
+            header('Location: ' . URL . '/account/changeemail');
+            return;
+        }
+        
+        // collect post vars
+        $newEmail = $_POST['newEmail'];
+        $password = $_POST['emailPassword'];
+        $userId = $_SESSION['userId'];
+        
+        $loginModel = $this->loadModel('Login');
+        // check if the email is in use
+        if ( $loginModel->usernameExists($newEmail) ) {
+            $FEEDBACK_NEGATIVE['newEmail'] = FEEDBACK_EMAIL_EXISTS;
+        } else {
+            // check if the email is propery fromatted
+            if ( $loginModel->validateFormat($newEmail) ) {
+                // vaidate user'spassword
+                if ( $loginModel->verifyUserPassword($password, $userId) ) {
+                    // password correct, update email
+                    $accountModel = $this->loadModel('Account');
+                    $accountModel->setUserEmail($userId, $newEmail);
+                    $FEEDBACK_POSITIVE['changeEmail'] = FEEDBACK_EMAIL_CHANGE_SUCCESS;
+                    Session::set(FEEDBACK_POSITIVE, $FEEDBACK_POSITIVE);
+                    header('Location: ' . URL . '/account');
+                    return;
+                } else {
+                    $FEEDBACK_NEGATIVE['password'] = FEEDBACK_PASWORD_INCORRECT;
+                }
+            } else {
+                $FEEDBACK_NEGATIVE['newEmail'] = FEEDBACK_EMAIL_FORMAT_WRONG;
+            }
+        }
+        
+        if ( isset($FEEDBACK_NEGATIVE) ) {
+            Session::set(FEEDBACK_NEGATIVE, $FEEDBACK_NEGATIVE);
+            header('Location: ' . URL . '/account/changeemail');
+            return;
+        }
+        
     }
 }

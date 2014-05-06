@@ -252,4 +252,18 @@ class AccountModel extends Model {
         //echo $newUser->get('password');
         $this->updateUser($userId, $newUser);
     }
+    
+    /**
+     * Set the user's email
+     * 
+     * @param int $userId
+     * @param string $email
+     * 
+     * @return boolean
+     */
+    public function setUserEmail ( $userId, $email ) {
+        $newUser = new User();
+        $newUser->set('email', $email);
+        $this->updateUser($userId, $newUser);
+    }
 }

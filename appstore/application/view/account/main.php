@@ -1,13 +1,13 @@
 <div class="panel">
-<?php 
-if ( isset($_SESSION['feedbackPositive']) ) { ?>
-    <div class="message_success">
-        <?php echo $_SESSION['feedbackPositive'] ?>
+    <?php if ( isset($this->FEEDBACK_POSITIVE) ) { ?>
+    <div>
+        <?php 
+        foreach ( $this->FEEDBACK_POSITIVE as $message ) {
+            echo '<div class="message_success">' . $message ."</div>\n";
+        }
+        ?>
     </div>
-<?php 
-} 
-Session::remove('feedbackPositive');
-?>
+    <?php } ?>
     <div class="panelTitle">
         <h4>Account Details</h4>
     </div>
@@ -32,5 +32,8 @@ Session::remove('feedbackPositive');
 	</div>
 	<div>
 	   <a href="<?php echo URL ?>/account/changepassword"><button>Change Password</button></a>
+	</div>
+	<div>
+	   <a href="<?php echo URL ?>/account/changeemail"><button>Change Email</button></a>
 	</div>
 </div>
