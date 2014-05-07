@@ -39,7 +39,7 @@
                 <ul class="left">
                     <li class="divider"></li>
                     <li>
-                        <a href="<?php echo URL ?>/main">Main</a>
+                        <a href="<?php echo URL ?>">Home</a>
                     </li>
                     <li class="divider"></li>
                 </ul>
