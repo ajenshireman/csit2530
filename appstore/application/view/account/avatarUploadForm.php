@@ -9,8 +9,8 @@
                 <input type="file" name="uploadAvatarImage" />
             </div>
             <div>
-            	<button type="submit" id="btnAvatarUploadSubmit">Submit</button>
-            	<button type="cancel" id="btnAvatarUploadCancel">Cancel</button>
+            	<button type="submit" name="btnAvatarUploadSubmit">Submit</button>
+            	<button type="cancel" name="btnAvatarUploadCancel">Cancel</button>
             </div>
         </form>
     </div>

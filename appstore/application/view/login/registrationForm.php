@@ -21,8 +21,8 @@
                     <input type="password" name="registerPasswordConfirm" />
                 </div>
                 <div class="row">
-                	<button type="submit" id="btnLoginSubmit">Register</button>
-                	<button type="cancel" id="btnLoginCancel">Cancel</button>
+                	<button type="submit" name="btnRegisterSubmit">Register</button>
+                	<button type="cancel" name="btnRegisterCancel">Cancel</button>
                 </div>
             </fieldset>
         </form>

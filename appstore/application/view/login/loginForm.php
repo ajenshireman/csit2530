@@ -15,8 +15,8 @@
                     </label>
                 </div>
                 <div class="row">
-                    <button type="submit" id="btnLoginSubmit" action="login" value="login">Log In</button>
-                    <button type="cancel" id="btnLoginCancel">Cancel</button>
+                    <button type="submit" name="btnLoginSubmit">Log In</button>
+                    <button type="cancel" name="btnLoginCancel">Cancel</button>
                 </div>
             </fieldset>
 		</form>

@@ -25,8 +25,8 @@
                     <input type="password" name="confirmPassword" />
                 </div>
                 <div class="row">
-                	<button type="submit" id="btnChangePasswordSubmit">Submit</button>
-                	<button type="cancel" id="btnChangePasswordCancel">Cancel</button>
+                	<button type="submit" name="btnChangePasswordSubmit">Submit</button>
+                	<button type="cancel" name="btnChangePasswordCancel">Cancel</button>
                 </div>
             </fieldset>
         </form>

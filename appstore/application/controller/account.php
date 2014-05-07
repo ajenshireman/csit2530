@@ -50,6 +50,11 @@ class Account extends Controller {
      * change the user's avatar
      */
     public function updateavatar () {
+        if ( isset($_POST['btnAvatarUploadCancel']) ) {
+            header('Location: ' . URL . '/account');
+            return;
+        }
+        
         $model = $this->loadModel('Account');
         $this->user = $model->getUserById($_SESSION['userId']);
         
@@ -102,6 +107,11 @@ class Account extends Controller {
      * changes the user's password
      */
     public function updatePassword () {
+        if ( isset($_POST['btnChangePasswordCancel']) ) {
+            header('Location: ' . URL . '/account');
+            return;
+        }
+        
         // make sure a fields are filled out
         if ( !isset($_POST['currentPassword']) || strlen($_POST['currentPassword']) == 0 ) {
             $FEEDBACK_NEGATIVE['currentPassword'] = FEEDBACK_PASSWORD_EMPTY;
@@ -153,6 +163,11 @@ class Account extends Controller {
      * changes the user's email
      */
     public function updateEmail () {
+        if ( isset($_POST['btnChangeEmailCancel']) ) {
+            header('Location: ' . URL . '/account');
+            return;
+        }
+        
         // make sure all fields are filled out
         if ( !isset($_POST['emailPassword']) || strlen($_POST['emailPassword']) == 0 ) {
             $FEEDBACK_NEGATIVE['emailPassword'] = FEEDBACK_PASSWORD_EMPTY;

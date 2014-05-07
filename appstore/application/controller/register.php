@@ -24,6 +24,11 @@ class Register extends Controller {
      * Registers a new user
      */
     public function register () {
+        if ( isset($_POST['btnRegisterCancel']) ) {
+            header('Location: ' . URL );
+            return;
+        }
+        
         $model =$this->loadModel('Login');
         if ( $model->register() ) {
             Session::set(FEEDBACK_POSITIVE . "['registration']", FEEDBACK_REGISTRAION_SUCCESS);

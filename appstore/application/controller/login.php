@@ -24,6 +24,11 @@ class Login extends Controller {
      * proceses a login attemp login through the login form
      */
     public function login() {
+        if ( isset($_POST['btnLoginCancel']) ) {
+            header('Location: ' . URL );
+            return;
+        }
+        
         // make sure the user has entered a username and password
         if ( !isset($_POST['loginUsername']) || empty($_POST['loginUsername']) ) {
             $FEEDBACK_NEGATIVE['username'] = FEEDBACK_USERNAME_EMPTY;
