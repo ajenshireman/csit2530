@@ -1,43 +1,26 @@
-html, body {
-	height: 100%;
+button, .button {
+	margin: 0 0 1.25rem;
+	padding-top: 0.625rem;
+	padding-right: 1.25rem;
+	padding-bottom: 0.6875rem;
+	padding-left: 1.25rem;
+	font-size: 0.6875rem;
 }
-
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html, body {
-	font-size: 100%;
-}
-
-body {
-	background: #ffffff;
-	color: #000000;
-	padding: 0;
-	margin: 0;
-	font-family: "Hevetica Nue", "Helvetica", Helvetica, Arial, sans-serif;
-	font-weight: normal;
-	font-style: normal;
-	line-height: 1;
-	postition: relative; 
-}
-
-.topbar ul {
-	display: inline;
-	list-style-type: none;
-	padding-left: 0;
-}
-
-ul.navbar > li {
-	display: inline;
-}
-/*
-.panel {
-	border: 1px solid black;
-	border-radius: 5px;
-}
-*/
+  button.large, .button.large {
+    padding-top: 1.125rem;
+    padding-right: 2.25rem;
+    padding-bottom: 1.1875rem;
+    padding-left: 2.25rem;
+    font-size: 1.25rem; }
+  button.small, .button.small {
+    padding-top: 0.875rem;
+    padding-right: 1.75rem;
+    padding-bottom: 0.9375rem;
+    padding-left: 1.75rem;
+    font-size: 0.8125rem; }
+  button.tiny, .button.tiny {
+    padding-top: 0.625rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.6875rem;
+    padding-left: 1.25rem;
+    font-size: 0.6875rem; }
