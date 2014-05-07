@@ -5,7 +5,7 @@ class Main extends Controller {
     }
     
     public function index () {
-        $this->render('main' . DS . 'index');
+        $this->render('main' . DS . 'main');
     }
     
     public function testLink () {
