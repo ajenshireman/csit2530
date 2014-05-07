@@ -34,6 +34,6 @@
 </div>
 <div class="row">
     <div class="small-12 column">
-        <a href="<?php echo URL ?>" class="button">Index</a>
+        <a href="<?php echo URL ?>" class="button">Home</a>
     </div>
 </div>
