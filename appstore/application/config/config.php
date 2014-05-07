@@ -17,14 +17,15 @@ define('CONTROLLER_PATH', 'application' . DS . 'controller' . DS);
 define('LIB_PATH', 'application' . DS . 'lib' . DS);
 define('MODEL_PATH', 'application' . DS . 'model' . DS);
 define('VIEW_PATH', 'application' . DS . 'view' . DS);
+define('TEMPLATE_PATH', VIEW_PATH . '_template' . DS);
 define('UPLOAD_PATH', 'user' . DS);
 define('AVATAR_UPLOAD_PATH', UPLOAD_PATH . 'avatar' . DS);
 define('PUBLIC_PATH', URL . '/public/');
 define('AVATAR_PATH', URL . '/user/avatar/');
 
 /* Define locations for the common head and foot */
-define('COMMON_HEAD', VIEW_PATH . '_template' . DS . 'head.php');
-define('COMMON_FOOT', VIEW_PATH . '_template' . DS . 'foot.php');
+define('COMMON_HEAD', TEMPLATE_PATH . 'head.php');
+define('COMMON_FOOT', TEMPLATE_PATH . 'foot.php');
 
 /* load password_compat if < php 5.5.0 */
 if ( !defined(PHP_VERSION_ID) ) {
