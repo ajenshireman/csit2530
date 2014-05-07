@@ -35,4 +35,8 @@
     So have a look around! Thanks for coming, and thanks to Professor Burlingame
         for a fun and eductional semester.
     </p>
+    <p>
+    The code for this project is available on my github repo 
+        <a href="https://github.com/ajenshireman/csit2530">here</a>.
+    </p>
 </div>
