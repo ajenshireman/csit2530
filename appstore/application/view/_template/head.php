@@ -12,9 +12,9 @@
     <!-- Foundation 5.1.1 -->
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/foundation.css" />
     
-    <!-- custom styles --
+    <!-- custom styles -->
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/styles.css" />
-    -->
+    
     <!--  Foundation 5.1.1 html5 shim -->
     <script src="<?php echo PUBLIC_PATH ?>js/vendor/modernizr.js"></script>
     
@@ -24,23 +24,26 @@
     <!-- common top bar menu -->
 	<div class="fixed">
 		<nav class="top-bar" data-topbar></body>
-		        <ul class="title-area">
-		            <li class="name">
-		                <h1><a href="#">PSTCC App Store</a></h1>
-		            </li>
-		            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-		        </ul>
+            <ul class="title-area">
+                <li class="name">
+                    <h1><a href="#">PSTCC App Store</a></h1>
+                </li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+            </ul>
 		        
-		    <section class="top-bar-section">
-		    	<ul class="left">
-		                <li>
-		                    <a href="<?php echo URL ?>/main">Main</a>
-		                </li>
-		                <li>
-		                    <a href="<?php echo URL ?>/overview/users">Users</a>
-		                </li>
-		    	</ul>
-		    </section>
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li class="divider"></li>
+                    <li>
+                        <a href="<?php echo URL ?>/main">Main</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="<?php echo URL ?>/overview/users">Users</a>
+                    </li>
+                    <li class="divider"></li>
+                </ul>
+            </section>
 		    
 		    <section class="top-bar-section">
 		            <ul class="right">
@@ -57,12 +60,15 @@
 		                    </ul>
 		                </li>
 		                <?php } else { ?>
+		                <li class="divider"></li>
 		                <li>
 		                    <a href="<?php echo URL ?>/login">Login</a>
 		                </li>
+		                <li class="divider"></li>
 		                <li>
 		                    <a href="<?php echo URL ?>/register">Register</a>
 		                </li>
+		                <li class="divider"></li>
 		                <?php } ?>
 		            </ul>
 		    </section>

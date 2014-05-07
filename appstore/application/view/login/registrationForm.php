@@ -1,31 +1,30 @@
-<form name="registratioForm" action="<?php echo URL ?>/register/register" method="post">
-    <?php if ( isset($this->FEEDBACK_NEGATIVE) ) { ?>
-    <div>
-        <?php 
-        foreach ( $this->FEEDBACK_NEGATIVE as $message ) {
-            echo '<div class="error">' . $message ."</div>\n";
-        }
-        ?>
+<div class="row">
+    <div class="small-12 column">
+        <form name="registratioForm" action="<?php echo URL ?>/register/register" method="post">
+            <?php require TEMPLATE_PATH . 'feedbackNegative.php' ?>
+		    <fieldset>
+                <legend>Register</legend>
+                <div class="row">
+                    <label for="registerUsername">Username: </label>
+                    <input type="text" name="registerUsername" />
+                </div>
+                <div class="row">
+                    <label for="registerEmail">Email: </label>
+                    <input type="text" name="registerEmail" />
+                </div class="row">
+                <div class="row">
+                    <label for="registerPassword">Password: </label>
+                    <input type="password" name="registerPassword" />
+                </div>
+                <div class="row">
+                    <label for="registerPasswordConfirm">Confirm Password: </label>
+                    <input type="password" name="registerPasswordConfirm" />
+                </div>
+                <div class="row">
+                	<button type="submit" id="btnLoginSubmit">Register</button>
+                	<button type="cancel" id="btnLoginCancel">Cancel</button>
+                </div>
+            </fieldset>
+        </form>
     </div>
-    <?php } ?>
-    <div>
-        <label for="registerUsername">Username: </label>
-        <input type="text" name="registerUsername" />
-    </div>
-    <div>
-        <label for="registerEmail">Email: </label>
-        <input type="text" name="registerEmail" />
-    </div>
-    <div>
-        <label for="registerPassword">Password: </label>
-        <input type="password" name="registerPassword" />
-    </div>
-    <div>
-        <label for="registerPasswordConfirm">Confirm Password: </label>
-        <input type="password" name="registerPasswordConfirm" />
-    </div>
-    <div>
-    	<button type="submit" id="btnLoginSubmit">Register</button>
-    	<button type="cancel" id="btnLoginCancel">Cancel</button>
-    </div>
-</form>
+</div>
