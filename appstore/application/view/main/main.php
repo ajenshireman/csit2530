@@ -18,7 +18,7 @@
     </p>
     <p>
     The site's structure nd operation is based on the <a href="http://www.php-login.net/">
-        PHP-MVC</a> project. It uses .htaccess to force al request to index.php
+        PHP-MVC</a> project. It uses .htaccess to force all requests to index.php
         and append the entered url as a query string. The appication then parses
         that query and calls the approproate method of the appropriate controller.
     </p>
