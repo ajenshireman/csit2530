@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/foundation.css" />
     
     <!-- custom styles -->
+    <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/foundationOverride.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/overrideColors.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo PUBLIC_PATH ?>css/styles.css" />
     
     <!--  Foundation 5.1.1 html5 shim -->
