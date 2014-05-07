@@ -42,16 +42,17 @@
                         <a href="<?php echo URL ?>/main">Main</a>
                     </li>
                     <li class="divider"></li>
-                    <li>
-                        <a href="<?php echo URL ?>/overview/users">Users</a>
-                    </li>
-                    <li class="divider"></li>
                 </ul>
             </section>
 		    
 		    <section class="top-bar-section">
 		            <ul class="right">
 		    	    	<?php if ( isset($_SESSION['loggedIn']) ) { ?>
+		    	    	<li class="divider"></li>
+		    	    	<li>
+                            <a href="<?php echo URL ?>/overview/users">Users</a>
+                        </li>
+                        <li class="divider"></li>
 		    	    	<li class="has-dropdown">
 		                    <a href="#"><?php echo $_SESSION['username'] ?></a>
 		                    <ul class="dropdown">
@@ -63,6 +64,7 @@
 		                        </li>
 		                    </ul>
 		                </li>
+		                <li class="divider"></li>
 		                <?php } else { ?>
 		                <li class="divider"></li>
 		                <li>
