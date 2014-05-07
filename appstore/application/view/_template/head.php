@@ -23,6 +23,8 @@
     <script></script>
 </head>
 <body>
+<!-- wrapper for page content -->
+<div id="wrap">
     <!-- common top bar menu -->
 	<div class="fixed">
 		<nav class="top-bar" data-topbar></body>
