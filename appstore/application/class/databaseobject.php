@@ -33,7 +33,7 @@ class DatabaseObject {
      * $return date
      */
     public function createDate () {
-        return date('Y-m-d H H:i:s', $this->created);
+        return date('Y-m-d H:i:s', $this->created);
     }
     
     /**
@@ -42,6 +42,6 @@ class DatabaseObject {
      * $return date
      */
     public function editDate () {
-        return date('Y-m-d H H:i:s', $this->edited);
+        return date('Y-m-d H:i:s', $this->edited);
     }
 }
