@@ -1,4 +1,4 @@
-<?php if ( isset($this->FEEDBACK_GENERAL ) { ?>
+<?php if ( isset($this->FEEDBACK_GENERAL ) ) { ?>
 <div class="row">
     <div class="small-12 column alert-box info" data-alert">
         <?php 
